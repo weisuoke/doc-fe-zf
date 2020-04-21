@@ -30,7 +30,11 @@ module.exports = {
             collapsable: true,
             sidebarDepth: 2,
             children: [
-              "/react/redux/手写Redux.md"
+              "/react/redux/手写Redux.md",
+              "/react/redux/Redux中间件.md",
+              "/react/redux/Redux-hooks.md",
+              "/react/redux/Redux-saga.md",
+              "/react/redux/Redux-saga-hand.md",
             ]
           },
           {

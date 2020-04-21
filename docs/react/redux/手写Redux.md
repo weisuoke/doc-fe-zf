@@ -128,3 +128,558 @@ export default function createStore(reducer, preloadedState) {
 }
 ```
 
+## 5. React计数器
+
+- 使用React实现一个计数器
+
+```jsx
+import React, { Component } from 'react';
+import { createStore } from '../redux';
+function reducer(state=0,action){
+    switch(action.type){
+        case 'INCREMENT':
+            return state + 1;
+        case 'DECREMENT':
+            return state - 1;
+        default:
+            return state;
+    }
+}
+const store = createStore(reducer,0);
+export default class Counter extends Component {
+    constructor(props) {
+        super(props);
+        this.state = { value: 0 };
+    }
+    componentDidMount() {
+        this.unsubscribe = store.subscribe(() => this.setState({ value: store.getState() }));
+    }
+    componentWillUnmount() {
+        this.unsubscribe();
+    }
+    render() {
+        return (
+            <div>
+                <p>{this.state.value}</p>
+                <button onClick={() => store.dispatch({ type: 'INCREMENT' })}>+</button>
+                <button onClick={() => store.dispatch({ type: 'DECREMENT' })}>-</button>
+                <button onClick={
+                    () => {
+                        setTimeout(() => {
+                            store.dispatch({ type: 'INCREMENT' })
+                        }, 1000);
+                    }
+                }>1秒后加1</button>
+            </div>
+        )
+    }
+}
+```
+
+## 6. bindActionCreators.js
+
+### 6.1 Counter.js
+
+```jsx
+import React, { Component } from 'react';
+import { createStore,bindActionCreators} from '../redux';
+function reducer(state=0,action){
+    switch(action.type){
+        case 'INCREMENT':
+            return state + 1;
+        case 'DECREMENT':
+            return state - 1;
+        default:
+            return state;
+    }
+}
+const store = createStore(reducer,0);
+function increment(){
+   return {type:'INCREMENT'};
+}
+function decrement(){
+   return {type:'DECREMENT'};
+}
+const actions = {increment,decrement};
+//const boundIncrement = bindActionCreators(increment,store.dispatch);//可以传一个函数
+const boundActions = bindActionCreators(actions,store.dispatch);//也可以传对象
+
+export default class Counter extends Component {
+    constructor(props) {
+        super(props);
+        this.state = { value: 0 };
+    }
+    componentDidMount() {
+        this.unsubscribe = store.subscribe(() => this.setState({ value: store.getState() }));
+    }
+    componentWillUnmount() {
+        this.unsubscribe();
+    }
+    render() {
+        return (
+            <div>
+                <p>{this.state.value}</p>
+                <button onClick={boundIncrement}>+</button>
+                <button onClick={boundIncrement}>-</button>
+            </div>
+        )
+    }
+}
+```
+
+### 6.2 bindActionCreators.js
+
+bindActionCreators.js
+
+```js
+function bindActionCreator(actionCreator, dispatch) {
+    return function() {
+      return dispatch(actionCreator.apply(this, arguments))
+    }
+}
+export default function bindActionCreators(actionCreators, dispatch) {
+    if (typeof actionCreators === 'function') {
+        return bindActionCreator(actionCreators, dispatch)
+    }
+    const boundActionCreators = {}
+    for (const key in actionCreators) {
+        const actionCreator = actionCreators[key]
+        if (typeof actionCreator === 'function') {
+            boundActionCreators[key] = bindActionCreator(actionCreator, dispatch)
+        }
+    }
+    return boundActionCreators
+}
+```
+
+## 7. combineReducers
+
+### 7.1 src/index.js
+
+```jsx
+import React from 'react';
+import ReactDOM from 'react-dom';
+import Counter1 from './components/Counter1';
+import Counter2 from './components/Counter2';
+ReactDOM.render(<><Counter1/><hr/><Counter2/></>,document.getElementById('root'));
+```
+
+### 7.2 redux/index.js
+
+```js
+// src\redux\index.js
+import createStore from './createStore'
+import bindActionCreators from './bindActionCreators'
+import combineReducers from './combineReducers'
+export {
+    createStore,
+    bindActionCreators,
+    combineReducers
+}
+```
+
+### 7.3 combineReducers.js
+
+```js
+// src\redux\combineReducers.js
+
+export default function combineReducers(reducers) {
+    const reducerKeys = Object.keys(reducers)
+    return function combination(state = {}, action) {
+        const nextState = {}
+        for (let i = 0; i < reducerKeys.length; i++) {
+            const key = reducerKeys[i];
+            const reducer = reducers[key];
+            const previousStateForKey = state[key];
+            const nextStateForKey = reducer(previousStateForKey, action);
+            nextState[key] = nextStateForKey;
+        }
+        return nextState;
+    }
+}
+```
+
+### 7.4 store\index.js
+
+```js
+// src\store\index.js
+import { createStore } from '../redux';
+import reducer from './reducers';
+const store = createStore(reducer,{counter1:0,counter2:0});
+export default store ;
+```
+
+### 7.5 action-types.js
+
+```js
+// src\store\action-types.js
+export const INCREMENT1 = 'INCREMENT1';
+export const DECREMENT1 = 'DECREMENT1';
+
+export const INCREMENT2 = 'INCREMENT2';
+export const DECREMENT2 = 'DECREMENT2';
+```
+
+### 7.6 actions
+
+#### 7.6.1 counter1.js
+
+```js
+// src\store\actions\counter1.js
+import * as types from '../action-types';
+export default {
+    increment1(){
+        return {type:types.INCREMENT1};
+    },
+    decrement1(){
+        return {type:types.DECREMENT1};
+    }
+}
+```
+
+#### 7.6.2 counter2.js
+
+```js
+// src\store\actions\counter2.js
+import * as types from '../action-types';
+export default {
+    increment2(){
+        return {type:types.INCREMENT2};
+    },
+    decrement2(){
+        return {type:types.DECREMENT2};
+    }
+}
+```
+
+### 7.7 reducers
+
+#### 7.7.1 index.js
+
+```js
+// src\store\reducers\index.js
+import {combineReducers} from '../../redux';
+import counter1 from './counter1';
+import counter2 from './counter2';
+export default combineReducers({
+    counter1,
+    counter2
+});
+```
+
+#### 7.7.2 counter1.js
+
+```js
+// src/store/reducers/counter1.js
+import * as types from '../action-types';
+export default function (state=0,action){
+    switch(action.type){
+        case types.INCREMENT1:
+            return state + 1;
+        case types.DECREMENT1:
+            return state - 1;
+        default:
+            return state;
+    }
+}
+```
+
+#### 7.7.3 counter2.js
+
+```js
+// src/store/reducers/counter2.js
+
+import * as types from '../action-types';
+export default function (state=0,action){
+    switch(action.type){
+        case types.INCREMENT2:
+            return state + 1;
+        case types.DECREMENT2:
+            return state - 1;
+        default:
+            return state;
+    }
+}
+```
+
+### 7.8 Component
+
+#### 7.8.1 Counter1.js
+
+```jsx
+// src\components\Counter1.js
+import React, { Component } from 'react';
+import actions from '../store/actions/counter1';
+import store from '../store';
+import {bindActionCreators} from '../redux';
+const boundActions = bindActionCreators(actions,store.dispatch);
+export default class Counter extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {value:0}
+    }
+    componentDidMount() {
+        this.unsubscribe = store.subscribe(() => this.setState({ value: store.getState().counter1 }));
+    }
+    componentWillUnmount() {
+        this.unsubscribe();
+    }
+    render() {
+        return (
+            <div>
+                <p>{this.state.value}</p>
+                <button onClick={boundActions.increment1}>+</button>
+                <button onClick={boundActions.decrement1}>-</button>
+            </div>
+        )
+    }
+}
+```
+
+#### 7.8.2 Counter2.js
+
+```jsx
+// src\components\Counter2.js
+import React, { Component } from 'react';
+import actions from '../store/actions/counter2';
+import store from '../store';
+import {bindActionCreators} from '../redux';
+const boundActions = bindActionCreators(actions,store.dispatch);
+export default class Counter extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {value:0}
+    }
+    componentDidMount() {
+        this.unsubscribe = store.subscribe(() => this.setState({ value: store.getState().counter2 }));
+    }
+    componentWillUnmount() {
+        this.unsubscribe();
+    }
+    render() {
+        return (
+            <div>
+                <p>{this.state.value}</p>
+                <button onClick={boundActions.increment2}>+</button>
+                <button onClick={boundActions.decrement2}>-</button>
+            </div>
+        )
+    }
+}
+```
+
+## 8. react-redux
+
+### 8.1 src/index.js
+
+```jsx
+// src/index.js
+import ReactDOM from 'react-dom';
+import Counter1 from './components/Counter1';
+import Counter2 from './components/Counter2';
+import store from './store';
+import {Provider} from './react-redux';
+ReactDOM.render(<Provider store={store}><Counter1/><hr/><Counter2/></Provider>,document.getElementById('root'));
+```
+
+### 8.2 Counter.js
+
+```jsx
+// src/components/Counter.js
+
+import React, { Component } from 'react';
+import actions from '../store/actions/counter1';
+import {connect} from '../react-redux'
+class Counter extends Component {
+    constructor(props) {
+        super(props);
+    }
+    render() {
+        return (
+            <div>
+                <p>{this.props.value}</p>
+                <button onClick={this.props.increment}>+</button>
+                <button onClick={this.props.decrement}>-</button>
+            </div>
+        )
+    }
+}
+
+let mapStateToProps = state=>({value:state.counter});
+export default connect(
+    mapStateToProps,
+    actions
+)(Counter)
+```
+
+### 8.3 react-redux\index.js
+
+```js
+// src\react-redux\index.js
+import Provider from './Provider';
+import connect from './connect';
+export {
+    Provider,
+    connect
+}
+```
+
+### 8.4 react-redux\Provider.js
+
+```jsx
+// src\react-redux\Provider.js
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
+import { ReactReduxContext } from './Context'
+export default class Provider extends Component {
+    static propTypes = {
+        store: PropTypes.shape({
+          subscribe: PropTypes.func.isRequired,
+          dispatch: PropTypes.func.isRequired,
+          getState: PropTypes.func.isRequired
+        }),
+        children: PropTypes.any
+    }
+    constructor(props) {
+        super(props)
+    }
+    render() {
+        return (
+          <ReactReduxContext.Provider value={{store:this.props.store}}>
+            {this.props.children}
+          </ReactReduxContext.Provider>
+        )
+      }
+}
+```
+
+### 8.5 react-redux\connect.js
+
+```js
+// src\react-redux\connect.js
+
+import React from "react";
+import { bindActionCreators } from "../redux";
+import { ReactReduxContext } from "./Context";
+export default function(mapStateToProps, mapDispatchToProps) {
+  return function wrapWithConnect(WrappedComponent) {
+    return class extends React.Component {
+      static contextType = ReactReduxContext;
+      constructor(props, context) {
+        super(props);
+        this.state = mapStateToProps(context.store.getState());
+      }
+      componentDidMount() {
+        this.unsubscribe = this.context.store.subscribe(() =>
+          this.setState(mapStateToProps(this.context.store.getState()))
+        );
+      }
+      shouldComponentUpdate() {
+        if (this.state === mapStateToProps(this.context.store.getState())) {
+          return false;
+        }
+        return true;
+      }
+      componentWillUnmount() {
+        this.unsubscribe();
+      }
+      render() {
+        let actions = bindActionCreators(
+          mapDispatchToProps,
+          this.context.store.dispatch
+        );
+        return <WrappedComponent {...this.state} {...actions} />;
+      }
+    };
+  };
+}
+```
+
+### 8.6 react-redux\Context.js
+
+```js
+// src\react-redux\Context.js
+import React from 'react'
+
+export const ReactReduxContext = React.createContext(null)
+
+export default ReactReduxContext
+```
+
+## 9. react-redux-old
+
+### 9.1 react-redux-old\Provider.js
+
+```js
+// src\react-redux-old\Provider.js
+
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
+export default class Provider extends Component {
+    static propTypes = {
+        store: PropTypes.shape({
+          subscribe: PropTypes.func.isRequired,
+          dispatch: PropTypes.func.isRequired,
+          getState: PropTypes.func.isRequired
+        }),
+        children: PropTypes.any
+    }
+    constructor(props) {
+        super(props);
+    }
+    static  childContextTypes = {
+       store: PropTypes.shape({
+          subscribe: PropTypes.func.isRequired,
+          dispatch: PropTypes.func.isRequired,
+          getState: PropTypes.func.isRequired
+       })
+    }
+    getChildContext(){
+      return {store:this.props.store};
+    }
+    render() {
+        return this.props.children
+    }
+}
+```
+
+### 9.2 react-redux-old\connect.js
+
+- connect方法将检查mapStateToProps方法返回的props对象是否变更以决定是否需要更新组件。为了提高这个检查变更的性能，connect方法基于Immutabe状态对象进行改进，使用浅引用相等性检查来探测变更。这意味着对对象或数组的直接变更将无法被探测，导致组件无法更新
+
+```js
+// src\react-redux-old\connect.js
+import React from 'react';
+import {bindActionCreators} from '../redux';
+import PropTypes from 'prop-types';
+export default function(mapStateToProps,mapDispatchToProps){
+    return function wrapWithConnect(WrappedComponent) {
+        return class  extends React.Component{
+            constructor(props,context){
+                super(props);
+                this.state = mapStateToProps(context.store.getState());
+            }
+            static contextTypes = {
+                 store: PropTypes.shape({
+                    subscribe: PropTypes.func.isRequired,
+                    dispatch: PropTypes.func.isRequired,
+                    getState: PropTypes.func.isRequired
+                })
+            }
+            componentDidMount(){
+                this.unsubscribe = this.context.store.subscribe(
+                    ()=>this.setState(mapStateToProps(this.context.store.getState()))
+                );
+            }
+            componentWillUnmount(){
+                this.unsubscribe();
+            }
+            render(){
+                let actions = bindActionCreators(mapDispatchToProps,this.context.store.dispatch);
+                return <WrappedComponent {...this.state} {...actions}/>
+            }
+        }
+    }
+}
+```
+
