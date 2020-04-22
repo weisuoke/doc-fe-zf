@@ -17,7 +17,12 @@ module.exports = {
           {
             title: "基础",
             path: "/react/basic/",
-            collapsable: true
+            collapsable: true,
+            children: [
+              "/react/basic/01-react-basic.md",
+              "/react/basic/02-react-state.md",
+              "/react/basic/03-react-high.md",
+            ]
           },
           {
             title: "react router",
@@ -94,7 +99,15 @@ module.exports = {
         sidebarDepth: 1,
         children: [
           "/webpack/01-webpack-basic.md",
-          "/webpack/02-webpack-optimize.md"
+          "/webpack/02-webpack-optimize.md",
+          "/webpack/03-webpack-file.md",
+          "/webpack/04-webpack-tapable.md",
+          "/webpack/05-webpack-ast.md",
+          "/webpack/06-webpack-source.md",
+          "/webpack/07-webpack-loader.md",
+          "/webpack/08-webpack-plugin.md",
+          "/webpack/09-webpack-hand.md",
+          "/webpack/10-webpack-prepare.md",
         ]
       },
     ]
