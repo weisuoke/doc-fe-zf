@@ -38,14 +38,20 @@ module.exports = {
             ]
           },
           {
-            title: "服务端渲染",
+            title: "SSR",
             path: "/react/ssr/",
-            collapsable: true
+            collapsable: true,
+            children: [
+              "/react/ssr/ssr.md",
+            ]
           },
           {
             title: "nextjs",
             path: "/react/nextjs/",
-            collapsable: true
+            collapsable: true,
+            children: [
+              "/react/nextjs/nextjs.md",
+            ]
           },
           {
             title: "dva",
@@ -56,6 +62,15 @@ module.exports = {
             title: "umi",
             path: "/react/umi/",
             collapsable: true
+          },
+          {
+            title: "组件",
+            path: "/react/component/",
+            collapsable: true,
+            children: [
+              "/react/component/Upload.md",
+              "/react/component/Tree.md"
+            ]
           },
         ]
       },
@@ -71,7 +86,16 @@ module.exports = {
             collapsable: true
           },
         ]
-      }
+      },
+      {
+        title: "webpack",
+        path: "/webpack/",
+        collapsable: true,
+        sidebarDepth: 1,
+        children: [
+          "/webpack/01-webpack-basic.md"
+        ]
+      },
     ]
   }
 }
