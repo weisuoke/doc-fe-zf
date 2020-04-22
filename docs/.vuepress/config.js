@@ -93,7 +93,8 @@ module.exports = {
         collapsable: true,
         sidebarDepth: 1,
         children: [
-          "/webpack/01-webpack-basic.md"
+          "/webpack/01-webpack-basic.md",
+          "/webpack/02-webpack-optimize.md"
         ]
       },
     ]
