@@ -22,12 +22,20 @@ module.exports = {
               "/react/basic/01-react-basic.md",
               "/react/basic/02-react-state.md",
               "/react/basic/03-react-high.md",
+              "/react/basic/04-react-optimize.md",
+              "/react/basic/05-react-hooks.md",
+              "/react/basic/06-react-immutable.md",
+              "/react/basic/07-react-source.md",
             ]
           },
           {
             title: "react router",
             path: "/react/router/",
-            collapsable: true
+            collapsable: true,
+            children: [
+              "/react/router/01-router.md",
+              "/react/router/02-router-connected.md",
+            ]
           },
           {
             title: "redux",
