@@ -69,7 +69,11 @@ module.exports = {
           {
             title: "dva",
             path: "/react/dva/",
-            collapsable: true
+            collapsable: true,
+            children: [
+              "/react/dva/01-dva.md",
+              "/react/dva/02-dva-source.md",
+            ]
           },
           {
             title: "umi",
@@ -81,7 +85,7 @@ module.exports = {
             path: "/react/component/",
             collapsable: true,
             children: [
-              "/react/component/Upload.md",
+              "/react/component/upload.md",
               "/react/component/Tree.md"
             ]
           },
