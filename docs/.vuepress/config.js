@@ -78,7 +78,10 @@ module.exports = {
           {
             title: "umi",
             path: "/react/umi/",
-            collapsable: true
+            collapsable: true,
+            children: [
+              "/react/umi/01-umi.md",
+            ]
           },
           {
             title: "组件",
