@@ -125,6 +125,15 @@ module.exports = {
           "/webpack/10-webpack-prepare.md",
         ]
       },
+      {
+        title: "other",
+        path: "/other/",
+        collapsable: true,
+        sidebarDepth: 1,
+        children: [
+          "/other/01-https.md"
+        ]
+      },
     ]
   }
 }
