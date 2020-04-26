@@ -29,6 +29,14 @@ module.exports = {
             ]
           },
           {
+            title: "Fiber",
+            path: "/react/fiber/",
+            collapsable: true,
+            children: [
+              "/react/fiber/01-fiber.md",
+            ]
+          },
+          {
             title: "react router",
             path: "/react/router/",
             collapsable: true,
