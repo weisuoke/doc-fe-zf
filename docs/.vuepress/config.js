@@ -34,6 +34,7 @@ module.exports = {
             collapsable: true,
             children: [
               "/react/fiber/01-fiber.md",
+              "/react/fiber/02-fiber.md",
             ]
           },
           {

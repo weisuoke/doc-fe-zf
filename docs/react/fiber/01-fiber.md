@@ -1,3 +1,7 @@
+# 01. Fiber
+
+## 1. 屏幕刷新率
+
 ## 1. 屏幕刷新率
 
 - 目前大多数设备的屏幕刷新率为 60 次/秒
@@ -550,3 +554,7 @@ workInProgressRoot = {
 nextUnitOfWork = workInProgressRoot;//从RootFiber开始，到RootFiber结束
 workLoop();
 ```
+
+
+
+所以targetRowHeight, 不管我传什么, 都是一样的。
