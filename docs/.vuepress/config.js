@@ -140,7 +140,8 @@ module.exports = {
         collapsable: true,
         sidebarDepth: 1,
         children: [
-          "/other/01-https.md"
+          "/other/01-https.md",
+          "/other/02-serverless.md"
         ]
       },
     ]
