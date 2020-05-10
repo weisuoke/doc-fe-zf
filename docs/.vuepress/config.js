@@ -135,6 +135,15 @@ module.exports = {
         ]
       },
       {
+        title: "flutter",
+        path: "/flutter/",
+        collapsable: true,
+        sidebarDepth: 1,
+        children: [
+          "/flutter/m01-flutter.md"
+        ]
+      },
+      {
         title: "other",
         path: "/other/",
         collapsable: true,
