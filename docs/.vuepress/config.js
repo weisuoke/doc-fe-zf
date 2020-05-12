@@ -106,7 +106,9 @@ module.exports = {
             path: "/react/interview/",
             collapsable: true,
             children: [
-              "/react/interview/01-basic-doc.md"
+              "/react/interview/01-basic-doc.md",
+              "/react/interview/02-react-15.md",
+              "/react/interview/m01-react-15.md"
             ]
           }
         ]

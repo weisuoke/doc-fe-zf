@@ -105,7 +105,7 @@
     - Prompt
   - connect-react-router
 
-## 4. react周边
+## 3. react周边
 
 - roadhog
 - dva
@@ -113,7 +113,7 @@
 - AntDesign
 - AntDesignPro
 
-## 5.原理
+## 4. 原理
 
 - 1.JSX的本质是什么?
 - 2.不同的类型的组件是如何渲染的?
