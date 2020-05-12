@@ -101,6 +101,14 @@ module.exports = {
               "/react/component/Tree.md"
             ]
           },
+          {
+            title: "面试",
+            path: "/react/interview/",
+            collapsable: true,
+            children: [
+              "/react/interview/01-basic-doc.md"
+            ]
+          }
         ]
       },
       {
