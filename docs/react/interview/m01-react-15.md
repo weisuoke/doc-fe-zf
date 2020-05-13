@@ -292,3 +292,21 @@ export { Component }
 
 ```
 
+### $$typeof的作用
+
+用来标识元素的类型
+
+	- div
+	- Class
+	- Function
+
+具体的类型在这里查看，[点我](https://github.com/facebook/react/blob/v16.6.0/packages/shared/ReactSymbols.js)
+
+如果说`$$typeof`是symbol的话可以用来防 XSS 攻击
+
+symbol是不可变值，是唯一值。
+
+请求后台接口放回的是 `{type: 'div', props: {}}`，那么就在渲染页面上。如果返回的数据被注入攻击了。type是一个攻击后的值，是一个恶意的值。渲染的话会出问题，为了防止后台返回的数据有恶意的虚拟DOM类型，可以用Symbol避免这个问题。因为后台没有Symbol值，Symbol值只有前端有。
+
+## step-03
+
