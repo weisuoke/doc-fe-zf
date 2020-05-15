@@ -108,6 +108,7 @@ module.exports = {
             children: [
               "/react/interview/01-basic-doc.md",
               "/react/interview/02-react-15.md",
+              "/react/interview/toutiao.md",
               "/react/interview/m01-react-15.md"
             ]
           }

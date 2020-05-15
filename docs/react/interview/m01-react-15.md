@@ -310,3 +310,20 @@ symbol是不可变值，是唯一值。
 
 ## step-03
 
+
+
+我现在还没有使用，HomeFeed中的PhotoCard和Quest中的PhotoCard有些不一样。如果我使用现在PhotoCard。我要去修改PhotoCard组件.
+
+
+
+移动端的PhotoCard和现在的PhotoCard完全不一样
+
+
+
+I haven't used it yet. The `PhotoCard` in homefeed has some different from the `PhotoCard` in quest. If I use current `PhotoCard`。 I'm going to modify the PhotoCard Component。
+
+`PhotoCard` in mobile-web is totally different from the current `PhotoCard`
+
+
+
+我明天去用它
