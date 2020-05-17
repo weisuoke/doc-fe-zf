@@ -310,20 +310,73 @@ symbol是不可变值，是唯一值。
 
 ## step-03
 
+现在的React `Component` 是这样的
 
+```js
+class Component {
+  constructor(props, context) {
+    this.props = props
+    this.context = context
+  }
+}
 
-我现在还没有使用，HomeFeed中的PhotoCard和Quest中的PhotoCard有些不一样。如果我使用现在PhotoCard。我要去修改PhotoCard组件.
+// 在 React 内部是凭这个变量来判断是不是一个 React 组件的
+// 因为在组件定义的时候有两种方式, 一种是类组件，一种是函数组件，都被 babel 编译成函数
+// 编译后后通过 isReactComponent 来判断的
+Component.prototype.isReactComponent = {};
 
+export { Component }
 
+```
 
-移动端的PhotoCard和现在的PhotoCard完全不一样
+如果你去看源码，你会发现源码不是这样写的, [点我查看](https://github.com/facebook/react/blob/v16.6.0/packages/react/src/ReactBaseClasses.js)
 
+是这样的
 
+```js
+/**
+ * Base class helpers for the updating state of a component.
+ */
+function Component(props, context, updater) {
+  this.props = props;
+  this.context = context;
+  // If a component has string refs, we will assign a different object later.
+  this.refs = emptyObject;
+  // We initialize the default updater but the real one gets injected by the
+  // renderer.
+  this.updater = updater || ReactNoopUpdateQueue;
+}
+// 不在类上，在类的原型上。
+Component.prototype.isReactComponent = {};
+```
 
-I haven't used it yet. The `PhotoCard` in homefeed has some different from the `PhotoCard` in quest. If I use current `PhotoCard`。 I'm going to modify the PhotoCard Component。
+这里我们写了一个Component的构造函数，Component的原型上有一个 isReactComponent 的属性。不在类上，在类的原型上。
 
-`PhotoCard` in mobile-web is totally different from the current `PhotoCard`
+```js
+function ComponentDummy() {}
+ComponentDummy.prototype = Component.prototype;
 
+/**
+ * Convenience component with default shallow equality check for sCU.
+ */
+function PureComponent(props, context, updater) {
+  this.props = props;
+  this.context = context;
+  // If a component has string refs, we will assign a different object later.
+  this.refs = emptyObject;
+  this.updater = updater || ReactNoopUpdateQueue;
+}
 
+const pureComponentPrototype = (PureComponent.prototype = new ComponentDummy());
+pureComponentPrototype.constructor = PureComponent;
+// Avoid an extra prototype jump for these methods.
+Object.assign(pureComponentPrototype, Component.prototype);
+pureComponentPrototype.isPureReactComponent = true;
+```
 
-我明天去用它
+这个文件中有个这个东西
+
+声明了一个空的 ComponentDummy 构造函数。这个构造函数的原型指向了 Component 的构造函数
+
+<img src="https://wsk-mweb.oss-cn-hangzhou.aliyuncs.com/ipic/2020-05-17-154249.png" alt="image-20200517234240858" style="zoom:50%;" />
+
