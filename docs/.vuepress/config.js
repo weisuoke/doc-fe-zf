@@ -162,7 +162,8 @@ module.exports = {
         children: [
           "/other/01-https.md",
           "/other/02-serverless.md",
-          "/other/03-rbac.md"
+          "/other/03-rbac.md",
+          "/other/04-websocket.md"
         ]
       },
     ]
