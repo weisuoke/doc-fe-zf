@@ -308,7 +308,7 @@ symbol是不可变值，是唯一值。
 
 请求后台接口放回的是 `{type: 'div', props: {}}`，那么就在渲染页面上。如果返回的数据被注入攻击了。type是一个攻击后的值，是一个恶意的值。渲染的话会出问题，为了防止后台返回的数据有恶意的虚拟DOM类型，可以用Symbol避免这个问题。因为后台没有Symbol值，Symbol值只有前端有。
 
-## step-03
+## step-03 PureComponent
 
 现在的React `Component` 是这样的
 
@@ -379,4 +379,50 @@ pureComponentPrototype.isPureReactComponent = true;
 声明了一个空的 ComponentDummy 构造函数。这个构造函数的原型指向了 Component 的构造函数
 
 <img src="https://wsk-mweb.oss-cn-hangzhou.aliyuncs.com/ipic/2020-05-17-154249.png" alt="image-20200517234240858" style="zoom:50%;" />
+
+定义了一个纯组件`PureComponent`
+
+> shouldComponentDidMount 的时候会进行一个浅检查（浅比较）
+
+![image-20200523000921121](https://wsk-mweb.oss-cn-hangzhou.aliyuncs.com/ipic/2020-05-22-160922.png)
+
+`Object.assign(pureComponentPrototype, Component.prototype);`
+
+把 `Component.prototype`上的方法复制到了 pureComponentPrototype 上了
+
+`pureComponentPrototype.isPureReactComponent = true;`
+
+创建了一个新的类叫PureComponent，继承了 Component
+
+
+
+```js
+// ES6写法
+
+let emptyObject = {}
+
+class Component {
+
+  constructor(props, context) {
+    this.props = props
+    this.context = context
+    this.refs = emptyObject
+  }
+}
+
+// 在 React 内部是凭这个变量来判断是不是一个 React 组件的
+// 因为在组件定义的时候有两种方式, 一种是类组件，一种是函数组件，都被 babel 编译成函数
+// 编译后后通过 isReactComponent 来判断的
+Component.prototype.isReactComponent = {}
+
+class PureComponent extends Component {
+
+}
+
+PureComponent.prototype.isPureReactComponent = true
+
+export { Component }
+```
+
+## step-04 map 方法
 
