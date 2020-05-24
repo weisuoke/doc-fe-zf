@@ -426,3 +426,128 @@ export { Component }
 
 ## step-04 map 方法
 
+演示一个例子，`React.children.map`
+
+```jsx
+import React, { Component } from 'react'
+import ReactDOM from 'react-dom'
+
+class Child extends Component {
+  render() {
+    console.log(this.props.children)
+    const mappedChildren = React.Children.map(this.props.children, (item, index) => (
+      [<div>{item}</div>, <div>{item}</div>]
+    ))
+    console.log(mappedChildren)
+    return (
+      <div>
+        {mappedChildren}
+      </div>
+    )
+  }
+}
+
+class App extends Component {
+  render() {
+    return (
+      <Child>
+        <div>child1</div>
+        <div key="key2">child2</div>
+        <div key="key3">child3</div>
+        {
+          [
+            <div key="key4">child4</div>,
+            <div key="key5">child5</div>,
+            <div key="key6">child6</div>
+          ]
+        }
+      </Child>
+    )
+  }
+}
+
+ReactDOM.render(<App/>, document.getElementById('root'))
+
+```
+
+这里分别打印 `this.props.children` 和 `mappedChildren`
+
+![image-20200524224318852](https://wsk-mweb.oss-cn-hangzhou.aliyuncs.com/2020-05-24-145323.jpg)
+
+打印出`mappedChildren`如下
+
+![image-20200524225438864](https://wsk-mweb.oss-cn-hangzhou.aliyuncs.com/2020-05-24-145441.png)
+
+这里看到的 key 非常奇怪。
+
+再增加难度。把 key 再搞复杂点
+
+```jsx
+import React, { Component } from 'react'
+import ReactDOM from 'react-dom'
+
+class Child extends Component {
+  render() {
+    console.log(this.props.children)
+    const mappedChildren = React.Children.map(this.props.children, (item, index) => (
+      [<div key={`div${index}A`}>{item}</div>, <div key={`div${index}B`}>{item}</div>]
+    ))
+    console.log(mappedChildren)
+    return (
+      <div>
+        {mappedChildren}
+      </div>
+    )
+  }
+}
+
+class App extends Component {
+  render() {
+    return (
+      <Child>
+        <div>child1</div>
+        <div key="key2">child2</div>
+        <div key="key3">child3</div>
+        {
+          [
+            <div key="key4">child4</div>,
+            <div key="key5">child5</div>,
+            <div key="key6">child6</div>
+          ]
+        }
+      </Child>
+    )
+  }
+}
+
+ReactDOM.render(<App/>, document.getElementById('root'))
+```
+
+看下打印， 我这里要看两个东西：
+
+1. 它是怎么工作的
+2. 它是怎么去映射的
+3. key是怎么生成的
+
+![image-20200524230338795](https://wsk-mweb.oss-cn-hangzhou.aliyuncs.com/2020-05-24-150341.png)
+
+![image-20200524230059196](https://wsk-mweb.oss-cn-hangzhou.aliyuncs.com/2020-05-24-150101.png)
+
+把一个变成了两个。
+
+key是怎么来的，key有什么特点？
+
+`.0/.$div0A` 首先以`.`开头。第一个是`.0`  child1 的索引为0，`.$div0A` 是`<Child>`组件中给的 key
+
+> 第一级元素，如果没有 key 值，使用索引。 否则使用索引
+>
+> 分隔符用 `/`
+>
+> 第二级元素就是`.$key`
+
+`React.children.map`有展平的功能，不管有多少级。都展平成一级
+
+
+
+**源码**
+
