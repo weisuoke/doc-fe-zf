@@ -547,7 +547,113 @@ key是怎么来的，key有什么特点？
 
 `React.children.map`有展平的功能，不管有多少级。都展平成一级
 
+**[源码](https://github.com/facebook/react/blob/v16.6.0/packages/react/src/ReactChildren.js)**
 
+```js
+// 源码
+function mapChildren(children, func, context) {
+  if (children == null) {
+    return children;
+  }
+  const result = [];
+  mapIntoWithKeyPrefixInternal(children, result, null, func, context);
+  return result;
+}
+```
 
-**源码**
+<img src="https://wsk-mweb.oss-cn-hangzhou.aliyuncs.com/2020-05-28-001745.png" alt="img" style="zoom:50%;" />
+
+map的流程图
+
+> 作业：简单实现`React.Children.map`
+
+## step04-1 一对一映射
+
+简单实现的目标功能：
+
+```jsx
+import React, { Component } from './react'
+import ReactDOM from 'react-dom'
+
+class Child extends Component {
+  render() {
+    console.log(this.props.children) // 就一个 React 元素
+    const mappedChildren = React.Children.map(
+      this.props.children,
+      function(item, index){
+        return <li key={index}>{this.name}:{item}</li>
+      },
+      {name: '我是上下文对象'}
+    )
+    console.log(mappedChildren)
+    return (
+      <div>
+        {mappedChildren}
+      </div>
+    )
+  }
+}
+
+class App extends Component {
+  render() {
+    return (
+      <Child>
+        <span>A</span>
+      </Child>
+    )
+  }
+}
+
+ReactDOM.render(<App/>, document.getElementById('root'))
+
+```
+
+<img src="https://wsk-mweb.oss-cn-hangzhou.aliyuncs.com/2020-05-28-002237.png" alt="image-20200528082227563" style="zoom:50%;" />
+
+实现一个一对一的映射
+
+```js
+// ./src/react/ReactChildren.js
+// # 一对一的映射
+import { REACT_ELEMENT_TYPE } from '../shared/ReactSymbols'
+
+/**
+ *
+ * @param children 要映射的元素，可能是一个数组，也可能是一个可渲染的节点
+ * @param mapFunction
+ * @param context
+ * result 我们会把我们所有映射出来的节点放在 result 里面
+ */
+function mapChildren(children, mapFunction, context) {
+  const result = []
+  mapIntoWithKeyPrefixInternal(children, result, mapFunction, context)
+  return result
+}
+
+// 映射函数的核心有两个数组的处理
+function mapIntoWithKeyPrefixInternal(children, result, mapFunction, context) {
+  // traverseContext 遍历的上下文
+  const traverseContext = { result, mapFunction, context }
+  traverseAllChildren(children, mapSingleChildIntoContext, traverseContext)
+}
+
+function traverseAllChildren(children, mapSingleChildIntoContext, traverseContext) {
+  let type = typeof children
+  // 如果 type 是字符串或数字，或者 type 是一个对象，但是 children.$$typeof 是一个 React 元素，说明 children 是一个可渲染节点
+  if (type === 'string' || type === 'number' || (type === 'object' && children.$$typeof === REACT_ELEMENT_TYPE)) {
+    mapSingleChildIntoContext(traverseContext, children)
+  }
+}
+
+// 如果执行到这个地方，child肯定是一个节点
+function mapSingleChildIntoContext(traverseContext, child) {
+  let { result, mapFunction, context } = traverseContext
+  let mappedChild = mapFunction.call(context, child)
+  result.push(mappedChild)
+}
+
+export {
+  mapChildren as map
+}
+```
 
