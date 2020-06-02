@@ -753,3 +753,86 @@ export {
 }
 ```
 
+## step05 实现 key
+
+现在将功能改成如下显示
+
+```jsx
+// src/index.js
+
+import React, { Component } from 'react'
+import ReactDOM from 'react-dom'
+
+// 把原来的 children 打平成一级，然后把映射后的结果打平成一级
+class Child extends Component {
+  render() {
+    console.log(this.props.children) // 就一个 React 元素
+    const mappedChildren = React.Children.map(
+      this.props.children,
+      function(item, index){
+        // return <li key={index}>{this.name}:{item}</li>
+        return [item, [item, [item, [item]]]]
+      },
+      {name: '我是上下文对象'}
+    )
+    console.log(mappedChildren)
+    return (
+      <div>
+        {mappedChildren}
+      </div>
+    )
+  }
+}
+
+class App extends Component {
+  render() {
+    return (
+      <Child>
+        {[<span>A</span>,<span>B</span>]}
+        {[<span>C</span>,<span>D</span>]}
+      </Child>
+    )
+  }
+}
+
+ReactDOM.render(<App/>, document.getElementById('root'))
+
+```
+
+使用原生React, 打印的结果如下：
+
+![image-20200602125929615](https://wsk-mweb.oss-cn-hangzhou.aliyuncs.com/2020-06-02-045932.png)
+
+使用现在自己写的 React，打印结果如下：
+
+![image-20200602130051260](https://wsk-mweb.oss-cn-hangzhou.aliyuncs.com/2020-06-02-050054.png)
+
+观察`key`的变化
+
+### key值说明
+
+#### .0:0/.0
+
+斜杠是分隔符，斜杠前是映射前的索引。斜杠后是映射后的索引
+
+![image-20200602131420079](https://wsk-mweb.oss-cn-hangzhou.aliyuncs.com/2020-06-02-051422.png)
+
+映射前第一个元素是一个数组，包含A、B两个值。 A对应的是 `.0:0` , B对应的是 `.0:1`
+
+映射前第二个元素是一个数组，包含C、D两个值。C对应的是 `.1:0` , D对应的是 `.1:1`
+
+**子函数的映射函数是**
+
+```js
+function(item, index){
+  // return <li key={index}>{this.name}:{item}</li>
+  return [item, [item, [item, [item]]]]
+},
+```
+
+`[item, [item, [item, [item]]]]` 
+
+- 第一个 item 输出为`.0`
+- 第二个 item 输出为`.1:0`
+- 第三个 item 输出为`.1:1:0`
+- 第四个 item 输出为`.1:1:1:0`
