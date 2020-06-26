@@ -155,6 +155,33 @@ module.exports = {
         ]
       },
       {
+        title: "interview",
+        path: "/interview/",
+        collapsable: true,
+        sidebarDepth: 1,
+        children: [
+          {
+            title: "基础",
+            path: "/interview/basic/",
+            collapsable: true,
+            children: [
+              "/react/interview/01-basic-doc.md",
+              "/interview/basic/01-interview.md",
+              "/interview/basic/m02-interview.md",
+            ]
+          },
+          {
+            title: "基础",
+            path: "/interview/basic/",
+            collapsable: true,
+            children: [
+              "/interview/basic/01-interview.md",
+              "/interview/basic/m02-interview.md",
+            ]
+          },
+        ]
+      },
+      {
         title: "other",
         path: "/other/",
         collapsable: true,
