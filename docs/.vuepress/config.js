@@ -165,18 +165,8 @@ module.exports = {
             path: "/interview/basic/",
             collapsable: true,
             children: [
-              "/react/interview/01-basic-doc.md",
               "/interview/basic/01-interview.md",
-              "/interview/basic/m02-interview.md",
-            ]
-          },
-          {
-            title: "基础",
-            path: "/interview/basic/",
-            collapsable: true,
-            children: [
-              "/interview/basic/01-interview.md",
-              "/interview/basic/m02-interview.md",
+              "/interview/basic/m01-interview.md",
             ]
           },
         ]
