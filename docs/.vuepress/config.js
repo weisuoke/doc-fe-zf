@@ -133,6 +133,21 @@ module.exports = {
         collapsable: true,
         sidebarDepth: 1,
         children: [
+          {
+            title: "2020版",
+            path: "/webpack/2020/",
+            collapsable: true,
+            children: [
+              "/webpack/2020/01-webpack-bundle.md",
+              "/webpack/2020/02-webpack-flow.md",
+              "/webpack/2020/03-webpack-loader.md",
+              "/webpack/2020/04-webpack-tapable.md",
+              "/webpack/2020/05-webpack-ast.md",
+              "/webpack/2020/06-webpack-plugin.md",
+              "/webpack/2020/07-webpack-hand.md",
+              "/webpack/2020/08-webpack-HMR.md",
+            ]
+          },
           "/webpack/01-webpack-basic.md",
           "/webpack/02-webpack-optimize.md",
           "/webpack/03-webpack-file.md",
