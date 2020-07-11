@@ -291,3 +291,96 @@ ECStack.pop()
 > 作用域链是在创建函数的时候确定的
 >
 > 调用栈是在调用的时候确定的
+
+## this
+
+```js
+/**
+ * 如何确定 this
+ * 思考 this 为什么会出现？我们需要 this 干什么用
+ * this 谁来调用， 或者说当前执行这个逻辑的主体是谁
+ * 函数只是一个处理逻辑
+ */
+
+function eat() {
+  
+}
+
+eat();
+
+// 当前执行 getName 方法主体的名字
+function getName() {
+  console.log(this.name)
+}
+
+let person = {
+  name: '张三',
+  getName() {
+    console.log(this.name);
+  }
+
+// 怎么确定 this, 干这件事，那么 this 就是谁
+// 在 JS 里，谁调用哪个方法
+person.getName();
+// 如何确定 this， `.` 前面的对象
+
+/**
+ * 如何确定 this，其实就是知道当前函数执行主体是谁？
+ */
+// 如果是对象来调，this就是调用的对象
+
+// 如果没有人来调，直接执行
+// 如果是非严格模式，主体是 window、global
+// 如果是严格模式，是 undefined
+
+// 其实 this 的确定只有一条规定，谁调用方法就是谁
+// 如果是事件绑定的时候，this就是绑定的元素
+
+let dom = {
+  addEventListener(type, callback) {
+    dom["on" + type] = callback;
+  },
+  emit(type) {
+    dom["on" + type]();
+  }
+}
+
+dom.addEventListener('click', function() {
+  console.log(this);	// this 就是当前的元素
+})
+```
+
+### call apply bind
+
+```js
+/**
+ * call 调用方法
+ * apply 调用方法
+ * bind 绑定方法
+ */
+function getName() {
+  console.log(this.name)
+}
+
+let obj = {
+  name: 'zhufeng'
+}
+
+// 以 obj 作为调用方，或者说执行主体，调用 getName 方法
+getName.call(obj)
+```
+
+### call 的原理
+
+```js
+// 实现 call
+!(function (prototype) {
+  function call2(context) {
+    context.getName = this;
+    context.getName();
+    delete context.getName
+  }
+  prototype.call2 = call2
+})(Function.prototype);
+getName.call2(obj)
+```

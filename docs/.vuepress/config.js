@@ -148,16 +148,23 @@ module.exports = {
               "/webpack/2020/08-webpack-HMR.md",
             ]
           },
-          "/webpack/01-webpack-basic.md",
-          "/webpack/02-webpack-optimize.md",
-          "/webpack/03-webpack-file.md",
-          "/webpack/04-webpack-tapable.md",
-          "/webpack/05-webpack-ast.md",
-          "/webpack/06-webpack-source.md",
-          "/webpack/07-webpack-loader.md",
-          "/webpack/08-webpack-plugin.md",
-          "/webpack/09-webpack-hand.md",
-          "/webpack/10-webpack-prepare.md",
+          {
+            title: "备份",
+            path: "/webpack/backup/",
+            collapsable: true,
+            children: [
+              "/webpack/backup/01-webpack-basic.md",
+              "/webpack/backup/02-webpack-optimize.md",
+              "/webpack/backup/03-webpack-file.md",
+              "/webpack/backup/04-webpack-tapable.md",
+              "/webpack/backup/05-webpack-ast.md",
+              "/webpack/backup/06-webpack-source.md",
+              "/webpack/backup/07-webpack-loader.md",
+              "/webpack/backup/08-webpack-plugin.md",
+              "/webpack/backup/09-webpack-hand.md",
+              "/webpack/backup/10-webpack-prepare.md",
+            ]
+          },
         ]
       },
       {
@@ -197,7 +204,9 @@ module.exports = {
           "/other/03-rbac.md",
           "/other/04-websocket.md",
           "/other/05-monitor.md",
-          "/other/06-monitor-2.md"
+          "/other/06-monitor-2.md",
+          "/other/07-binary.md",
+          "/other/08-binary-2.md"
         ]
       },
     ]
