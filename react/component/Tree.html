@@ -1,0 +1,1132 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Tree | 珠峰架构</title>
+    <meta name="generator" content="VuePress 1.4.1">
+    
+    <meta name="description" content="">
+    <link rel="preload" href="/assets/css/0.styles.1657c744.css" as="style"><link rel="preload" href="/assets/js/app.2af561cb.js" as="script"><link rel="preload" href="/assets/js/2.b2a5c435.js" as="script"><link rel="preload" href="/assets/js/33.f975c942.js" as="script"><link rel="prefetch" href="/assets/js/10.2b2c8443.js"><link rel="prefetch" href="/assets/js/11.689524dc.js"><link rel="prefetch" href="/assets/js/12.849e2da9.js"><link rel="prefetch" href="/assets/js/13.c798d95d.js"><link rel="prefetch" href="/assets/js/14.380c4ee7.js"><link rel="prefetch" href="/assets/js/15.d5753b2e.js"><link rel="prefetch" href="/assets/js/16.49eb1f17.js"><link rel="prefetch" href="/assets/js/17.5ecf2b4f.js"><link rel="prefetch" href="/assets/js/18.da9c8265.js"><link rel="prefetch" href="/assets/js/19.59d827ef.js"><link rel="prefetch" href="/assets/js/20.73eb42bb.js"><link rel="prefetch" href="/assets/js/21.8570b5b4.js"><link rel="prefetch" href="/assets/js/22.34094913.js"><link rel="prefetch" href="/assets/js/23.5209939b.js"><link rel="prefetch" href="/assets/js/24.53d92201.js"><link rel="prefetch" href="/assets/js/25.7241adf1.js"><link rel="prefetch" href="/assets/js/26.fecc2611.js"><link rel="prefetch" href="/assets/js/27.e50fca48.js"><link rel="prefetch" href="/assets/js/28.4c168acc.js"><link rel="prefetch" href="/assets/js/29.f5186710.js"><link rel="prefetch" href="/assets/js/3.ba1dcccd.js"><link rel="prefetch" href="/assets/js/30.33cb1c11.js"><link rel="prefetch" href="/assets/js/31.c088791d.js"><link rel="prefetch" href="/assets/js/32.3b724af5.js"><link rel="prefetch" href="/assets/js/34.7d1f4bd2.js"><link rel="prefetch" href="/assets/js/35.26c11750.js"><link rel="prefetch" href="/assets/js/36.e8890e58.js"><link rel="prefetch" href="/assets/js/37.516eba46.js"><link rel="prefetch" href="/assets/js/38.4f8b8525.js"><link rel="prefetch" href="/assets/js/39.26f95568.js"><link rel="prefetch" href="/assets/js/4.fca74266.js"><link rel="prefetch" href="/assets/js/40.b9a8ffbb.js"><link rel="prefetch" href="/assets/js/41.fd02ea5f.js"><link rel="prefetch" href="/assets/js/42.d2483185.js"><link rel="prefetch" href="/assets/js/43.70bff2de.js"><link rel="prefetch" href="/assets/js/44.219702ca.js"><link rel="prefetch" href="/assets/js/45.aba93af9.js"><link rel="prefetch" href="/assets/js/46.447ba87c.js"><link rel="prefetch" href="/assets/js/47.519ddc28.js"><link rel="prefetch" href="/assets/js/48.fd8af347.js"><link rel="prefetch" href="/assets/js/49.b3783fa9.js"><link rel="prefetch" href="/assets/js/5.cc992e8b.js"><link rel="prefetch" href="/assets/js/50.0bb20f92.js"><link rel="prefetch" href="/assets/js/51.37ba1a59.js"><link rel="prefetch" href="/assets/js/52.054af132.js"><link rel="prefetch" href="/assets/js/53.5aca78a0.js"><link rel="prefetch" href="/assets/js/54.78c43f89.js"><link rel="prefetch" href="/assets/js/55.8ecaadc1.js"><link rel="prefetch" href="/assets/js/56.e844f110.js"><link rel="prefetch" href="/assets/js/57.530db0e9.js"><link rel="prefetch" href="/assets/js/58.8c839289.js"><link rel="prefetch" href="/assets/js/59.6634b409.js"><link rel="prefetch" href="/assets/js/6.b8b36e50.js"><link rel="prefetch" href="/assets/js/60.7ebe5787.js"><link rel="prefetch" href="/assets/js/61.bfe89a8b.js"><link rel="prefetch" href="/assets/js/62.4cdf6e8c.js"><link rel="prefetch" href="/assets/js/63.a0e80f0d.js"><link rel="prefetch" href="/assets/js/64.62a1b782.js"><link rel="prefetch" href="/assets/js/65.7be0994b.js"><link rel="prefetch" href="/assets/js/66.5a592a8e.js"><link rel="prefetch" href="/assets/js/67.40b4291c.js"><link rel="prefetch" href="/assets/js/68.2ac34b58.js"><link rel="prefetch" href="/assets/js/69.728773d5.js"><link rel="prefetch" href="/assets/js/7.0414e914.js"><link rel="prefetch" href="/assets/js/70.30137f66.js"><link rel="prefetch" href="/assets/js/71.7735c9fc.js"><link rel="prefetch" href="/assets/js/72.e9f43339.js"><link rel="prefetch" href="/assets/js/73.2d754e71.js"><link rel="prefetch" href="/assets/js/74.bf70dd09.js"><link rel="prefetch" href="/assets/js/75.18c28356.js"><link rel="prefetch" href="/assets/js/76.a0626bc9.js"><link rel="prefetch" href="/assets/js/77.dfde57e0.js"><link rel="prefetch" href="/assets/js/78.b380a0d6.js"><link rel="prefetch" href="/assets/js/79.f7bafb5d.js"><link rel="prefetch" href="/assets/js/8.c3544379.js"><link rel="prefetch" href="/assets/js/80.ade6c33e.js"><link rel="prefetch" href="/assets/js/81.6335ba85.js"><link rel="prefetch" href="/assets/js/82.9d01c14e.js"><link rel="prefetch" href="/assets/js/83.47911fdd.js"><link rel="prefetch" href="/assets/js/9.844fca3b.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.1657c744.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">珠峰架构</span></a> <div class="links"><!----> <!----></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><!---->  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><a href="/react/" class="sidebar-heading clickable router-link-active open"><span>react</span> <span class="arrow down"></span></a> <ul class="sidebar-links sidebar-group-items"><li><section class="sidebar-group collapsable is-sub-group depth-1"><a href="/react/basic/" class="sidebar-heading clickable"><span>基础</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><a href="/react/fiber/" class="sidebar-heading clickable"><span>Fiber</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><a href="/react/router/" class="sidebar-heading clickable"><span>react router</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><a href="/react/redux/" class="sidebar-heading clickable"><span>redux</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><a href="/react/ssr/" class="sidebar-heading clickable"><span>SSR</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><a href="/react/nextjs/" class="sidebar-heading clickable"><span>nextjs</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><a href="/react/dva/" class="sidebar-heading clickable"><span>dva</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><a href="/react/umi/" class="sidebar-heading clickable"><span>umi</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><a href="/react/component/" class="sidebar-heading clickable router-link-active open"><span>组件</span> <span class="arrow down"></span></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/react/component/upload.html" class="sidebar-link">上传功能</a></li><li><a href="/react/component/Tree.html" class="active sidebar-link">Tree</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/react/component/Tree.html#_1-初始化项目" class="sidebar-link">1. 初始化项目</a></li><li class="sidebar-sub-header"><a href="/react/component/Tree.html#_2-单元测试" class="sidebar-link">2. 单元测试</a></li><li class="sidebar-sub-header"><a href="/react/component/Tree.html#_3-创建树型菜单" class="sidebar-link">3. 创建树型菜单</a></li><li class="sidebar-sub-header"><a href="/react/component/Tree.html#_4-渲染树型结构" class="sidebar-link">4. 渲染树型结构</a></li><li class="sidebar-sub-header"><a href="/react/component/Tree.html#_5-打开关闭功能" class="sidebar-link">5. 打开关闭功能</a></li><li class="sidebar-sub-header"><a href="/react/component/Tree.html#_6-全选和全消功能" class="sidebar-link">6. 全选和全消功能</a></li><li class="sidebar-sub-header"><a href="/react/component/Tree.html#_7-动态加载数据" class="sidebar-link">7. 动态加载数据</a></li><li class="sidebar-sub-header"><a href="/react/component/Tree.html#_8-拖动排序" class="sidebar-link">8. 拖动排序</a></li></ul></li></ul></section></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><a href="/react/interview/" class="sidebar-heading clickable"><span>面试</span> <span class="arrow right"></span></a> <!----></section></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/vue/" class="sidebar-heading clickable"><span>vue</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/webpack/" class="sidebar-heading clickable"><span>webpack</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/flutter/" class="sidebar-heading clickable"><span>flutter</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/interview/" class="sidebar-heading clickable"><span>interview</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/other/" class="sidebar-heading clickable"><span>other</span> <span class="arrow right"></span></a> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="tree"><a href="#tree" class="header-anchor">#</a> Tree</h1> <h2 id="_1-初始化项目"><a href="#_1-初始化项目" class="header-anchor">#</a> 1. 初始化项目</h2> <ul><li><a href="http://img.zhufengpeixun.cn/tree4.html" target="_blank" rel="noopener noreferrer">项目预览<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul> <h3 id="_1-1-创建项目"><a href="#_1-1-创建项目" class="header-anchor">#</a> 1.1 创建项目</h3> <div class="language-js extra-class"><pre class="language-js"><code>mkdir zhufeng_prepare_tree
+cd zhufeng_prepare_tree
+cnpm init <span class="token operator">-</span>y
+touch <span class="token punctuation">.</span>gitignore
+</code></pre></div><h3 id="_1-2-安装依赖"><a href="#_1-2-安装依赖" class="header-anchor">#</a> 1.2 安装依赖</h3> <ul><li><a href="https://github.com/DefinitelyTyped/DefinitelyTyped" target="_blank" rel="noopener noreferrer">@types<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>开头的包都是typeScript的声明文件，可以进入<code>node_modules/@types/XX/index.d.ts</code>进行查看</li></ul> <div class="language-js extra-class"><pre class="language-js"><code>cnpm i react @types<span class="token operator">/</span>react react<span class="token operator">-</span>dom @types<span class="token operator">/</span>react<span class="token operator">-</span>dom <span class="token operator">-</span><span class="token constant">S</span>
+cnpm i webpack webpack<span class="token operator">-</span>cli webpack<span class="token operator">-</span>dev<span class="token operator">-</span>server  <span class="token operator">-</span><span class="token constant">D</span>
+cnpm i typescript ts<span class="token operator">-</span>loader source<span class="token operator">-</span>map<span class="token operator">-</span>loader style<span class="token operator">-</span>loader css<span class="token operator">-</span>loader  less<span class="token operator">-</span>loader  less file<span class="token operator">-</span>loader url<span class="token operator">-</span>loader html<span class="token operator">-</span>webpack<span class="token operator">-</span>plugin <span class="token operator">-</span><span class="token constant">D</span>
+cnpm i jest @types<span class="token operator">/</span>jest ts<span class="token operator">-</span>jest jest<span class="token operator">-</span>junit enzyme @types<span class="token operator">/</span>enzyme 
+enzyme<span class="token operator">-</span>adapter<span class="token operator">-</span>react<span class="token operator">-</span><span class="token number">16</span> @types<span class="token operator">/</span>enzyme<span class="token operator">-</span>adapter<span class="token operator">-</span>react<span class="token operator">-</span><span class="token number">16</span> <span class="token operator">-</span><span class="token constant">D</span>
+cnpm i axios express qs @types<span class="token operator">/</span>qs <span class="token operator">-</span><span class="token constant">D</span>
+</code></pre></div><table><thead><tr><th style="text-align:left;">模块名</th> <th style="text-align:left;">使用方式</th></tr></thead> <tbody><tr><td style="text-align:left;">react</td> <td style="text-align:left;">React is a JavaScript library for creating user interfaces.</td></tr> <tr><td style="text-align:left;">react-dom</td> <td style="text-align:left;">This package serves as the entry point to the DOM and server renderers for React. It is intended to be paired with the generic React package, which is shipped as react to npm.</td></tr> <tr><td style="text-align:left;">webpack</td> <td style="text-align:left;">webpack is a module bundler. Its main purpose is to bundle JavaScript files for usage in a browser, yet it is also capable of transforming, bundling, or packaging just about any resource or asset.</td></tr> <tr><td style="text-align:left;">webpack-cli</td> <td style="text-align:left;">The official CLI of webpack</td></tr> <tr><td style="text-align:left;">webpack-dev-server</td> <td style="text-align:left;">Use webpack with a development server that provides live reloading. This should be used for development only.</td></tr> <tr><td style="text-align:left;">typescript</td> <td style="text-align:left;">TypeScript is a language for application-scale JavaScript.</td></tr> <tr><td style="text-align:left;">ts-loader</td> <td style="text-align:left;">This is the TypeScript loader for webpack.</td></tr> <tr><td style="text-align:left;">source-map-loader</td> <td style="text-align:left;">Extracts source maps from existing source files (from their sourceMappingURL).</td></tr> <tr><td style="text-align:left;">style-loader</td> <td style="text-align:left;">Inject CSS into the DOM.</td></tr> <tr><td style="text-align:left;">css-loader</td> <td style="text-align:left;">The css-loader interprets @import and url() like import/require() and will resolve them.</td></tr> <tr><td style="text-align:left;">less-loader</td> <td style="text-align:left;">A Less loader for webpack. Compiles Less to CSS.</td></tr> <tr><td style="text-align:left;">less</td> <td style="text-align:left;">This is the JavaScript, official, stable version of Less.</td></tr> <tr><td style="text-align:left;">file-loader</td> <td style="text-align:left;">The file-loader resolves import/require() on a file into a url and emits the file into the output directory.</td></tr> <tr><td style="text-align:left;">url-loader</td> <td style="text-align:left;">A loader for webpack which transforms files into base64 URIs.</td></tr> <tr><td style="text-align:left;">html-webpack-plugin</td> <td style="text-align:left;">Plugin that simplifies creation of HTML files to serve your bundles</td></tr> <tr><td style="text-align:left;">jest</td> <td style="text-align:left;"><a href="https://jestjs.io/" target="_blank" rel="noopener noreferrer">jest<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> is a delightful JavaScript Testing Framework with a focus on simplicity.</td></tr> <tr><td style="text-align:left;">jest-junit</td> <td style="text-align:left;">A Jest reporter that creates compatible junit xml files</td></tr> <tr><td style="text-align:left;">ts-jest</td> <td style="text-align:left;">ts-jest is a TypeScript preprocessor with source map support for Jest that lets you use Jest to test projects written in TypeScript.</td></tr> <tr><td style="text-align:left;">enzyme</td> <td style="text-align:left;">JavaScript Testing utilities for React</td></tr> <tr><td style="text-align:left;">enzyme-adapter-react-16</td> <td style="text-align:left;">Enzyme is a JavaScript Testing utility for React that makes it easier to test your React Components' output. You can also manipulate, traverse, and in some ways simulate runtime given the output.</td></tr></tbody></table> <h3 id="_1-3-支持typescript"><a href="#_1-3-支持typescript" class="header-anchor">#</a> 1.3 支持typescript</h3> <ul><li>首先需要生成一个<code>tsconfig.json</code>文件来告诉<code>ts-loader</code>如何编译代码TypeScript代码</li></ul> <div class="language-js extra-class"><pre class="language-js"><code>tsc <span class="token operator">--</span>init
+<span class="token punctuation">{</span>
+  <span class="token string">&quot;compilerOptions&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token string">&quot;target&quot;</span><span class="token operator">:</span> <span class="token string">&quot;es5&quot;</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;module&quot;</span><span class="token operator">:</span> <span class="token string">&quot;commonjs&quot;</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;jsx&quot;</span><span class="token operator">:</span> <span class="token string">&quot;react&quot;</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;outDir&quot;</span><span class="token operator">:</span> <span class="token string">&quot;./dist&quot;</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;rootDir&quot;</span><span class="token operator">:</span> <span class="token string">&quot;./src&quot;</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;noImplicitAny&quot;</span><span class="token operator">:</span><span class="token boolean">true</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;esModuleInterop&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token string">&quot;include&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token string">&quot;./src/**/*&quot;</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;./typings/**/*&quot;</span>
+  <span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+</code></pre></div><table><thead><tr><th style="text-align:left;">参数</th> <th style="text-align:left;">含义</th></tr></thead> <tbody><tr><td style="text-align:left;">target</td> <td style="text-align:left;">转换成es5</td></tr> <tr><td style="text-align:left;">module</td> <td style="text-align:left;">代码规范</td></tr> <tr><td style="text-align:left;">jsx</td> <td style="text-align:left;">react模式会生成React.createElement，在使用前不需要再进行转换操作了，输出文件的扩展名为.js</td></tr> <tr><td style="text-align:left;">outDir</td> <td style="text-align:left;">指定输出目录</td></tr> <tr><td style="text-align:left;">rootDir</td> <td style="text-align:left;">指定根目录</td></tr> <tr><td style="text-align:left;">sourceMap</td> <td style="text-align:left;">把 ts 文件编译成 js 文件的时候，同时生成对应的sourceMap文件</td></tr> <tr><td style="text-align:left;">noImplicitAny</td> <td style="text-align:left;">如果为true的话，TypeScript 编译器无法推断出类型时，它仍然会生成 JS文件，但是它也会报告一个错误</td></tr> <tr><td style="text-align:left;">esModuleInterop</td> <td style="text-align:left;">是否转译common.js模块</td></tr> <tr><td style="text-align:left;">include</td> <td style="text-align:left;">需要编译的目录</td></tr></tbody></table> <h3 id="_1-4-webpack-config-js"><a href="#_1-4-webpack-config-js" class="header-anchor">#</a> 1.4 webpack.config.js</h3> <p>webpack.config.js</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> webpack <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'webpack'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> HtmlWebpackPlugin <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'html-webpack-plugin'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> path <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'path'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+    mode<span class="token operator">:</span> <span class="token string">'development'</span><span class="token punctuation">,</span>
+    entry<span class="token operator">:</span> <span class="token string">&quot;./src/index.tsx&quot;</span><span class="token punctuation">,</span>
+    output<span class="token operator">:</span> <span class="token punctuation">{</span>
+        path<span class="token operator">:</span> path<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span> <span class="token string">'dist'</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    devtool<span class="token operator">:</span> <span class="token string">&quot;source-map&quot;</span><span class="token punctuation">,</span>
+    devServer<span class="token operator">:</span> <span class="token punctuation">{</span>
+        hot<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+        contentBase<span class="token operator">:</span> path<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span> <span class="token string">'dist'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        historyApiFallback<span class="token operator">:</span> <span class="token punctuation">{</span>
+            index<span class="token operator">:</span> <span class="token string">'./index.html'</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    resolve<span class="token operator">:</span> <span class="token punctuation">{</span>
+        extensions<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">&quot;.ts&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;.tsx&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;.js&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;.json&quot;</span><span class="token punctuation">]</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+
+    module<span class="token operator">:</span> <span class="token punctuation">{</span>
+        rules<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>
+            test<span class="token operator">:</span> <span class="token regex">/\.tsx?$/</span><span class="token punctuation">,</span>
+            loader<span class="token operator">:</span> <span class="token string">&quot;ts-loader&quot;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span>
+            enforce<span class="token operator">:</span> <span class="token string">&quot;pre&quot;</span><span class="token punctuation">,</span>
+            test<span class="token operator">:</span> <span class="token regex">/\.tsx$/</span><span class="token punctuation">,</span>
+            loader<span class="token operator">:</span> <span class="token string">&quot;source-map-loader&quot;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span>
+            test<span class="token operator">:</span> <span class="token regex">/\.less$/</span><span class="token punctuation">,</span>
+            use<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">'style-loader'</span><span class="token punctuation">,</span> <span class="token string">'css-loader'</span><span class="token punctuation">,</span> <span class="token string">'less-loader'</span><span class="token punctuation">]</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span>
+            test<span class="token operator">:</span> <span class="token regex">/\.(jpg|png|gif|svg)$/</span><span class="token punctuation">,</span>
+            loader<span class="token operator">:</span> <span class="token string">&quot;url-loader&quot;</span>
+        <span class="token punctuation">}</span>
+        <span class="token punctuation">]</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+
+    plugins<span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token keyword">new</span> <span class="token class-name">HtmlWebpackPlugin</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+            template<span class="token operator">:</span> <span class="token string">'./src/index.html'</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        <span class="token keyword">new</span> <span class="token class-name">webpack<span class="token punctuation">.</span>HotModuleReplacementPlugin</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><h3 id="_1-5-src-index-tsx"><a href="#_1-5-src-index-tsx" class="header-anchor">#</a> 1.5 src\index.tsx</h3> <p>src\index.tsx</p> <div class="language-js extra-class"><pre class="language-js"><code>console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'hello'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h3 id="_1-6-src-index-html"><a href="#_1-6-src-index-html" class="header-anchor">#</a> 1.6 src\index.html</h3> <p>src\index.html</p> <div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>root<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><h3 id="_1-7-package-json"><a href="#_1-7-package-json" class="header-anchor">#</a> 1.7 package.json</h3> <p>package.json</p> <div class="language-json extra-class"><pre class="language-json"><code>  <span class="token property">&quot;scripts&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;build&quot;</span><span class="token operator">:</span> <span class="token string">&quot;webpack&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;dev&quot;</span><span class="token operator">:</span> <span class="token string">&quot;webpack-dev-server&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;test&quot;</span><span class="token operator">:</span> <span class="token string">&quot;jest&quot;</span>
+  <span class="token punctuation">}</span>
+</code></pre></div><h2 id="_2-单元测试"><a href="#_2-单元测试" class="header-anchor">#</a> 2. 单元测试</h2> <h3 id="_2-1-jest-config-js"><a href="#_2-1-jest-config-js" class="header-anchor">#</a> 2.1 jest.config.js</h3> <p>jest.config.js</p> <div class="language-js extra-class"><pre class="language-js"><code>module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+    verbose<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    clearMocks<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    collectCoverage<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    reporters<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">&quot;default&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;jest-junit&quot;</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    moduleFileExtensions<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">'js'</span><span class="token punctuation">,</span> <span class="token string">'jsx'</span><span class="token punctuation">,</span> <span class="token string">'ts'</span><span class="token punctuation">,</span> <span class="token string">'tsx'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    moduleDirectories<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">'node_modules'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    transform<span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token string">'^.+\\.tsx?$'</span><span class="token operator">:</span> <span class="token string">'ts-jest'</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    moduleNameMapper<span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token string">&quot;\\.(jpg|jpeg|png|gif||svg|ttf|woff|woff2)$&quot;</span><span class="token operator">:</span>
+            <span class="token string">&quot;&lt;rootDir&gt;/test/__mocks__/file-mock.js&quot;</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;\\.(css|less|sass|scss)$&quot;</span><span class="token operator">:</span>
+            <span class="token string">&quot;&lt;rootDir&gt;/test/__mocks__/object-mock.js&quot;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    testRegex<span class="token operator">:</span> <span class="token string">'(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx|tsx)$'</span><span class="token punctuation">,</span>
+    moduleFileExtensions<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">'ts'</span><span class="token punctuation">,</span> <span class="token string">'tsx'</span><span class="token punctuation">,</span> <span class="token string">'js'</span><span class="token punctuation">,</span> <span class="token string">'jsx'</span><span class="token punctuation">,</span> <span class="token string">'json'</span><span class="token punctuation">,</span> <span class="token string">'node'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    setupFilesAfterEnv<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">'&lt;rootDir&gt;/test/setupTests.tsx'</span><span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="_2-2-src-utils-tsx"><a href="#_2-2-src-utils-tsx" class="header-anchor">#</a> 2.2 src\utils.tsx</h3> <p>src\utils.tsx</p> <div class="language-tsx extra-class"><pre class="language-tsx"><code><span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">sum</span><span class="token punctuation">(</span><span class="token parameter">a<span class="token operator">:</span> <span class="token builtin">number</span><span class="token punctuation">,</span> b<span class="token operator">:</span> <span class="token builtin">number</span></span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token builtin">number</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> a <span class="token operator">+</span> b<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="_2-3-utils-spec-tsx"><a href="#_2-3-utils-spec-tsx" class="header-anchor">#</a> 2.3 utils.spec.tsx</h3> <p>src__tests__\utils.spec.tsx</p> <div class="language-tsx extra-class"><pre class="language-tsx"><code><span class="token keyword">import</span> <span class="token punctuation">{</span> sum <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'../utils'</span><span class="token punctuation">;</span>
+<span class="token function">describe</span><span class="token punctuation">(</span><span class="token string">'sum'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token function">test</span><span class="token punctuation">(</span><span class="token string">'1+1'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        <span class="token function">expect</span><span class="token punctuation">(</span><span class="token function">sum</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toBe</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">test</span><span class="token punctuation">(</span><span class="token string">'2+2'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        <span class="token function">expect</span><span class="token punctuation">(</span><span class="token function">sum</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toBe</span><span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h3 id="_2-4-mocks-file-mock-js"><a href="#_2-4-mocks-file-mock-js" class="header-anchor">#</a> 2.4 mocks\file-mock.js</h3> <p>test__mocks__\file-mock.js</p> <div class="language-tsx extra-class"><pre class="language-tsx"><code><span class="token keyword">module</span><span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token string">'file-stub'</span><span class="token punctuation">;</span>
+</code></pre></div><h3 id="_2-5-object-mock-js"><a href="#_2-5-object-mock-js" class="header-anchor">#</a> 2.5 object-mock.js</h3> <p>test__mocks__\object-mock.js</p> <div class="language-tsx extra-class"><pre class="language-tsx"><code><span class="token keyword">module</span><span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+</code></pre></div><h2 id="_3-创建树型菜单"><a href="#_3-创建树型菜单" class="header-anchor">#</a> 3. 创建树型菜单</h2> <p><img src="https://wsk-mweb.oss-cn-hangzhou.aliyuncs.com/ipic/2020-04-21-150936.png" alt="treecomponent"></p> <h3 id="_3-1-src-index-tsx"><a href="#_3-1-src-index-tsx" class="header-anchor">#</a> 3.1 src\index.tsx</h3> <p>src\index.tsx</p> <div class="language-tsx extra-class"><pre class="language-tsx"><code><span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> ReactDOM <span class="token keyword">from</span> <span class="token string">'react-dom'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> Tree <span class="token keyword">from</span> <span class="token string">'./components/tree'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> data <span class="token keyword">from</span> <span class="token string">'./data'</span><span class="token punctuation">;</span>
+
+ReactDOM<span class="token punctuation">.</span><span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">,</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'root'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h3 id="_3-2-src-data-tsx"><a href="#_3-2-src-data-tsx" class="header-anchor">#</a> 3.2 src\data.tsx</h3> <p>src\data.tsx</p> <div class="language-tsx extra-class"><pre class="language-tsx"><code><span class="token keyword">import</span> <span class="token punctuation">{</span> TreeData <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'./typings'</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> data<span class="token operator">:</span> TreeData <span class="token operator">=</span> <span class="token punctuation">{</span>
+    name<span class="token operator">:</span> <span class="token string">'父亲'</span><span class="token punctuation">,</span>
+    key<span class="token operator">:</span> <span class="token string">'1'</span><span class="token punctuation">,</span>
+    <span class="token keyword">type</span><span class="token operator">:</span> <span class="token string">'folder'</span><span class="token punctuation">,</span>
+    collapsed<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+    children<span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span>
+            name<span class="token operator">:</span> <span class="token string">'儿子1'</span><span class="token punctuation">,</span>
+            key<span class="token operator">:</span> <span class="token string">'1-1'</span><span class="token punctuation">,</span>
+            <span class="token keyword">type</span><span class="token operator">:</span> <span class="token string">'folder'</span><span class="token punctuation">,</span>
+            collapsed<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+            children<span class="token operator">:</span> <span class="token punctuation">[</span>
+                <span class="token punctuation">{</span>
+                    name<span class="token operator">:</span> <span class="token string">'孙子1'</span><span class="token punctuation">,</span>
+                    key<span class="token operator">:</span> <span class="token string">'1-1-1'</span><span class="token punctuation">,</span>
+                    <span class="token keyword">type</span><span class="token operator">:</span> <span class="token string">'folder'</span><span class="token punctuation">,</span>
+                    collapsed<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+                    children<span class="token operator">:</span> <span class="token punctuation">[</span>
+                        <span class="token punctuation">{</span>
+                            name<span class="token operator">:</span> <span class="token string">'重孙1'</span><span class="token punctuation">,</span>
+                            key<span class="token operator">:</span> <span class="token string">'1-1-1-1'</span><span class="token punctuation">,</span>
+                            <span class="token keyword">type</span><span class="token operator">:</span> <span class="token string">'file'</span><span class="token punctuation">,</span>
+                            collapsed<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+                            children<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+                        <span class="token punctuation">}</span>
+                    <span class="token punctuation">]</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">]</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span>
+            name<span class="token operator">:</span> <span class="token string">'儿子2'</span><span class="token punctuation">,</span>
+            key<span class="token operator">:</span> <span class="token string">'1-2'</span><span class="token punctuation">,</span>
+            <span class="token keyword">type</span><span class="token operator">:</span> <span class="token string">'folder'</span><span class="token punctuation">,</span>
+            collapsed<span class="token operator">:</span> <span class="token boolean">true</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> data<span class="token punctuation">;</span>
+</code></pre></div><h3 id="_3-3-typings-tsx"><a href="#_3-3-typings-tsx" class="header-anchor">#</a> 3.3 typings.tsx</h3> <p>src\typings.tsx</p> <div class="language-tsx extra-class"><pre class="language-tsx"><code><span class="token keyword">export</span> <span class="token keyword">interface</span> <span class="token class-name">TreeData</span> <span class="token punctuation">{</span>
+    name<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">;</span>
+    key<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">;</span>
+    <span class="token keyword">type</span><span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">;</span>
+    collapsed<span class="token operator">?</span><span class="token operator">:</span> <span class="token builtin">boolean</span><span class="token punctuation">;</span>
+    children<span class="token operator">?</span><span class="token operator">:</span> <span class="token builtin">Array</span><span class="token punctuation">;</span>
+    parent<span class="token operator">?</span><span class="token operator">:</span> TreeData<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="_3-4-components-tree-tsx"><a href="#_3-4-components-tree-tsx" class="header-anchor">#</a> 3.4 components\tree.tsx</h3> <p>src\components\tree.tsx</p> <div class="language-tsx extra-class"><pre class="language-tsx"><code><span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token string">'./index.less'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> TreeData <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'../typings'</span><span class="token punctuation">;</span>
+<span class="token keyword">interface</span> <span class="token class-name">Props</span> <span class="token punctuation">{</span>
+    data<span class="token operator">:</span> TreeData
+<span class="token punctuation">}</span>
+<span class="token keyword">class</span> <span class="token class-name">Tree</span> <span class="token keyword">extends</span> <span class="token class-name">React<span class="token punctuation">.</span>Component</span> <span class="token punctuation">{</span>
+    <span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token punctuation">(</span>
+            
+
+                Tree
+            
+        <span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> Tree<span class="token punctuation">;</span>
+</code></pre></div><h3 id="_3-5-index-less"><a href="#_3-5-index-less" class="header-anchor">#</a> 3.5 index.less</h3> <p>src\components\index.less</p> <div class="language-tsx extra-class"><pre class="language-tsx"><code><span class="token punctuation">.</span>tree<span class="token punctuation">{</span>
+    position<span class="token operator">:</span> fixed<span class="token punctuation">;</span>
+    left<span class="token operator">:</span><span class="token number">0</span><span class="token punctuation">;</span>
+    top<span class="token operator">:</span><span class="token number">0</span><span class="token punctuation">;</span>
+    bottom<span class="token operator">:</span><span class="token number">0</span><span class="token punctuation">;</span>
+    width<span class="token operator">:</span><span class="token number">80</span><span class="token operator">%</span><span class="token punctuation">;</span>
+    overflow<span class="token operator">-</span>x<span class="token operator">:</span> hidden<span class="token punctuation">;</span>
+    overflow<span class="token operator">-</span>y<span class="token operator">:</span> auto<span class="token punctuation">;</span>
+    background<span class="token operator">-</span>color<span class="token operator">:</span> #<span class="token constant">EEE</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="_4-渲染树型结构"><a href="#_4-渲染树型结构" class="header-anchor">#</a> 4. 渲染树型结构</h2> <h3 id="_4-1-src-components-tree-tsx"><a href="#_4-1-src-components-tree-tsx" class="header-anchor">#</a> 4.1 src\components\tree.tsx</h3> <p>src\components\tree.tsx</p> <div class="language-diff extra-class"><pre class="language-diff"><code>import React from 'react';
+import './index.less';
+import { TreeData } from '../typings';
+<span class="token inserted-sign inserted">+import TreeNode from './tree-node';
+</span>interface Props {
+<span class="token unchanged">    data: TreeData
+</span>}
+<span class="token inserted-sign inserted">+interface KeyToNodeMap {
++    [key: string]: TreeData
++}
++interface State {
++    data: TreeData
++}
+</span>class Tree extends React.Component&lt;Props, State&gt; {
+<span class="token inserted-sign inserted">+    data: TreeData;
++    keyToNodeMap: KeyToNodeMap;
++    constructor(props: Props) {
++        super(props);
++        this.data = props.data;
++        this.state={ data: this.props.data };
++        this.buildKeyMap();
++    }
++    buildKeyMap = () =&gt; {
++        let data = this.data;
++        this.keyToNodeMap = {};
++        this.keyToNodeMap[data.key] = data;
++        if (data.children &amp;&amp; data.children.length &gt; 0) {
++            this.walk(data.children, data);
++        }
++    }
++    walk = (children: Array&lt;TreeData&gt;, parent: TreeData): void =&gt; {
++        children.map((item: TreeData) =&gt; {
++            item.parent = parent;
++            this.keyToNodeMap[item.key] = item;
++            if (item.children &amp;&amp; item.children.length &gt; 0) {
++                this.walk(item.children, item);
++            }
++        });
++    }
+</span><span class="token unchanged">    render() {
+        return (
+            &lt;div className=&quot;tree&quot;&gt;
+</span><span class="token inserted-sign inserted">+                &lt;div className=&quot;tree-nodes&quot;&gt;
++                    &lt;TreeNode
++                        data={this.props.data}
++                    /&gt;
++                &lt;/div&gt;
+</span><span class="token unchanged">            &lt;/div&gt;
+        )
+    }
+</span>}
+export default Tree;
+</code></pre></div><h3 id="_4-2-index-less"><a href="#_4-2-index-less" class="header-anchor">#</a> 4.2 index.less</h3> <p>src\components\index.less</p> <div class="language-diff extra-class"><pre class="language-diff"><code>.tree{
+<span class="token unchanged">    position: fixed;
+    left:0;
+    top:0;
+    bottom:0;
+    width:80%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-color: #EEE;
+</span><span class="token inserted-sign inserted">+    .tree-nodes{
++        position: relative;
++        overflow:hidden;
++        .tree-node{
++            .inner{
++                color:#000;
++                font-size:20px;
++                position: relative;
++                cursor:pointer;
++                padding-left:10px;
++                .content{
++                    display: inline-block;
++                    width:100%;
++                    padding:4px 5px;
++                }
++            }
++            .children{
++                padding-left: 20px;
++            }
++        }    
++    }
+</span>}
+</code></pre></div><h3 id="_4-3-components-tree-node-tsx"><a href="#_4-3-components-tree-node-tsx" class="header-anchor">#</a> 4.3 components\tree-node.tsx</h3> <p>src\components\tree-node.tsx</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> TreeData <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'../typings'</span><span class="token punctuation">;</span>
+<span class="token keyword">interface</span> <span class="token class-name">Props</span> <span class="token punctuation">{</span>
+    data<span class="token operator">:</span> TreeData
+<span class="token punctuation">}</span>
+<span class="token keyword">class</span> <span class="token class-name">TreeNode</span> <span class="token keyword">extends</span> <span class="token class-name">React<span class="token punctuation">.</span>Component</span><span class="token operator">&lt;</span>Props<span class="token operator">&gt;</span> <span class="token punctuation">{</span>
+    <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token parameter">props<span class="token operator">:</span> Props</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">super</span><span class="token punctuation">(</span>props<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">let</span> <span class="token punctuation">{</span> data<span class="token operator">:</span> <span class="token punctuation">{</span> name<span class="token punctuation">,</span> children <span class="token punctuation">}</span> <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>props<span class="token punctuation">;</span>
+        <span class="token keyword">return</span> <span class="token punctuation">(</span>
+            <span class="token operator">&lt;</span>div className<span class="token operator">=</span><span class="token string">&quot;tree-node&quot;</span><span class="token operator">&gt;</span>
+                <span class="token operator">&lt;</span>div className<span class="token operator">=</span><span class="token string">&quot;inner&quot;</span><span class="token operator">&gt;</span>
+                    <span class="token operator">&lt;</span>span className<span class="token operator">=</span><span class="token string">&quot;content&quot;</span><span class="token operator">&gt;</span><span class="token punctuation">{</span>name<span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>span<span class="token operator">&gt;</span>
+                <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+                <span class="token punctuation">{</span>
+                    <span class="token punctuation">(</span>children <span class="token operator">&amp;&amp;</span> children<span class="token punctuation">.</span>length <span class="token operator">&gt;</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span> <span class="token punctuation">(</span>
+                        <span class="token operator">&lt;</span>div className<span class="token operator">=</span><span class="token string">&quot;children&quot;</span><span class="token operator">&gt;</span>
+                            <span class="token punctuation">{</span>
+                                children<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">item<span class="token operator">:</span> TreeData</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span>
+                                    <span class="token operator">&lt;</span>TreeNode key<span class="token operator">=</span><span class="token punctuation">{</span>item<span class="token punctuation">.</span>key<span class="token punctuation">}</span> data<span class="token operator">=</span><span class="token punctuation">{</span>item<span class="token punctuation">}</span> <span class="token operator">/</span><span class="token operator">&gt;</span>
+                                <span class="token punctuation">)</span><span class="token punctuation">)</span>
+                            <span class="token punctuation">}</span>
+                        <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+                    <span class="token punctuation">)</span>
+                <span class="token punctuation">}</span>
+            <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+        <span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> TreeNode<span class="token punctuation">;</span>
+</code></pre></div><h2 id="_5-打开关闭功能"><a href="#_5-打开关闭功能" class="header-anchor">#</a> 5. 打开关闭功能</h2> <ul><li><a href="http://img.zhufengpeixun.cn/icons.zip" target="_blank" rel="noopener noreferrer">icons.zip<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul> <h3 id="_5-1-components-tree-tsx"><a href="#_5-1-components-tree-tsx" class="header-anchor">#</a> 5.1 components\tree.tsx</h3> <p>src\components\tree.tsx</p> <div class="language-diff extra-class"><pre class="language-diff"><code>import React from 'react';
+import './index.less';
+import { TreeData } from '../typings';
+import TreeNode from './tree-node';
+interface Props {
+<span class="token unchanged">    data: TreeData
+</span>}
+interface KeyToNodeMap {
+<span class="token unchanged">    [key: string]: TreeData
+</span>}
+interface State {
+<span class="token unchanged">    data: TreeData
+</span>}
+class Tree extends React.Component&lt;Props, State&gt; {
+<span class="token unchanged">    data: TreeData;
+    keyToNodeMap: KeyToNodeMap;
+    constructor(props: Props) {
+        super(props);
+        this.data = props.data;
+        this.state={ data: this.props.data };
+        this.buildKeyMap();
+    }
+    buildKeyMap = () =&gt; {
+        let data = this.data;
+        this.keyToNodeMap = {};
+        this.keyToNodeMap[data.key] = data;
+        if (data.children &amp;&amp; data.children.length &gt; 0) {
+            this.walk(data.children, data);
+        }
+    }
+    walk = (children: Array&lt;TreeData&gt;, parent: TreeData): void =&gt; {
+        children.map((item: TreeData) =&gt; {
+            item.parent = parent;
+            this.keyToNodeMap[item.key] = item;
+            if (item.children &amp;&amp; item.children.length &gt; 0) {
+                this.walk(item.children, item);
+            }
+        });
+    }
+</span><span class="token inserted-sign inserted">+    onCollapse = (key: string) =&gt; {
++        let data = this.keyToNodeMap[key];
++        if (data) {
++            data.collapsed = !data.collapsed;
++            data.children = data.children || [];
++            this.setState({ data: this.state.data });
++        }
++    }
+</span><span class="token unchanged">    render() {
+        return (
+            &lt;div className=&quot;tree&quot;&gt;
+                &lt;div className=&quot;tree-nodes&quot;&gt;
+                    &lt;TreeNode
+                        data={this.props.data}
+</span><span class="token inserted-sign inserted">+                        onCollapse={this.onCollapse}
+</span><span class="token unchanged">                    /&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        )
+    }
+</span>}
+export default Tree;
+</code></pre></div><h3 id="_5-2-tree-node-tsx"><a href="#_5-2-tree-node-tsx" class="header-anchor">#</a> 5.2 tree-node.tsx</h3> <p>src\components\tree-node.tsx</p> <div class="language-diff extra-class"><pre class="language-diff"><code>import React from 'react';
+import { TreeData } from '../typings';
+<span class="token inserted-sign inserted">+import file from '../assets/file.png';
++import closedFolder from '../assets/closed-folder.png';
++import openedFolder from '../assets/opened-folder.png';
+</span>interface Props {
+<span class="token unchanged">    data: TreeData,
+</span><span class="token inserted-sign inserted">+    onCollapse: any
+</span>}
+class TreeNode extends React.Component&lt;Props&gt; {
+<span class="token unchanged">    constructor(props: Props) {
+        super(props);
+    }
+    render() {
+</span><span class="token inserted-sign inserted">+        let { data: { name, children, collapsed = false, key } } = this.props;
++        let caret, icon;
++        if (children) {
++            if (children.length &gt; 0) {
++                caret = (
++                    &lt;span className={`collapse ${collapsed ? 'caret-right' : 'caret-down'}`}
++                        onClick={() =&gt; this.props.onCollapse(key)}
++                    /&gt;
++                )
++                icon = collapsed ? closedFolder : openedFolder;
++            } else {
++                caret = null;
++                icon = file;
++            }
++        } else {
++            caret = (
++                &lt;span className={`collapse caret-right`}
++                    onClick={() =&gt; this.props.onCollapse(key)}
++                /&gt;
++            )
++            icon = closedFolder;
++        }
+</span><span class="token unchanged">        return (
+            &lt;div className=&quot;tree-node&quot;&gt;
+                &lt;div className=&quot;inner&quot;&gt;
+</span><span class="token inserted-sign inserted">+                    {caret}
++                    &lt;span className=&quot;content&quot;&gt;
++                        &lt;img style={{ width: 20 }} src={icon} /&gt;
++                        {name}
++                    &lt;/span&gt;
+</span><span class="token unchanged">                &lt;/div&gt;
+                {
+</span><span class="token inserted-sign inserted">+                    (children &amp;&amp; children.length &gt; 0 &amp;&amp; !collapsed) &amp;&amp; (
+</span><span class="token unchanged">                        &lt;div className=&quot;children&quot;&gt;
+                            {
+                                children.map((item: TreeData) =&gt; (
+                                    &lt;TreeNode
+</span><span class="token inserted-sign inserted">+                                        onCollapse={this.props.onCollapse}
+</span><span class="token unchanged">                                        key={item.key}
+                                        data={item} /&gt;
+                                ))
+                            }
+                        &lt;/div&gt;
+                    )
+                }
+            &lt;/div&gt;
+        )
+    }
+</span>}
+export default TreeNode;
+</code></pre></div><h3 id="_5-3-components-index-less"><a href="#_5-3-components-index-less" class="header-anchor">#</a> 5.3 components\index.less</h3> <p>src\components\index.less</p> <div class="language-diff extra-class"><pre class="language-diff"><code>.tree{
+<span class="token unchanged">    position: fixed;
+    left:0;
+    top:0;
+    bottom:0;
+    width:80%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-color: #EEE;
+    .tree-nodes{
+        position: relative;
+        overflow:hidden;
+        .tree-node{
+            .inner{
+                color:#000;
+                font-size:20px;
+                position: relative;
+                cursor:pointer;
+                padding-left:10px;
+</span><span class="token inserted-sign inserted">+                .collapse {
++                    position: absolute;
++                    left: 0;
++                    cursor: pointer;
++                }
++                .caret-right:before {
++                    content: '\25B8';
++                }
++                .caret-down:before {
++                    content: '\25BE';
++                }
+</span><span class="token unchanged">                .content{
+                    display: inline-block;
+                    width:100%;
+                    padding:4px 5px;
+                }
+            }
+            .children{
+                padding-left: 20px;
+            }
+        }
+</span>
+<span class="token unchanged">    }
+</span>}
+</code></pre></div><h3 id="_5-4-images-d-ts"><a href="#_5-4-images-d-ts" class="header-anchor">#</a> 5.4 images.d.ts</h3> <p>typings\images.d.ts</p> <div class="language-ts extra-class"><pre class="language-ts"><code><span class="token keyword">declare</span> <span class="token keyword">module</span> <span class="token string">'*.svg'</span><span class="token punctuation">;</span>
+<span class="token keyword">declare</span> <span class="token keyword">module</span> <span class="token string">'*.png'</span><span class="token punctuation">;</span>
+<span class="token keyword">declare</span> <span class="token keyword">module</span> <span class="token string">'*.jpg'</span><span class="token punctuation">;</span>
+<span class="token keyword">declare</span> <span class="token keyword">module</span> <span class="token string">'*.jpeg'</span><span class="token punctuation">;</span>
+<span class="token keyword">declare</span> <span class="token keyword">module</span> <span class="token string">'*.gif'</span><span class="token punctuation">;</span>
+<span class="token keyword">declare</span> <span class="token keyword">module</span> <span class="token string">'*.bmp'</span><span class="token punctuation">;</span>
+<span class="token keyword">declare</span> <span class="token keyword">module</span> <span class="token string">'*.tiff'</span><span class="token punctuation">;</span>
+</code></pre></div><h2 id="_6-全选和全消功能"><a href="#_6-全选和全消功能" class="header-anchor">#</a> 6. 全选和全消功能</h2> <h3 id="_6-1-src-typings-tsx"><a href="#_6-1-src-typings-tsx" class="header-anchor">#</a> 6.1 src\typings.tsx</h3> <p>src\typings.tsx</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">export</span> <span class="token keyword">interface</span> <span class="token class-name">TreeData</span> <span class="token punctuation">{</span>
+    name<span class="token operator">:</span> string<span class="token punctuation">;</span>
+    key<span class="token operator">:</span> string<span class="token punctuation">;</span>
+    type<span class="token operator">:</span> string<span class="token punctuation">;</span>
+    collapsed<span class="token operator">:</span> boolean<span class="token punctuation">;</span>
+    children<span class="token operator">?</span><span class="token operator">:</span> Array<span class="token operator">&lt;</span>TreeData<span class="token operator">&gt;</span><span class="token punctuation">;</span>
+    parent<span class="token operator">?</span><span class="token operator">:</span> TreeData<span class="token punctuation">;</span>
+    checked<span class="token operator">?</span><span class="token operator">:</span> boolean<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="_6-2-components-tree-tsx"><a href="#_6-2-components-tree-tsx" class="header-anchor">#</a> 6.2 components\tree.tsx</h3> <p>src\components\tree.tsx</p> <div class="language-diff extra-class"><pre class="language-diff"><code>import React from 'react';
+import './index.less';
+import { TreeData } from '../typings';
+import TreeNode from './tree-node';
+interface Props {
+<span class="token unchanged">    data: TreeData
+</span>}
+interface KeyToNodeMap {
+<span class="token unchanged">    [key: string]: TreeData
+</span>}
+interface State {
+<span class="token unchanged">    data: TreeData
+</span>}
+class Tree extends React.Component&lt;Props, State&gt; {
+<span class="token unchanged">    data: TreeData;
+    keyToNodeMap: KeyToNodeMap;
+    constructor(props: Props) {
+        super(props);
+        this.data = props.data;
+        this.state={ data: this.props.data };
+        this.buildKeyMap();
+    }
+    buildKeyMap = () =&gt; {
+        let data = this.data;
+        this.keyToNodeMap = {};
+        this.keyToNodeMap[data.key] = data;
+        if (data.children &amp;&amp; data.children.length &gt; 0) {
+            this.walk(data.children, data);
+        }
+    }
+    walk = (children: Array&lt;TreeData&gt;, parent: TreeData): void =&gt; {
+        children.map((item: TreeData) =&gt; {
+            item.parent = parent;
+            this.keyToNodeMap[item.key] = item;
+            if (item.children &amp;&amp; item.children.length &gt; 0) {
+                this.walk(item.children, item);
+            }
+        });
+    }
+    onCollapse = (key: string) =&gt; {
+        let data = this.keyToNodeMap[key];
+        if (data) {
+            data.collapsed = !data.collapsed;
+            data.children = data.children || [];
+            this.setState({ data: this.state.data });
+        }
+    }
+</span><span class="token inserted-sign inserted">+    onCheck = (key: string) =&gt; {
++        let data: TreeData = this.keyToNodeMap[key];
++        if (data) {
++            data.checked = !data.checked;
++            if (data.checked) {
++                this.checkChildren(data.children, true);
++                this.checkParentCheckAll(data.parent);
++            } else {
++                this.checkChildren(data.children, false);
++                this.checkParent(data.parent, false);
++            }
++            this.setState({ data: this.state.data });
++        }
++    }
++    checkParentCheckAll = (parent: TreeData) =&gt; {
++        while (parent) {
++            parent.checked = parent.children.every(item =&gt; item.checked);
++            parent = parent.parent;
++        }
++    }
++    checkParent = (parent: TreeData, checked: boolean) =&gt; {
++        while (parent) {
++            parent.checked = checked;
++            parent = parent.parent;
++        }
++    }
++    checkChildren = (children: Array&lt;TreeData&gt; = [], checked: boolean) =&gt; {
++        children.forEach((item: TreeData) =&gt; {
++            item.checked = checked;
++            this.checkChildren(item.children, checked);
++        });
++    }
+</span><span class="token unchanged">    render() {
+        return (
+            &lt;div className=&quot;tree&quot;&gt;
+                &lt;div className=&quot;tree-nodes&quot;&gt;
+                    &lt;TreeNode
+                        data={this.props.data}
+                        onCollapse={this.onCollapse}
+</span><span class="token inserted-sign inserted">+                        onCheck={this.onCheck}
+</span><span class="token unchanged">                    /&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        )
+    }
+</span>}
+export default Tree;
+</code></pre></div><h3 id="_6-3-tree-node-tsx"><a href="#_6-3-tree-node-tsx" class="header-anchor">#</a> 6.3 tree-node.tsx</h3> <p>src\components\tree-node.tsx</p> <div class="language-diff extra-class"><pre class="language-diff"><code>import React from 'react';
+import { TreeData } from '../typings';
+import file from '../assets/file.png';
+import closedFolder from '../assets/closed-folder.png';
+import openedFolder from '../assets/opened-folder.png';
+interface Props {
+<span class="token unchanged">    data: TreeData,
+    onCollapse: any,
+</span><span class="token inserted-sign inserted">+    onCheck: any
+</span>}
+class TreeNode extends React.Component&lt;Props&gt; {
+<span class="token unchanged">    constructor(props: Props) {
+        super(props);
+    }
+    render() {
+</span><span class="token inserted-sign inserted">+        let { data: { name, children, collapsed = false, key, checked = false } } = this.props;
+</span><span class="token unchanged">        let caret, icon;
+        if (children) {
+            if (children.length &gt; 0) {
+                caret = (
+                    &lt;span className={`collapse ${collapsed ? 'caret-right' : 'caret-down'}`}
+                        onClick={() =&gt; this.props.onCollapse(key)}
+                    /&gt;
+                )
+                icon = collapsed ? closedFolder : openedFolder;
+            } else {
+                caret = null;
+                icon = file;
+            }
+        } else {
+            caret = (
+                &lt;span className={`collapse caret-right`}
+                    onClick={() =&gt; this.props.onCollapse(key)}
+                /&gt;
+            )
+            icon = closedFolder;
+        }
+        return (
+            &lt;div className=&quot;tree-node&quot;&gt;
+                &lt;div className=&quot;inner&quot;&gt;
+                    {caret}
+                    &lt;span className=&quot;content&quot;&gt;
+</span><span class="token inserted-sign inserted">+                        &lt;input type=&quot;checkbox&quot; checked={checked} onChange={() =&gt; this.props.onCheck(key)} /&gt;
+</span><span class="token unchanged">                        &lt;img style={{ width: 20 }} src={icon} /&gt;
+                        {name}
+                    &lt;/span&gt;
+                &lt;/div&gt;
+                {
+                    (children &amp;&amp; children.length &gt; 0 &amp;&amp; !collapsed) &amp;&amp; (
+                        &lt;div className=&quot;children&quot;&gt;
+                            {
+                                children.map((item: TreeData) =&gt; (
+                                    &lt;TreeNode
+                                        onCollapse={this.props.onCollapse}
+</span><span class="token inserted-sign inserted">+                                       onCheck={this.props.onCheck}
+</span><span class="token unchanged">                                        key={item.key}
+                                        data={item} /&gt;
+                                ))
+                            }
+                        &lt;/div&gt;
+                    )
+                }
+            &lt;/div&gt;
+        )
+    }
+</span>}
+export default TreeNode;
+</code></pre></div><h2 id="_7-动态加载数据"><a href="#_7-动态加载数据" class="header-anchor">#</a> 7. 动态加载数据</h2> <h3 id="_7-1-typings-tsx"><a href="#_7-1-typings-tsx" class="header-anchor">#</a> 7.1 typings.tsx</h3> <p>src\typings.tsx</p> <div class="language-diff extra-class"><pre class="language-diff"><code>export interface TreeData {
+<span class="token unchanged">    name: string;
+    key: string;
+    type: string;
+    collapsed: boolean;
+    children?: Array&lt;TreeData&gt;;
+    parent?: TreeData;
+    checked?: boolean;
+</span><span class="token inserted-sign inserted">+   loading?: boolean;
+</span>}
+</code></pre></div><h3 id="_7-2-tree-tsx"><a href="#_7-2-tree-tsx" class="header-anchor">#</a> 7.2 tree.tsx</h3> <p>src\components\tree.tsx</p> <div class="language-diff extra-class"><pre class="language-diff"><code>import React from 'react';
+import './index.less';
+import { TreeData } from '../typings';
+import TreeNode from './tree-node';
+<span class="token inserted-sign inserted">+import { getChildren } from '../api';
+</span>interface Props {
+<span class="token unchanged">    data: TreeData
+</span>}
+interface KeyToNodeMap {
+<span class="token unchanged">    [key: string]: TreeData
+</span>}
+interface State {
+<span class="token unchanged">    data: TreeData
+</span>}
+class Tree extends React.Component&lt;Props, State&gt; {
+<span class="token unchanged">    data: TreeData;
+    keyToNodeMap: KeyToNodeMap;
+    constructor(props: Props) {
+        super(props);
+        this.data = props.data;
+        this.state={ data: this.props.data };
+        this.buildKeyMap();
+    }
+    buildKeyMap = () =&gt; {
+        let data = this.data;
+        this.keyToNodeMap = {};
+        this.keyToNodeMap[data.key] = data;
+        if (data.children &amp;&amp; data.children.length &gt; 0) {
+            this.walk(data.children, data);
+        }
+    }
+    walk = (children: Array&lt;TreeData&gt;, parent: TreeData): void =&gt; {
+        children.map((item: TreeData) =&gt; {
+            item.parent = parent;
+            this.keyToNodeMap[item.key] = item;
+            if (item.children &amp;&amp; item.children.length &gt; 0) {
+                this.walk(item.children, item);
+            }
+        });
+    }
+</span><span class="token inserted-sign inserted">+    onCollapse = async (key: string) =&gt; {
+</span><span class="token unchanged">        let data = this.keyToNodeMap[key];
+        if (data) {
+</span><span class="token inserted-sign inserted">+            let { children } = data;
++            if (!children) {
++                data.loading = true;
++                this.setState({ data: this.state.data });
++                let result = await getChildren(data);
++                if (result.code == 0) {
++                    data.children = result.data;
++                    data.collapsed = false;
++                    data.loading = false;
++                    this.buildKeyMap();
++                    this.setState({ data: this.state.data });
++                } else {
++                    alert('加载失败');
++                }
++            } else {
++                data.collapsed = !data.collapsed;
++                this.setState({ data: this.state.data });
++            }
+</span><span class="token unchanged">        }
+    }
+    onCheck = (key: string) =&gt; {
+        let data: TreeData = this.keyToNodeMap[key];
+        if (data) {
+            data.checked = !data.checked;
+            if (data.checked) {
+                this.checkChildren(data.children, true);
+                this.checkParentCheckAll(data.parent);
+            } else {
+                this.checkChildren(data.children, false);
+                this.checkParent(data.parent, false);
+            }
+            this.setState({ data: this.state.data });
+        }
+    }
+    checkParentCheckAll = (parent: TreeData) =&gt; {
+        while (parent) {
+            parent.checked = parent.children.every(item =&gt; item.checked);
+            parent = parent.parent;
+        }
+    }
+    checkParent = (parent: TreeData, checked: boolean) =&gt; {
+        while (parent) {
+            parent.checked = checked;
+            parent = parent.parent;
+        }
+    }
+    checkChildren = (children: Array&lt;TreeData&gt; = [], checked: boolean) =&gt; {
+        children.forEach((item: TreeData) =&gt; {
+            item.checked = checked;
+            this.checkChildren(item.children, checked);
+        });
+    }
+    render() {
+        return (
+            &lt;div className=&quot;tree&quot;&gt;
+                &lt;div className=&quot;tree-nodes&quot;&gt;
+                    &lt;TreeNode
+                        data={this.props.data}
+                        onCollapse={this.onCollapse}
+                        onCheck={this.onCheck}
+                    /&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        )
+    }
+</span>}
+export default Tree;
+</code></pre></div><h3 id="_7-3-tree-node-tsx"><a href="#_7-3-tree-node-tsx" class="header-anchor">#</a> 7.3 tree-node.tsx</h3> <p>src\components\tree-node.tsx</p> <div class="language-diff extra-class"><pre class="language-diff"><code>import React from 'react';
+import { TreeData } from '../typings';
+import file from '../assets/file.png';
+import closedFolder from '../assets/closed-folder.png';
+import openedFolder from '../assets/opened-folder.png';
+<span class="token inserted-sign inserted">+import loadingSrc from '../assets/loading.gif';
+</span>interface Props {
+<span class="token unchanged">    data: TreeData,
+    onCollapse: any,
+    onCheck: any
+</span>}
+class TreeNode extends React.Component&lt;Props&gt; {
+<span class="token unchanged">    constructor(props: Props) {
+        super(props);
+    }
+    render() {
+</span><span class="token inserted-sign inserted">+        let { data: { name, children, collapsed = false, key, checked = false,loading } } = this.props;
+</span><span class="token unchanged">        let caret, icon;
+        if (children) {
+            if (children.length &gt; 0) {
+                caret = (
+                    &lt;span className={`collapse ${collapsed ? 'caret-right' : 'caret-down'}`}
+                        onClick={() =&gt; this.props.onCollapse(key)}
+                    /&gt;
+                )
+                icon = collapsed ? closedFolder : openedFolder;
+            } else {
+                caret = null;
+                icon = file;
+            }
+        } else {
+</span><span class="token inserted-sign inserted">+            caret = (
+</span><span class="token unchanged">                loading?&lt;img className=&quot;collapse&quot; src={loadingSrc} style={{ width: 14, top: '50%', marginTop: -7 }}/&gt;:&lt;span className={`collapse caret-right`}
+                    onClick={() =&gt; this.props.onCollapse(key)}
+                /&gt;
+            )
+            icon = closedFolder;
+        }
+        return (
+            &lt;div className=&quot;tree-node&quot;&gt;
+                &lt;div className=&quot;inner&quot;&gt;
+                    {caret}
+                    &lt;span className=&quot;content&quot;&gt;
+                        &lt;input type=&quot;checkbox&quot; checked={checked} onChange={() =&gt; this.props.onCheck(key)} /&gt;
+                        &lt;img style={{ width: 20 }} src={icon} /&gt;
+                        {name}
+                    &lt;/span&gt;
+                &lt;/div&gt;
+                {
+                    (children &amp;&amp; children.length &gt; 0 &amp;&amp; !collapsed) &amp;&amp; (
+                        &lt;div className=&quot;children&quot;&gt;
+                            {
+                                children.map((item: TreeData) =&gt; (
+                                    &lt;TreeNode
+                                        onCollapse={this.props.onCollapse}
+                                        onCheck={this.props.onCheck}
+                                        key={item.key}
+                                        data={item} /&gt;
+                                ))
+                            }
+                        &lt;/div&gt;
+                    )
+                }
+            &lt;/div&gt;
+        )
+    }
+</span>}
+export default TreeNode;
+</code></pre></div><h3 id="_7-4-src-api-tsx"><a href="#_7-4-src-api-tsx" class="header-anchor">#</a> 7.4 src\api.tsx</h3> <p>src\api.tsx</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">import</span> axios <span class="token keyword">from</span> <span class="token string">'axios'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> qs <span class="token keyword">from</span> <span class="token string">'qs'</span><span class="token punctuation">;</span>
+axios<span class="token punctuation">.</span>defaults<span class="token punctuation">.</span>baseURL <span class="token operator">=</span> <span class="token string">'http://localhost:3000'</span><span class="token punctuation">;</span>
+<span class="token keyword">export</span> <span class="token keyword">const</span> <span class="token function-variable function">getChildren</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">data<span class="token operator">:</span> any</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> axios<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">/getChildren?</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>qs<span class="token punctuation">.</span><span class="token function">stringify</span><span class="token punctuation">(</span><span class="token punctuation">{</span> key<span class="token operator">:</span> data<span class="token punctuation">.</span>key<span class="token punctuation">,</span> name<span class="token operator">:</span> data<span class="token punctuation">.</span>name <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token parameter">res</span> <span class="token operator">=&gt;</span> res<span class="token punctuation">.</span>data<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">catch</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">error</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>error<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="_7-5-api-js"><a href="#_7-5-api-js" class="header-anchor">#</a> 7.5 api.js</h3> <p>api.js</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">let</span> express <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'express'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> app <span class="token operator">=</span> <span class="token function">express</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+app<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">req<span class="token punctuation">,</span> res<span class="token punctuation">,</span> next</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    res<span class="token punctuation">.</span><span class="token function">setHeader</span><span class="token punctuation">(</span><span class="token string">'Access-Control-Allow-Origin'</span><span class="token punctuation">,</span> <span class="token string">'*'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>req<span class="token punctuation">.</span>method <span class="token operator">===</span> <span class="token string">'OPTIONS'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> res<span class="token punctuation">.</span><span class="token function">sendStatus</span><span class="token punctuation">(</span><span class="token number">200</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+app<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">'/getChildren'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">req<span class="token punctuation">,</span> res</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword">let</span> data <span class="token operator">=</span> req<span class="token punctuation">.</span>query<span class="token punctuation">;</span>
+    <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        res<span class="token punctuation">.</span><span class="token function">json</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+            code<span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+            data<span class="token operator">:</span> <span class="token punctuation">[</span>
+                <span class="token punctuation">{</span>
+                    name<span class="token operator">:</span> data<span class="token punctuation">.</span>name <span class="token operator">+</span> <span class="token string">'的儿子1'</span><span class="token punctuation">,</span>
+                    key<span class="token operator">:</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>data<span class="token punctuation">.</span>key<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">-1</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">,</span>
+                    type<span class="token operator">:</span> <span class="token string">'folder'</span><span class="token punctuation">,</span>
+                    collapsed<span class="token operator">:</span> <span class="token boolean">true</span>
+                <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                <span class="token punctuation">{</span>
+                    name<span class="token operator">:</span> data<span class="token punctuation">.</span>name <span class="token operator">+</span> <span class="token string">'的儿子2'</span><span class="token punctuation">,</span>
+                    key<span class="token operator">:</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>data<span class="token punctuation">.</span>key<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">-2</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">,</span>
+                    type<span class="token operator">:</span> <span class="token string">'folder'</span><span class="token punctuation">,</span>
+                    collapsed<span class="token operator">:</span> <span class="token boolean">true</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">]</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token number">2000</span><span class="token punctuation">)</span>
+
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+app<span class="token punctuation">.</span><span class="token function">listen</span><span class="token punctuation">(</span><span class="token number">3000</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">接口服务器在</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span><span class="token number">3000</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">上启动</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h2 id="_8-拖动排序"><a href="#_8-拖动排序" class="header-anchor">#</a> 8. 拖动排序</h2> <h3 id="_8-1-components-tree-tsx"><a href="#_8-1-components-tree-tsx" class="header-anchor">#</a> 8.1 components\tree.tsx</h3> <p>src\components\tree.tsx</p> <div class="language-diff extra-class"><pre class="language-diff"><code>import React from 'react';
+import './index.less';
+import { TreeData } from '../typings';
+import TreeNode from './tree-node';
+import { getChildren } from '../api';
+interface Props {
+<span class="token unchanged">    data: TreeData;
+</span>}
+interface KeyToNodeMap {
+<span class="token unchanged">    [key: string]: TreeData
+</span>}
+interface State {
+<span class="token unchanged">    data: TreeData;
+</span><span class="token inserted-sign inserted">+    fromNode?: TreeData;
+</span>}
+class Tree extends React.Component&lt;Props, State&gt; {
+<span class="token unchanged">    data: TreeData;
+    keyToNodeMap: KeyToNodeMap;
+    constructor(props: Props) {
+        super(props);
+        this.state = { data: this.props.data };
+        this.data = props.data;
+        this.buildKeyMap();
+    }
+    buildKeyMap = () =&gt; {
+        let data = this.data;
+        this.keyToNodeMap = {};
+        this.keyToNodeMap[data.key] = data;
+        if (data.children &amp;&amp; data.children.length &gt; 0) {
+            this.walk(data.children, data);
+        }
+        this.setState({ data: this.state.data });
+    }
+    walk = (children: Array&lt;TreeData&gt;, parent: TreeData): void =&gt; {
+        children.map((item: TreeData) =&gt; {
+            item.parent = parent;
+            this.keyToNodeMap[item.key] = item;
+            if (item.children &amp;&amp; item.children.length &gt; 0) {
+                this.walk(item.children, item);
+            }
+        });
+    }
+    onCollapse = async (key: string) =&gt; {
+        let data = this.keyToNodeMap[key];
+        if (data) {
+            let { children } = data;
+            if (!children) {
+                data.loading = true;
+                this.setState({ data: this.state.data });
+                let result = await getChildren(data);
+                if (result.code == 0) {
+                    data.children = result.data;
+                    data.collapsed = false;
+                    data.loading = false;
+                    this.buildKeyMap();
+                } else {
+                    alert('加载失败');
+                }
+            } else {
+                data.collapsed = !data.collapsed;
+                this.setState({ data: this.state.data });
+            }
+        }
+    }
+    onCheck = (key: string) =&gt; {
+        let data: TreeData = this.keyToNodeMap[key];
+        if (data) {
+            data.checked = !data.checked;
+            if (data.checked) {
+                this.checkChildren(data.children, true);
+                this.checkParentCheckAll(data.parent);
+            } else {
+                this.checkChildren(data.children, false);
+                this.checkParent(data.parent, false);
+            }
+            this.setState({ data: this.state.data });
+        }
+    }
+    checkParentCheckAll = (parent: TreeData) =&gt; {
+        while (parent) {
+            parent.checked = parent.children.every(item =&gt; item.checked);
+            parent = parent.parent;
+        }
+    }
+    checkParent = (parent: TreeData, checked: boolean) =&gt; {
+        while (parent) {
+            parent.checked = checked;
+            parent = parent.parent;
+        }
+    }
+    checkChildren = (children: Array&lt;TreeData&gt; = [], checked: boolean) =&gt; {
+        children.forEach((item: TreeData) =&gt; {
+            item.checked = checked;
+            this.checkChildren(item.children, checked);
+        });
+    }
+</span><span class="token inserted-sign inserted">+    setFromNode = (fromNode: TreeData) =&gt; {
++        this.setState({ ...this.state, fromNode });
++    }
++    onMove = (toNode: TreeData) =&gt; {
++        let fromNode = this.state.fromNode;
++        let fromChildren = fromNode.parent.children, toChildren = toNode.parent.children;
++        let fromIndex = fromChildren.findIndex((item: TreeData) =&gt; item === fromNode);
++        let toIndex = toChildren.findIndex(item =&gt; item === toNode);
++        fromChildren.splice(fromIndex, 1, toNode);
++        toChildren.splice(toIndex, 1, fromNode);
++        this.buildKeyMap();
++    }
+</span><span class="token unchanged">    render() {
+        return (
+            &lt;div className=&quot;tree&quot;&gt;
+                &lt;div className=&quot;tree-nodes&quot;&gt;
+                    &lt;TreeNode
+                        data={this.props.data}
+                        onCollapse={this.onCollapse}
+                        onCheck={this.onCheck}
+</span><span class="token inserted-sign inserted">+                        setFromNode={this.setFromNode}
++                        onMove={this.onMove}
+</span><span class="token unchanged">                    /&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        )
+    }
+</span>}
+export default Tree;
+</code></pre></div><h3 id="_8-2-tree-node-tsx"><a href="#_8-2-tree-node-tsx" class="header-anchor">#</a> 8.2 tree-node.tsx</h3> <p>src\components\tree-node.tsx</p> <div class="language-diff extra-class"><pre class="language-diff"><code>import React from 'react';
+import { TreeData } from '../typings';
+import file from '../assets/file.png';
+import closedFolder from '../assets/closed-folder.png';
+import openedFolder from '../assets/opened-folder.png';
+import loadingSrc from '../assets/loading.gif';
+interface Props {
+<span class="token unchanged">    data: TreeData,
+    onCollapse: any,
+    onCheck: any;
+</span><span class="token inserted-sign inserted">+   setFromNode: any;
++   onMove: any
+</span>}
+class TreeNode extends React.Component&lt;Props&gt; {
+<span class="token unchanged">    treeNodeRef: React.RefObject&lt;HTMLDivElement&gt;;
+    constructor(props: Props) {
+        super(props);
+</span><span class="token inserted-sign inserted">+        this.treeNodeRef = React.createRef();
+</span><span class="token unchanged">    }
+</span><span class="token inserted-sign inserted">+    componentDidMount() {
++        this.treeNodeRef.current.addEventListener('dragstart', (event: DragEvent): void =&gt; {
++            this.props.setFromNode(this.props.data);
++            event.stopPropagation();
++        }, false);//useCapture=false
++        this.treeNodeRef.current.addEventListener('dragenter', (event: DragEvent) =&gt; {
++            event.preventDefault();
++            event.stopPropagation();
++        }, false);
++        this.treeNodeRef.current.addEventListener('dragover', (event: DragEvent) =&gt; {
++            event.preventDefault();
++            event.stopPropagation();
++        }, false);
++        this.treeNodeRef.current.addEventListener('drop', (event: DragEvent) =&gt; {
++            event.preventDefault();
++            this.props.onMove(this.props.data);
++            event.stopPropagation();
++        }, false);
++    }
+</span><span class="token unchanged">    render() {
+        let { data: { name, children, collapsed = false, key, checked = false, loading } } = this.props;
+        let caret, icon;
+        if (children) {
+            if (children.length &gt; 0) {
+                caret = (
+                    &lt;span className={`collapse ${collapsed ? 'caret-right' : 'caret-down'}`}
+                        onClick={() =&gt; this.props.onCollapse(key)}
+                    /&gt;
+                )
+                icon = collapsed ? closedFolder : openedFolder;
+            } else {
+                caret = null;
+                icon = file;
+            }
+        } else {
+            caret = (
+                loading ? &lt;img className=&quot;collapse&quot; src={loadingSrc} style={{ width: 14, top: '50%', marginTop: -7 }} /&gt; : &lt;span className={`collapse caret-right`}
+                    onClick={() =&gt; this.props.onCollapse(key)}
+                /&gt;
+            )
+            icon = closedFolder;
+        }
+        return (
+            &lt;div className=&quot;tree-node&quot; draggable={true} ref={this.treeNodeRef}&gt;
+                &lt;div className=&quot;inner&quot;&gt;
+                    {caret}
+                    &lt;span className=&quot;content&quot;&gt;
+                        &lt;input type=&quot;checkbox&quot; checked={checked} onChange={() =&gt; this.props.onCheck(key)} /&gt;
+                        &lt;img style={{ width: 20 }} src={icon} /&gt;
+                        {name}
+                    &lt;/span&gt;
+                &lt;/div&gt;
+                {
+                    (children &amp;&amp; children.length &gt; 0 &amp;&amp; !collapsed) &amp;&amp; (
+                        &lt;div className=&quot;children&quot;&gt;
+                            {
+                                children.map((item: TreeData) =&gt; (
+                                    &lt;TreeNode
+                                        onCollapse={this.props.onCollapse}
+                                        onCheck={this.props.onCheck}
+                                        key={item.key}
+</span><span class="token inserted-sign inserted">+                                        setFromNode={this.props.setFromNode}
++                                        onMove={this.props.onMove}
+</span><span class="token unchanged">                                        data={item} /&gt;
+                                ))
+                            }
+                        &lt;/div&gt;
+                    )
+                }
+            &lt;/div&gt;
+        )
+    }
+</span>}
+export default TreeNode;
+</code></pre></div></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">更新时间:</span> <span class="time">4/23/2020, 10:12:56 AM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/react/component/upload.html" class="prev">
+        上传功能
+      </a></span> <span class="next"><a href="/react/interview/01-basic-doc.html">
+        01. React 面试知识点
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.2af561cb.js" defer></script><script src="/assets/js/2.b2a5c435.js" defer></script><script src="/assets/js/33.f975c942.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,1527 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>02. Fiber | 珠峰架构</title>
+    <meta name="generator" content="VuePress 1.4.1">
+    
+    <meta name="description" content="">
+    <link rel="preload" href="/assets/css/0.styles.1657c744.css" as="style"><link rel="preload" href="/assets/js/app.2af561cb.js" as="script"><link rel="preload" href="/assets/js/2.b2a5c435.js" as="script"><link rel="preload" href="/assets/js/39.26f95568.js" as="script"><link rel="prefetch" href="/assets/js/10.2b2c8443.js"><link rel="prefetch" href="/assets/js/11.689524dc.js"><link rel="prefetch" href="/assets/js/12.849e2da9.js"><link rel="prefetch" href="/assets/js/13.c798d95d.js"><link rel="prefetch" href="/assets/js/14.380c4ee7.js"><link rel="prefetch" href="/assets/js/15.d5753b2e.js"><link rel="prefetch" href="/assets/js/16.49eb1f17.js"><link rel="prefetch" href="/assets/js/17.5ecf2b4f.js"><link rel="prefetch" href="/assets/js/18.da9c8265.js"><link rel="prefetch" href="/assets/js/19.59d827ef.js"><link rel="prefetch" href="/assets/js/20.73eb42bb.js"><link rel="prefetch" href="/assets/js/21.8570b5b4.js"><link rel="prefetch" href="/assets/js/22.34094913.js"><link rel="prefetch" href="/assets/js/23.5209939b.js"><link rel="prefetch" href="/assets/js/24.53d92201.js"><link rel="prefetch" href="/assets/js/25.7241adf1.js"><link rel="prefetch" href="/assets/js/26.fecc2611.js"><link rel="prefetch" href="/assets/js/27.e50fca48.js"><link rel="prefetch" href="/assets/js/28.4c168acc.js"><link rel="prefetch" href="/assets/js/29.f5186710.js"><link rel="prefetch" href="/assets/js/3.ba1dcccd.js"><link rel="prefetch" href="/assets/js/30.33cb1c11.js"><link rel="prefetch" href="/assets/js/31.c088791d.js"><link rel="prefetch" href="/assets/js/32.3b724af5.js"><link rel="prefetch" href="/assets/js/33.f975c942.js"><link rel="prefetch" href="/assets/js/34.7d1f4bd2.js"><link rel="prefetch" href="/assets/js/35.26c11750.js"><link rel="prefetch" href="/assets/js/36.e8890e58.js"><link rel="prefetch" href="/assets/js/37.516eba46.js"><link rel="prefetch" href="/assets/js/38.4f8b8525.js"><link rel="prefetch" href="/assets/js/4.fca74266.js"><link rel="prefetch" href="/assets/js/40.b9a8ffbb.js"><link rel="prefetch" href="/assets/js/41.fd02ea5f.js"><link rel="prefetch" href="/assets/js/42.d2483185.js"><link rel="prefetch" href="/assets/js/43.70bff2de.js"><link rel="prefetch" href="/assets/js/44.219702ca.js"><link rel="prefetch" href="/assets/js/45.aba93af9.js"><link rel="prefetch" href="/assets/js/46.447ba87c.js"><link rel="prefetch" href="/assets/js/47.519ddc28.js"><link rel="prefetch" href="/assets/js/48.fd8af347.js"><link rel="prefetch" href="/assets/js/49.b3783fa9.js"><link rel="prefetch" href="/assets/js/5.cc992e8b.js"><link rel="prefetch" href="/assets/js/50.0bb20f92.js"><link rel="prefetch" href="/assets/js/51.37ba1a59.js"><link rel="prefetch" href="/assets/js/52.054af132.js"><link rel="prefetch" href="/assets/js/53.5aca78a0.js"><link rel="prefetch" href="/assets/js/54.78c43f89.js"><link rel="prefetch" href="/assets/js/55.8ecaadc1.js"><link rel="prefetch" href="/assets/js/56.e844f110.js"><link rel="prefetch" href="/assets/js/57.530db0e9.js"><link rel="prefetch" href="/assets/js/58.8c839289.js"><link rel="prefetch" href="/assets/js/59.6634b409.js"><link rel="prefetch" href="/assets/js/6.b8b36e50.js"><link rel="prefetch" href="/assets/js/60.7ebe5787.js"><link rel="prefetch" href="/assets/js/61.bfe89a8b.js"><link rel="prefetch" href="/assets/js/62.4cdf6e8c.js"><link rel="prefetch" href="/assets/js/63.a0e80f0d.js"><link rel="prefetch" href="/assets/js/64.62a1b782.js"><link rel="prefetch" href="/assets/js/65.7be0994b.js"><link rel="prefetch" href="/assets/js/66.5a592a8e.js"><link rel="prefetch" href="/assets/js/67.40b4291c.js"><link rel="prefetch" href="/assets/js/68.2ac34b58.js"><link rel="prefetch" href="/assets/js/69.728773d5.js"><link rel="prefetch" href="/assets/js/7.0414e914.js"><link rel="prefetch" href="/assets/js/70.30137f66.js"><link rel="prefetch" href="/assets/js/71.7735c9fc.js"><link rel="prefetch" href="/assets/js/72.e9f43339.js"><link rel="prefetch" href="/assets/js/73.2d754e71.js"><link rel="prefetch" href="/assets/js/74.bf70dd09.js"><link rel="prefetch" href="/assets/js/75.18c28356.js"><link rel="prefetch" href="/assets/js/76.a0626bc9.js"><link rel="prefetch" href="/assets/js/77.dfde57e0.js"><link rel="prefetch" href="/assets/js/78.b380a0d6.js"><link rel="prefetch" href="/assets/js/79.f7bafb5d.js"><link rel="prefetch" href="/assets/js/8.c3544379.js"><link rel="prefetch" href="/assets/js/80.ade6c33e.js"><link rel="prefetch" href="/assets/js/81.6335ba85.js"><link rel="prefetch" href="/assets/js/82.9d01c14e.js"><link rel="prefetch" href="/assets/js/83.47911fdd.js"><link rel="prefetch" href="/assets/js/9.844fca3b.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.1657c744.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">珠峰架构</span></a> <div class="links"><!----> <!----></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><!---->  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><a href="/react/" class="sidebar-heading clickable router-link-active open"><span>react</span> <span class="arrow down"></span></a> <ul class="sidebar-links sidebar-group-items"><li><section class="sidebar-group collapsable is-sub-group depth-1"><a href="/react/basic/" class="sidebar-heading clickable"><span>基础</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><a href="/react/fiber/" class="sidebar-heading clickable router-link-active open"><span>Fiber</span> <span class="arrow down"></span></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/react/fiber/01-fiber.html" class="sidebar-link">01. Fiber</a></li><li><a href="/react/fiber/02-fiber.html" class="active sidebar-link">02. Fiber</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/react/fiber/02-fiber.html#_1-实现虚拟dom" class="sidebar-link">1.实现虚拟DOM</a></li><li class="sidebar-sub-header"><a href="/react/fiber/02-fiber.html#_2-实现初次渲染" class="sidebar-link">2.实现初次渲染</a></li><li class="sidebar-sub-header"><a href="/react/fiber/02-fiber.html#_3-实现元素的更新" class="sidebar-link">3.实现元素的更新</a></li><li class="sidebar-sub-header"><a href="/react/fiber/02-fiber.html#_4-实现类组件" class="sidebar-link">4.实现类组件</a></li><li class="sidebar-sub-header"><a href="/react/fiber/02-fiber.html#_5-实现函数组件" class="sidebar-link">5.实现函数组件</a></li><li class="sidebar-sub-header"><a href="/react/fiber/02-fiber.html#_5-实现hooks" class="sidebar-link">5.实现hooks</a></li></ul></li></ul></section></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><a href="/react/router/" class="sidebar-heading clickable"><span>react router</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><a href="/react/redux/" class="sidebar-heading clickable"><span>redux</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><a href="/react/ssr/" class="sidebar-heading clickable"><span>SSR</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><a href="/react/nextjs/" class="sidebar-heading clickable"><span>nextjs</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><a href="/react/dva/" class="sidebar-heading clickable"><span>dva</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><a href="/react/umi/" class="sidebar-heading clickable"><span>umi</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><a href="/react/component/" class="sidebar-heading clickable"><span>组件</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><a href="/react/interview/" class="sidebar-heading clickable"><span>面试</span> <span class="arrow right"></span></a> <!----></section></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/vue/" class="sidebar-heading clickable"><span>vue</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/webpack/" class="sidebar-heading clickable"><span>webpack</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/flutter/" class="sidebar-heading clickable"><span>flutter</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/interview/" class="sidebar-heading clickable"><span>interview</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/other/" class="sidebar-heading clickable"><span>other</span> <span class="arrow right"></span></a> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="_02-fiber"><a href="#_02-fiber" class="header-anchor">#</a> 02. Fiber</h1> <h2 id="_1-实现虚拟dom"><a href="#_1-实现虚拟dom" class="header-anchor">#</a> 1.实现虚拟DOM</h2> <h3 id="_1-1-src-index-js"><a href="#_1-1-src-index-js" class="header-anchor">#</a> 1.1 src\index.js</h3> <div class="language-jsx extra-class"><pre class="language-jsx"><code><span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">'./react'</span><span class="token punctuation">;</span>
+<span class="token comment">//import ReactDOM from 'react-dom';</span>
+<span class="token keyword">let</span> element <span class="token operator">=</span> <span class="token punctuation">(</span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>A1<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+    </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>B1<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+      </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>C1<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+      </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>C2<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+    </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+    </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>B2<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+  </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token punctuation">)</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>element<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">/* ReactDOM.render(
+  element,
+  document.getElementById('root')
+);
+*/</span>
+</code></pre></div><h3 id="_1-2-src-react-js"><a href="#_1-2-src-react-js" class="header-anchor">#</a> 1.2 src\react.js</h3> <p>src\react.js</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">import</span> <span class="token punctuation">{</span> <span class="token constant">ELEMENT_TEXT</span> <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'./constants'</span><span class="token punctuation">;</span>
+<span class="token keyword">function</span> <span class="token function">createElement</span><span class="token punctuation">(</span><span class="token parameter">type<span class="token punctuation">,</span> config<span class="token punctuation">,</span> <span class="token operator">...</span>children</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">delete</span> config<span class="token punctuation">.</span>__self<span class="token punctuation">;</span>
+    <span class="token keyword">delete</span> config<span class="token punctuation">.</span>__source<span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token punctuation">{</span>
+        type<span class="token punctuation">,</span>
+        props<span class="token operator">:</span> <span class="token punctuation">{</span>
+            <span class="token operator">...</span>config<span class="token punctuation">,</span>
+            children<span class="token operator">:</span> children<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span>
+                <span class="token parameter">child</span> <span class="token operator">=&gt;</span> <span class="token keyword">typeof</span> child <span class="token operator">===</span> <span class="token string">&quot;object&quot;</span> <span class="token operator">?</span>
+                    child <span class="token operator">:</span>
+                    <span class="token punctuation">{</span> type<span class="token operator">:</span> <span class="token constant">ELEMENT_TEXT</span><span class="token punctuation">,</span> props<span class="token operator">:</span> <span class="token punctuation">{</span> text<span class="token operator">:</span> child<span class="token punctuation">,</span> children<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token punctuation">}</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">let</span> React <span class="token operator">=</span> <span class="token punctuation">{</span>
+    createElement
+<span class="token punctuation">}</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> React<span class="token punctuation">;</span>
+</code></pre></div><h2 id="_2-实现初次渲染"><a href="#_2-实现初次渲染" class="header-anchor">#</a> 2.实现初次渲染</h2> <p><img src="https://wsk-mweb.oss-cn-hangzhou.aliyuncs.com/ipic/2020-04-27-144944.png" alt="collecting2"></p> <p><img src="https://wsk-mweb.oss-cn-hangzhou.aliyuncs.com/ipic/2020-04-27-144954.png" alt="fibereffectlistabc"></p> <p><img src="https://wsk-mweb.oss-cn-hangzhou.aliyuncs.com/ipic/2020-04-27-144958.png" alt="fibereffectlistwithchild3"></p> <h3 id="_2-1-index-js"><a href="#_2-1-index-js" class="header-anchor">#</a> 2.1 index.js</h3> <div class="language-diff extra-class"><pre class="language-diff"><code>import React from './react';
+import ReactDOM from './react-dom';
+<span class="token inserted-sign inserted">+let style = { border: '3px solid red', margin: '5px' };
++let element = (
++  &lt;div  id=&quot;A1&quot; style={style}&gt;
++    A1
++    &lt;div  id=&quot;B1&quot; style={style}&gt;
++      B1
++        &lt;div  id=&quot;C1&quot; style={style}&gt;C1&lt;/div&gt;
++      &lt;div  id=&quot;C2&quot; style={style}&gt;C2&lt;/div&gt;
++    &lt;/div&gt;
++    &lt;div  id=&quot;B2&quot; style={style}&gt;B2&lt;/div&gt;
++  &lt;/div&gt;
++)
+</span>ReactDOM.render(
+<span class="token unchanged">  element,
+  document.getElementById('root')
+</span>);
+</code></pre></div><h3 id="_2-2-constants-js"><a href="#_2-2-constants-js" class="header-anchor">#</a> 2.2 constants.js</h3> <p>src\constants.js</p> <div class="language-diff extra-class"><pre class="language-diff"><code><span class="token inserted-sign inserted">+export const ELEMENT_TEXT = Symbol.for('ELEMENT_TEXT');
++export const TAG_ROOT = Symbol.for('TAG_ROOT');
++export const TAG_HOST = Symbol.for('TAG_HOST');
++export const TAG_TEXT = Symbol.for('TAG_TEXT');
++export const PLACEMENT = Symbol.for('PLACEMENT');
+</span></code></pre></div><h3 id="_2-3-utils-js"><a href="#_2-3-utils-js" class="header-anchor">#</a> 2.3 utils.js</h3> <p>src\utils.js</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">function</span> <span class="token function">setProp</span><span class="token punctuation">(</span><span class="token parameter">dom<span class="token punctuation">,</span> key<span class="token punctuation">,</span> value</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token regex">/^on/</span><span class="token punctuation">.</span><span class="token function">test</span><span class="token punctuation">(</span>key<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        dom<span class="token punctuation">[</span>key<span class="token punctuation">.</span><span class="token function">toLowerCase</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">]</span> <span class="token operator">=</span> value<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>key <span class="token operator">===</span> <span class="token string">'style'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>value<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> styleName <span class="token keyword">in</span> value<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token keyword">if</span> <span class="token punctuation">(</span>value<span class="token punctuation">.</span><span class="token function">hasOwnProperty</span><span class="token punctuation">(</span>styleName<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                    dom<span class="token punctuation">.</span>style<span class="token punctuation">[</span>styleName<span class="token punctuation">]</span> <span class="token operator">=</span> value<span class="token punctuation">[</span>styleName<span class="token punctuation">]</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+        dom<span class="token punctuation">.</span><span class="token function">setAttribute</span><span class="token punctuation">(</span>key<span class="token punctuation">,</span> value<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> dom<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">setProps</span><span class="token punctuation">(</span><span class="token parameter">elem<span class="token punctuation">,</span> oldProps<span class="token punctuation">,</span> newProps</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> key <span class="token keyword">in</span> oldProps<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>key <span class="token operator">!==</span> <span class="token string">'children'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>newProps<span class="token punctuation">.</span><span class="token function">hasOwnProperty</span><span class="token punctuation">(</span>key<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token function">setProp</span><span class="token punctuation">(</span>elem<span class="token punctuation">,</span> key<span class="token punctuation">,</span> newProps<span class="token punctuation">[</span>key<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+                elem<span class="token punctuation">.</span><span class="token function">removeAttribute</span><span class="token punctuation">(</span>key<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> key <span class="token keyword">in</span> newProps<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>key <span class="token operator">!==</span> <span class="token string">'children'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token function">setProp</span><span class="token punctuation">(</span>elem<span class="token punctuation">,</span> key<span class="token punctuation">,</span> newProps<span class="token punctuation">[</span>key<span class="token punctuation">]</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="_2-4-react-dom-js"><a href="#_2-4-react-dom-js" class="header-anchor">#</a> 2.4 react-dom.js</h3> <p>src\react-dom.js</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">import</span> <span class="token punctuation">{</span> <span class="token constant">TAG_ROOT</span> <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'./constants'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> scheduleRoot <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'./scheduler'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">function</span> <span class="token function">render</span><span class="token punctuation">(</span><span class="token parameter">element<span class="token punctuation">,</span> container</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">let</span> rootFiber <span class="token operator">=</span> <span class="token punctuation">{</span>
+        tag<span class="token operator">:</span> <span class="token constant">TAG_ROOT</span><span class="token punctuation">,</span><span class="token comment">//这是根Fiber</span>
+        stateNode<span class="token operator">:</span> container<span class="token punctuation">,</span><span class="token comment">//此Fiber对应的DOM节点</span>
+        props<span class="token operator">:</span> <span class="token punctuation">{</span> children<span class="token operator">:</span> <span class="token punctuation">[</span>element<span class="token punctuation">]</span> <span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token comment">//子元素就是要渲染的element</span>
+    <span class="token punctuation">}</span>
+    <span class="token function">scheduleRoot</span><span class="token punctuation">(</span>rootFiber<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+    render
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="_2-4-scheduler-js"><a href="#_2-4-scheduler-js" class="header-anchor">#</a> 2.4 scheduler.js</h3> <p>src\scheduler.js</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">import</span> <span class="token punctuation">{</span> setProps <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'./utils'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span>
+    <span class="token constant">ELEMENT_TEXT</span><span class="token punctuation">,</span> <span class="token constant">TAG_ROOT</span><span class="token punctuation">,</span> <span class="token constant">TAG_HOST</span><span class="token punctuation">,</span> <span class="token constant">TAG_TEXT</span><span class="token punctuation">,</span> <span class="token constant">PLACEMENT</span>
+<span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'./constants'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">let</span> workInProgressRoot <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span><span class="token comment">//正在渲染中的根Fiber</span>
+<span class="token keyword">let</span> nextUnitOfWork <span class="token operator">=</span> <span class="token keyword">null</span><span class="token comment">//下一个工作单元</span>
+
+<span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">scheduleRoot</span><span class="token punctuation">(</span><span class="token parameter">rootFiber</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">//把当前树设置为nextUnitOfWork开始进行调度</span>
+    workInProgressRoot <span class="token operator">=</span> rootFiber<span class="token punctuation">;</span>
+    nextUnitOfWork <span class="token operator">=</span> workInProgressRoot<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">function</span> <span class="token function">commitRoot</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">let</span> currentFiber <span class="token operator">=</span> workInProgressRoot<span class="token punctuation">.</span>firstEffect<span class="token punctuation">;</span>
+    <span class="token keyword">while</span> <span class="token punctuation">(</span>currentFiber<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token function">commitWork</span><span class="token punctuation">(</span>currentFiber<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        currentFiber <span class="token operator">=</span> currentFiber<span class="token punctuation">.</span>nextEffect<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    workInProgressRoot <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">function</span> <span class="token function">commitWork</span><span class="token punctuation">(</span><span class="token parameter">currentFiber</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>currentFiber<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">let</span> returnFiber <span class="token operator">=</span> currentFiber<span class="token punctuation">.</span>return<span class="token punctuation">;</span><span class="token comment">//先获取父Fiber</span>
+    <span class="token keyword">const</span> domReturn <span class="token operator">=</span> returnFiber<span class="token punctuation">.</span>stateNode<span class="token punctuation">;</span><span class="token comment">//获取父的DOM节点</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>currentFiber<span class="token punctuation">.</span>effectTag <span class="token operator">===</span> <span class="token constant">PLACEMENT</span> <span class="token operator">&amp;&amp;</span> currentFiber<span class="token punctuation">.</span>stateNode <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token comment">//如果是新增DOM节点</span>
+        <span class="token keyword">let</span> nextFiber <span class="token operator">=</span> currentFiber<span class="token punctuation">;</span>
+        domReturn<span class="token punctuation">.</span><span class="token function">appendChild</span><span class="token punctuation">(</span>nextFiber<span class="token punctuation">.</span>stateNode<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    currentFiber<span class="token punctuation">.</span>effectTag <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">function</span> <span class="token function">performUnitOfWork</span><span class="token punctuation">(</span><span class="token parameter">currentFiber</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">beginWork</span><span class="token punctuation">(</span>currentFiber<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//开始渲染前的Fiber,就是把子元素变成子fiber</span>
+
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>currentFiber<span class="token punctuation">.</span>child<span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token comment">//如果子节点就返回第一个子节点</span>
+        <span class="token keyword">return</span> currentFiber<span class="token punctuation">.</span>child<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">while</span> <span class="token punctuation">(</span>currentFiber<span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token comment">//如果没有子节点说明当前节点已经完成了渲染工作</span>
+        <span class="token function">completeUnitOfWork</span><span class="token punctuation">(</span>currentFiber<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//可以结束此fiber的渲染了 </span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>currentFiber<span class="token punctuation">.</span>sibling<span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token comment">//如果它有弟弟就返回弟弟</span>
+            <span class="token keyword">return</span> currentFiber<span class="token punctuation">.</span>sibling<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        currentFiber <span class="token operator">=</span> currentFiber<span class="token punctuation">.</span>return<span class="token punctuation">;</span><span class="token comment">//如果没有弟弟让爸爸完成，然后找叔叔</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">function</span> <span class="token function">beginWork</span><span class="token punctuation">(</span><span class="token parameter">currentFiber</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>currentFiber<span class="token punctuation">.</span>tag <span class="token operator">===</span> <span class="token constant">TAG_ROOT</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token comment">//如果是根节点</span>
+        <span class="token function">updateHostRoot</span><span class="token punctuation">(</span>currentFiber<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>currentFiber<span class="token punctuation">.</span>tag <span class="token operator">===</span> <span class="token constant">TAG_TEXT</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token comment">//如果是原生文本节点</span>
+        <span class="token function">updateHostText</span><span class="token punctuation">(</span>currentFiber<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>currentFiber<span class="token punctuation">.</span>tag <span class="token operator">===</span> <span class="token constant">TAG_HOST</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token comment">//如果是原生DOM节点</span>
+        <span class="token function">updateHostComponent</span><span class="token punctuation">(</span>currentFiber<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">function</span> <span class="token function">updateHostRoot</span><span class="token punctuation">(</span><span class="token parameter">currentFiber</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token comment">//如果是根节点</span>
+    <span class="token keyword">const</span> newChildren <span class="token operator">=</span> currentFiber<span class="token punctuation">.</span>props<span class="token punctuation">.</span>children<span class="token punctuation">;</span><span class="token comment">//直接渲染子节点</span>
+    <span class="token function">reconcileChildren</span><span class="token punctuation">(</span>currentFiber<span class="token punctuation">,</span> newChildren<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">function</span> <span class="token function">updateHostText</span><span class="token punctuation">(</span><span class="token parameter">currentFiber</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>currentFiber<span class="token punctuation">.</span>stateNode<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        currentFiber<span class="token punctuation">.</span>stateNode <span class="token operator">=</span> <span class="token function">createDOM</span><span class="token punctuation">(</span>currentFiber<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//先创建真实的DOM节点</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">function</span> <span class="token function">updateHostComponent</span><span class="token punctuation">(</span><span class="token parameter">currentFiber</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token comment">//如果是原生DOM节点</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>currentFiber<span class="token punctuation">.</span>stateNode<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        currentFiber<span class="token punctuation">.</span>stateNode <span class="token operator">=</span> <span class="token function">createDOM</span><span class="token punctuation">(</span>currentFiber<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//先创建真实的DOM节点</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">const</span> newChildren <span class="token operator">=</span> currentFiber<span class="token punctuation">.</span>props<span class="token punctuation">.</span>children<span class="token punctuation">;</span>
+    <span class="token function">reconcileChildren</span><span class="token punctuation">(</span>currentFiber<span class="token punctuation">,</span> newChildren<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">function</span> <span class="token function">createDOM</span><span class="token punctuation">(</span><span class="token parameter">currentFiber</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>currentFiber<span class="token punctuation">.</span>type <span class="token operator">===</span> <span class="token constant">ELEMENT_TEXT</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> document<span class="token punctuation">.</span><span class="token function">createTextNode</span><span class="token punctuation">(</span>currentFiber<span class="token punctuation">.</span>props<span class="token punctuation">.</span>text<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">const</span> stateNode <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">createElement</span><span class="token punctuation">(</span>currentFiber<span class="token punctuation">.</span>type<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">updateDOM</span><span class="token punctuation">(</span>stateNode<span class="token punctuation">,</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span> currentFiber<span class="token punctuation">.</span>props<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> stateNode<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">function</span> <span class="token function">reconcileChildren</span><span class="token punctuation">(</span><span class="token parameter">currentFiber<span class="token punctuation">,</span> newChildren</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">let</span> newChildIndex <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span><span class="token comment">//新虚拟DOM数组中的索引</span>
+    <span class="token keyword">let</span> prevSibling<span class="token punctuation">;</span>
+    <span class="token keyword">while</span> <span class="token punctuation">(</span>newChildIndex <span class="token operator">&lt;</span> newChildren<span class="token punctuation">.</span>length<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">const</span> newChild <span class="token operator">=</span> newChildren<span class="token punctuation">[</span>newChildIndex<span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token keyword">let</span> tag<span class="token punctuation">;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>newChild <span class="token operator">&amp;&amp;</span> newChild<span class="token punctuation">.</span>type <span class="token operator">===</span> <span class="token constant">ELEMENT_TEXT</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            tag <span class="token operator">=</span> <span class="token constant">TAG_TEXT</span><span class="token punctuation">;</span><span class="token comment">//文本</span>
+        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>newChild <span class="token operator">&amp;&amp;</span> <span class="token keyword">typeof</span> newChild<span class="token punctuation">.</span>type <span class="token operator">===</span> <span class="token string">'string'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            tag <span class="token operator">=</span> <span class="token constant">TAG_HOST</span><span class="token punctuation">;</span><span class="token comment">//原生DOM组件</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">let</span> newFiber <span class="token operator">=</span> <span class="token punctuation">{</span>
+            tag<span class="token punctuation">,</span><span class="token comment">//原生DOM组件</span>
+            type<span class="token operator">:</span> newChild<span class="token punctuation">.</span>type<span class="token punctuation">,</span><span class="token comment">//具体的元素类型</span>
+            props<span class="token operator">:</span> newChild<span class="token punctuation">.</span>props<span class="token punctuation">,</span><span class="token comment">//新的属性对象</span>
+            stateNode<span class="token operator">:</span> <span class="token keyword">null</span><span class="token punctuation">,</span><span class="token comment">//stateNode肯定是空的</span>
+            <span class="token keyword">return</span><span class="token operator">:</span> currentFiber<span class="token punctuation">,</span><span class="token comment">//父Fiber</span>
+            effectTag<span class="token operator">:</span> <span class="token constant">PLACEMENT</span><span class="token punctuation">,</span><span class="token comment">//副作用标识</span>
+            nextEffect<span class="token operator">:</span> <span class="token keyword">null</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>newFiber<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>newChildIndex <span class="token operator">===</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                currentFiber<span class="token punctuation">.</span>child <span class="token operator">=</span> newFiber<span class="token punctuation">;</span><span class="token comment">//第一个子节点挂到父节点的child属性上</span>
+            <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+                prevSibling<span class="token punctuation">.</span>sibling <span class="token operator">=</span> newFiber<span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            prevSibling <span class="token operator">=</span> newFiber<span class="token punctuation">;</span><span class="token comment">//然后newFiber变成了上一个哥哥了</span>
+        <span class="token punctuation">}</span>
+        prevSibling <span class="token operator">=</span> newFiber<span class="token punctuation">;</span><span class="token comment">//然后newFiber变成了上一个哥哥了</span>
+        newChildIndex<span class="token operator">++</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">function</span> <span class="token function">updateDOM</span><span class="token punctuation">(</span><span class="token parameter">stateNode<span class="token punctuation">,</span> oldProps<span class="token punctuation">,</span> newProps</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">setProps</span><span class="token punctuation">(</span>stateNode<span class="token punctuation">,</span> oldProps<span class="token punctuation">,</span> newProps<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">function</span> <span class="token function">completeUnitOfWork</span><span class="token punctuation">(</span><span class="token parameter">currentFiber</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> returnFiber <span class="token operator">=</span> currentFiber<span class="token punctuation">.</span>return<span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>returnFiber<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>returnFiber<span class="token punctuation">.</span>firstEffect<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            returnFiber<span class="token punctuation">.</span>firstEffect <span class="token operator">=</span> currentFiber<span class="token punctuation">.</span>firstEffect<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span><span class="token operator">!</span>currentFiber<span class="token punctuation">.</span>lastEffect<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span><span class="token operator">!</span>returnFiber<span class="token punctuation">.</span>lastEffect<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                returnFiber<span class="token punctuation">.</span>lastEffect<span class="token punctuation">.</span>nextEffect <span class="token operator">=</span> currentFiber<span class="token punctuation">.</span>firstEffect<span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            returnFiber<span class="token punctuation">.</span>lastEffect <span class="token operator">=</span> currentFiber<span class="token punctuation">.</span>lastEffect<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token keyword">const</span> effectTag <span class="token operator">=</span> currentFiber<span class="token punctuation">.</span>effectTag<span class="token punctuation">;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>effectTag<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span><span class="token operator">!</span>returnFiber<span class="token punctuation">.</span>lastEffect<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                returnFiber<span class="token punctuation">.</span>lastEffect<span class="token punctuation">.</span>nextEffect <span class="token operator">=</span> currentFiber<span class="token punctuation">;</span>
+            <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+                returnFiber<span class="token punctuation">.</span>firstEffect <span class="token operator">=</span> currentFiber<span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            returnFiber<span class="token punctuation">.</span>lastEffect <span class="token operator">=</span> currentFiber<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">function</span> <span class="token function">workLoop</span><span class="token punctuation">(</span><span class="token parameter">deadline</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">let</span> shouldYield <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+    <span class="token keyword">while</span> <span class="token punctuation">(</span>nextUnitOfWork <span class="token operator">&amp;&amp;</span> <span class="token operator">!</span>shouldYield<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        nextUnitOfWork <span class="token operator">=</span> <span class="token function">performUnitOfWork</span><span class="token punctuation">(</span>nextUnitOfWork<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//执行一个任务并返回下一个任务</span>
+        shouldYield <span class="token operator">=</span> deadline<span class="token punctuation">.</span><span class="token function">timeRemaining</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&lt;</span> <span class="token number">1</span><span class="token punctuation">;</span><span class="token comment">//如果剩余时间小于1毫秒就说明没有时间了，需要把控制权让给浏览器</span>
+    <span class="token punctuation">}</span>
+    <span class="token comment">//如果没有下一个执行单元了，并且当前渲染树存在，则进行提交阶段</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>nextUnitOfWork <span class="token operator">&amp;&amp;</span> workInProgressRoot<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token function">commitRoot</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token function">requestIdleCallback</span><span class="token punctuation">(</span>workLoop<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token comment">//开始在空闲时间执行workLoop</span>
+<span class="token function">requestIdleCallback</span><span class="token punctuation">(</span>workLoop<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h2 id="_3-实现元素的更新"><a href="#_3-实现元素的更新" class="header-anchor">#</a> 3.实现元素的更新</h2> <p><img src="https://wsk-mweb.oss-cn-hangzhou.aliyuncs.com/ipic/2020-04-27-145004.png" alt="updatecomponent"></p> <h3 id="_3-1-src-index-js"><a href="#_3-1-src-index-js" class="header-anchor">#</a> 3.1 src\index.js</h3> <p>src\index.js</p> <div class="language-diff extra-class"><pre class="language-diff"><code>import React from './react';
+import ReactDOM from './react-dom';
+let style = { border: '3px solid red', margin: '5px' };
+let element = (
+<span class="token unchanged">  &lt;div id=&quot;A1&quot; style={style}&gt;
+    A1
+    &lt;div id=&quot;B1&quot; style={style}&gt;
+      B1
+      &lt;div id=&quot;C1&quot; style={style}&gt;C1&lt;/div&gt;
+      &lt;div id=&quot;C2&quot; style={style}&gt;C2&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div id=&quot;B2&quot; style={style}&gt;B2&lt;/div&gt;
+  &lt;/div&gt;
+</span>)
+ReactDOM.render(
+<span class="token unchanged">  element,
+  document.getElementById('root')
+</span>);
+
+<span class="token inserted-sign inserted">+let reRender = document.getElementById('reRender');
++reRender.addEventListener('click', () =&gt; {
++  let element2 = (
++    &lt;div id=&quot;A1-new&quot; style={style}&gt;
++      A1-new
++      &lt;div id=&quot;B1-new&quot; style={style}&gt;
++        B1-new
++          &lt;div id=&quot;C1-new&quot; style={style}&gt;C1-new&lt;/div&gt;
++        &lt;div id=&quot;C2-new&quot; style={style}&gt;C2-new&lt;/div&gt;
++      &lt;/div&gt;
++      &lt;div id=&quot;B2&quot; style={style}&gt;B2&lt;/div&gt;
++      &lt;div id=&quot;B3&quot; style={style}&gt;B3&lt;/div&gt;
++    &lt;/div&gt;
++  )
++  ReactDOM.render(
++    element2,
++    document.getElementById('root')
++  );
++});
+</span></code></pre></div><h3 id="_3-2-src-constants-js"><a href="#_3-2-src-constants-js" class="header-anchor">#</a> 3.2 src\constants.js</h3> <div class="language-diff extra-class"><pre class="language-diff"><code>export const ELEMENT_TEXT = Symbol.for('ELEMENT_TEXT');
+
+export const TAG_ROOT = Symbol.for('TAG_ROOT');
+export const TAG_HOST = Symbol.for('TAG_HOST');
+export const TAG_TEXT = Symbol.for('TAG_TEXT');
+
+export const PLACEMENT = Symbol.for('PLACEMENT');
+<span class="token inserted-sign inserted">+export const UPDATE = Symbol.for('UPDATE');
++export const DELETION = Symbol.for('DELETION');
+</span></code></pre></div><h3 id="_3-3-scheduler-js"><a href="#_3-3-scheduler-js" class="header-anchor">#</a> 3.3 scheduler.js</h3> <p>src\scheduler.js</p> <div class="language-diff extra-class"><pre class="language-diff"><code>import { setProps } from './utils';
+import {
+<span class="token unchanged">    ELEMENT_TEXT, TAG_ROOT, TAG_HOST, TAG_TEXT, PLACEMENT, DELETION, UPDATE
+</span>} from './constants';
+<span class="token inserted-sign inserted">+let currentRoot = null;//当前的根Fiber
+</span>let workInProgressRoot = null;//正在渲染中的根Fiber
+let nextUnitOfWork = null//下一个工作单元
+<span class="token inserted-sign inserted">+let deletions = [];//要删除的fiber节点
+</span>
+export function scheduleRoot(rootFiber) {
+<span class="token inserted-sign inserted">+    rootFiber.alternate = currentRoot;
+</span><span class="token unchanged">    //把当前树设置为nextUnitOfWork开始进行调度
+    workInProgressRoot = rootFiber;
+    nextUnitOfWork = workInProgressRoot;
+</span>}
+
+function commitRoot() {
+<span class="token inserted-sign inserted">+    deletions.forEach(commitWork);
+</span><span class="token unchanged">    let currentFiber = workInProgressRoot.firstEffect;
+    while (currentFiber) {
+        commitWork(currentFiber);
+        currentFiber = currentFiber.nextEffect;
+    }
+</span><span class="token inserted-sign inserted">+    deletions.length = 0;//先把要删除的节点清空掉
++    currentRoot = workInProgressRoot;
+</span><span class="token unchanged">    workInProgressRoot = null;
+</span>}
+function commitWork(currentFiber) {
+<span class="token unchanged">    if (!currentFiber) {
+        return;
+    }
+    let returnFiber = currentFiber.return;//先获取父Fiber
+    const domReturn = returnFiber.stateNode;//获取父的DOM节点
+    if (currentFiber.effectTag === PLACEMENT &amp;&amp; currentFiber.stateNode != null) {//如果是新增DOM节点
+        let nextFiber = currentFiber;
+        domReturn.appendChild(nextFiber.stateNode);
+</span><span class="token inserted-sign inserted">+    } else if (currentFiber.effectTag === DELETION) {//如果是删除则删除并返回
++        domReturn.removeChild(currentFiber.stateNode);
++    } else if (currentFiber.effectTag === UPDATE &amp;&amp; currentFiber.stateNode != null) {//如果是更新
++        if (currentFiber.type === ELEMENT_TEXT) {
++            if (currentFiber.alternate.props.text != currentFiber.props.text) {
++                currentFiber.stateNode.textContent = currentFiber.props.text;
++            }
++        } else {
++            updateDOM(currentFiber.stateNode, currentFiber.alternate.props, currentFiber.props);
++        }
++    }
+</span><span class="token unchanged">    currentFiber.effectTag = null;
+</span>}
+
+function performUnitOfWork(currentFiber) {
+<span class="token unchanged">    beginWork(currentFiber);//开始渲染前的Fiber,就是把子元素变成子fiber
+</span>
+<span class="token unchanged">    if (currentFiber.child) {//如果子节点就返回第一个子节点
+        return currentFiber.child;
+    }
+</span>
+<span class="token unchanged">    while (currentFiber) {//如果没有子节点说明当前节点已经完成了渲染工作
+        completeUnitOfWork(currentFiber);//可以结束此fiber的渲染了 
+        if (currentFiber.sibling) {//如果它有弟弟就返回弟弟
+            return currentFiber.sibling;
+        }
+        currentFiber = currentFiber.return;//如果没有弟弟让爸爸完成，然后找叔叔
+    }
+</span>}
+
+function beginWork(currentFiber) {
+<span class="token unchanged">    if (currentFiber.tag === TAG_ROOT) {//如果是根节点
+        updateHostRoot(currentFiber);
+    } else if (currentFiber.tag === TAG_TEXT) {//如果是原生文本节点
+        updateHostText(currentFiber);
+    } else if (currentFiber.tag === TAG_HOST) {//如果是原生DOM节点
+        updateHostComponent(currentFiber);
+    }
+</span>}
+function updateHostRoot(currentFiber) {//如果是根节点
+<span class="token unchanged">    const newChildren = currentFiber.props.children;//直接渲染子节点
+    reconcileChildren(currentFiber, newChildren);
+</span>}
+function updateHostText(currentFiber) {
+<span class="token unchanged">    if (!currentFiber.stateNode) {
+        currentFiber.stateNode = createDOM(currentFiber);//先创建真实的DOM节点
+    }
+</span>}
+function updateHostComponent(currentFiber) {//如果是原生DOM节点
+<span class="token unchanged">    if (!currentFiber.stateNode) {
+        currentFiber.stateNode = createDOM(currentFiber);//先创建真实的DOM节点
+    }
+    const newChildren = currentFiber.props.children;
+    reconcileChildren(currentFiber, newChildren);
+</span>}
+function createDOM(currentFiber) {
+<span class="token unchanged">    if (currentFiber.type === ELEMENT_TEXT) {
+        return document.createTextNode(currentFiber.props.text);
+    }
+    const stateNode = document.createElement(currentFiber.type);
+    updateDOM(stateNode, {}, currentFiber.props);
+    return stateNode;
+</span>}
+
+function reconcileChildren(currentFiber, newChildren) {
+<span class="token unchanged">    let newChildIndex = 0;//新虚拟DOM数组中的索引
+</span><span class="token inserted-sign inserted">+    let oldFiber = currentFiber.alternate &amp;&amp; currentFiber.alternate.child;//父Fiber中的第一个子Fiber
++    let prevSibling;
++    while (newChildIndex &lt; newChildren.length || oldFiber) {
++        const newChild = newChildren[newChildIndex];
++        let newFiber;
++        const sameType = oldFiber &amp;&amp; newChild &amp;&amp; newChild.type === oldFiber.type;//新旧都有，并且元素类型一样
++        let tag;
++        if (newChild &amp;&amp; newChild.type === ELEMENT_TEXT) {
++            tag = TAG_TEXT;//文本
++        } else if (newChild &amp;&amp; typeof newChild.type === 'string') {
++            tag = TAG_HOST;//原生DOM组件
++        }
++        if (sameType) {
++            if (oldFiber.alternate) {
++                newFiber = oldFiber.alternate;
++                newFiber.props = newChild.props;
++                newFiber.alternate = oldFiber;
++                newFiber.effectTag = UPDATE;
++                newFiber.nextEffect = null;
++            } else {
++                newFiber = {
++                    tag,//标记Fiber类型，例如是函数组件或者原生组件
++                    type: oldFiber.type,//具体的元素类型
++                    props: newChild.props,//新的属性对象
++                    stateNode: oldFiber.stateNode,//原生组件的话就存放DOM节点，类组件的话是类组件实例，函数组件的话为空，因为没有实例
++                    return: currentFiber,//父Fiber
++                    alternate: oldFiber,//上一个Fiber 指向旧树中的节点
++                    effectTag: UPDATE,//副作用标识
++                    nextEffect: null //React 同样使用链表来将所有有副作用的Fiber连接起来
++                }
++            }
++        } else {
++            if (newChild) {//类型不一样，创建新的Fiber,旧的不复用了
++                newFiber = {
++                    tag,//原生DOM组件
++                    type: newChild.type,//具体的元素类型
++                    props: newChild.props,//新的属性对象
++                    stateNode: null,//stateNode肯定是空的
++                    return: currentFiber,//父Fiber
++                    effectTag: PLACEMENT//副作用标识
++                }
++            }
++            if (oldFiber) {
++                oldFiber.effectTag = DELETION;
++                deletions.push(oldFiber);
++            }
++        }
++        if (oldFiber) {  //比较完一个元素了，老Fiber向后移动1位
++            oldFiber = oldFiber.sibling;
++        }
+</span><span class="token unchanged">       if (newFiber) {
+            if (newChildIndex === 0) {
+                currentFiber.child = newFiber;//第一个子节点挂到父节点的child属性上
+            } else {
+                prevSibling.sibling = newFiber;
+            }
+            prevSibling = newFiber;//然后newFiber变成了上一个哥哥了
+        }
+        prevSibling = newFiber;//然后newFiber变成了上一个哥哥了
+        newChildIndex++;
+    }
+</span>}
+
+function updateDOM(stateNode, oldProps, newProps) {
+<span class="token unchanged">    setProps(stateNode, oldProps, newProps);
+</span>}
+function completeUnitOfWork(currentFiber) {
+<span class="token unchanged">    const returnFiber = currentFiber.return;
+    if (returnFiber) {
+        if (!returnFiber.firstEffect) {
+            returnFiber.firstEffect = currentFiber.firstEffect;
+        }
+        if (!!currentFiber.lastEffect) {
+            if (!!returnFiber.lastEffect) {
+                returnFiber.lastEffect.nextEffect = currentFiber.firstEffect;
+            }
+            returnFiber.lastEffect = currentFiber.lastEffect;
+        }
+</span>
+<span class="token unchanged">        const effectTag = currentFiber.effectTag;
+        if (effectTag) {
+            if (!!returnFiber.lastEffect) {
+                returnFiber.lastEffect.nextEffect = currentFiber;
+            } else {
+                returnFiber.firstEffect = currentFiber;
+            }
+            returnFiber.lastEffect = currentFiber;
+        }
+    }
+</span>}
+
+function workLoop(deadline) {
+<span class="token unchanged">    let shouldYield = false;
+    while (nextUnitOfWork &amp;&amp; !shouldYield) {
+        nextUnitOfWork = performUnitOfWork(nextUnitOfWork);//执行一个任务并返回下一个任务
+        shouldYield = deadline.timeRemaining() &lt; 1;//如果剩余时间小于1毫秒就说明没有时间了，需要把控制权让给浏览器
+    }
+    //如果没有下一个执行单元了，并且当前渲染树存在，则进行提交阶段
+    if (!nextUnitOfWork &amp;&amp; workInProgressRoot) {
+        commitRoot();
+    }
+    requestIdleCallback(workLoop);
+</span>}
+//开始在空闲时间执行workLoop
+requestIdleCallback(workLoop);
+</code></pre></div><h2 id="_4-实现类组件"><a href="#_4-实现类组件" class="header-anchor">#</a> 4.实现类组件</h2> <p><img src="http://img.zhufengpeixun.cn/singlelink2.jpg" alt="singlelink2"></p> <p><img src="https://wsk-mweb.oss-cn-hangzhou.aliyuncs.com/ipic/2020-04-27-145011.png" alt="fiberdoublebuffer"></p> <h3 id="_4-1-src-index-js"><a href="#_4-1-src-index-js" class="header-anchor">#</a> 4.1 src\index.js</h3> <div class="language-diff extra-class"><pre class="language-diff"><code>import React from './react';
+import ReactDOM from './react-dom';
+<span class="token inserted-sign inserted">+class ClassCounter extends React.Component {
++  constructor(props) {
++    super(props);
++    this.state = { number: 0 };
++  }
++  onClick = () =&gt; {
++    this.setState(state =&gt; ({ number: state.number + 1 }));
++  }
++  render() {
++    return (
++      &lt;div id=&quot;counter&quot;&gt;
++        &lt;span&gt;{this.state.number}&lt;/span&gt;
++        &lt;button onClick={this.onClick}&gt;加1&lt;/button&gt;
++      &lt;/div &gt;
++    )
++  }
++}
+</span>ReactDOM.render(
+<span class="token inserted-sign inserted">+  &lt;ClassCounter /&gt;,
+</span><span class="token unchanged">  document.getElementById('root')
+</span>);
+</code></pre></div><h3 id="_4-2-src-react-js"><a href="#_4-2-src-react-js" class="header-anchor">#</a> 4.2 src\react.js</h3> <p>src\react.js</p> <div class="language-diff extra-class"><pre class="language-diff"><code>import { ELEMENT_TEXT } from './constants';
+<span class="token inserted-sign inserted">+import { Update, UpdateQueue } from './updateQueue';
++import { scheduleRoot } from './scheduler';
+</span>function createElement(type, config, ...children) {
+<span class="token unchanged">    delete config.__self;
+    delete config.__source;
+    return {
+        type,
+        props: {
+            ...config,
+            children: children.map(
+                child =&gt; typeof child === &quot;object&quot; ?
+                    child :
+                    { type: ELEMENT_TEXT, props: { text: child, children: [] } })
+        }
+    }
+</span>}
+<span class="token inserted-sign inserted">+class Component {
++    constructor(props) {
++        this.props = props;
++        this.updateQueue = new UpdateQueue();
++    }
++    setState(payload) {
++        this.internalFiber.updateQueue.enqueueUpdate(new Update(payload));
++        scheduleRoot();
++    }
++}
++Component.prototype.isReactComponent = true;
+</span>let React = {
+<span class="token unchanged">    createElement,
+</span><span class="token inserted-sign inserted">+    Component
+</span>}
+export default React;
+</code></pre></div><h3 id="_4-3-constants-js"><a href="#_4-3-constants-js" class="header-anchor">#</a> 4.3 constants.js</h3> <p>src\constants.js</p> <div class="language-diff extra-class"><pre class="language-diff"><code>export const ELEMENT_TEXT = Symbol.for('ELEMENT_TEXT');
+
+export const TAG_ROOT = Symbol.for('TAG_ROOT');
+export const TAG_HOST = Symbol.for('TAG_HOST');
+export const TAG_TEXT = Symbol.for('TAG_TEXT');
+<span class="token inserted-sign inserted">+export const TAG_CLASS = Symbol.for('TAG_CLASS');
+</span>
+export const UPDATE = Symbol.for('UPDATE');
+export const PLACEMENT = Symbol.for('PLACEMENT');
+export const DELETION = Symbol.for('DELETION');
+</code></pre></div><h3 id="_4-4-updatequeue-js"><a href="#_4-4-updatequeue-js" class="header-anchor">#</a> 4.4 updateQueue.js</h3> <p>src\updateQueue.js</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">Update</span> <span class="token punctuation">{</span>
+    <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token parameter">payload</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>payload <span class="token operator">=</span> payload<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">UpdateQueue</span> <span class="token punctuation">{</span>
+    <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>firstUpdate <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>lastUpdate <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token function">enqueueUpdate</span><span class="token punctuation">(</span><span class="token parameter">update</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>lastUpdate <span class="token operator">===</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">this</span><span class="token punctuation">.</span>firstUpdate <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>lastUpdate <span class="token operator">=</span> update<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+            <span class="token keyword">this</span><span class="token punctuation">.</span>lastUpdate<span class="token punctuation">.</span>nextUpdate <span class="token operator">=</span> update<span class="token punctuation">;</span>
+            <span class="token keyword">this</span><span class="token punctuation">.</span>lastUpdate <span class="token operator">=</span> update<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+    <span class="token function">forceUpdate</span><span class="token punctuation">(</span><span class="token parameter">state</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">let</span> currentUpdate <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>firstUpdate<span class="token punctuation">;</span>
+        <span class="token keyword">while</span> <span class="token punctuation">(</span>currentUpdate<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            state <span class="token operator">=</span> <span class="token keyword">typeof</span> currentUpdate<span class="token punctuation">.</span>payload <span class="token operator">==</span> <span class="token string">'function'</span> <span class="token operator">?</span> currentUpdate<span class="token punctuation">.</span><span class="token function">payload</span><span class="token punctuation">(</span>state<span class="token punctuation">)</span> <span class="token operator">:</span> currentUpdate<span class="token punctuation">.</span>payload<span class="token punctuation">;</span>
+            currentUpdate <span class="token operator">=</span> currentUpdate<span class="token punctuation">.</span>nextUpdate<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>firstUpdate <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>lastUpdate <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> state<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="_4-5-utils-js"><a href="#_4-5-utils-js" class="header-anchor">#</a> 4.5 utils.js</h3> <p>src\utils.js</p> <div class="language-diff extra-class"><pre class="language-diff"><code>function setProp(dom, key, value) {
+<span class="token unchanged">    if (/^on/.test(key)) {
+        dom[key.toLowerCase()] = value;
+    } else if (key === 'style') {
+        if (value) {
+            for (let styleName in value) {
+                if (value.hasOwnProperty(styleName)) {
+                    dom.style[styleName] = value[styleName];
+                }
+            }
+        }
+    } else {
+        dom.setAttribute(key, value);
+    }
+    return dom;
+</span>}
+export function setProps(elem, oldProps, newProps) {
+<span class="token unchanged">    for (let key in oldProps) {
+        if (key !== 'children') {
+            if (newProps.hasOwnProperty(key)) {
+                setProp(elem, key, newProps[key]);
+            } else {
+                elem.removeAttribute(key);
+            }
+        }
+    }
+    for (let key in newProps) {
+        if (key !== 'children') {
+            setProp(elem, key, newProps[key])
+        }
+    }
+</span>}
+
+<span class="token inserted-sign inserted">+export function deepEquals(obj1, obj2) {
++    let { children: oldChildren, ...oldProps } = obj1;
++    let { children: newChildren, ...newProps } = obj2;
++    return JSON.stringify(oldProps) === JSON.stringify(newProps);
++}
+</span></code></pre></div><h3 id="_4-6-scheduler-js"><a href="#_4-6-scheduler-js" class="header-anchor">#</a> 4.6 scheduler.js</h3> <p>src\scheduler.js</p> <div class="language-diff extra-class"><pre class="language-diff"><code>import { setProps,deepEquals } from './utils';
+<span class="token inserted-sign inserted">+import { UpdateQueue } from './updateQueue';
++import _ from 'lodash';
+</span>import {
+<span class="token inserted-sign inserted">+    ELEMENT_TEXT, TAG_ROOT, TAG_HOST, TAG_TEXT, TAG_CLASS, PLACEMENT, DELETION, UPDATE
+</span>} from './constants';
+let currentRoot = null;        //当前的根Fiber
+let workInProgressRoot = null; //正在渲染中的根Fiber
+let nextUnitOfWork = null;     //下一个工作单元
+let deletions = [];            //要删除的fiber节点
+
+export function scheduleRoot(rootFiber) {
+<span class="token inserted-sign inserted">+    if (rootFiber) {
++        workInProgressRoot = rootFiber; //把当前树设置为nextUnitOfWork开始进行调度
++    } else {
++        if (currentRoot.alternate) {
++            workInProgressRoot = currentRoot.alternate;
++            workInProgressRoot.alternate = currentRoot;
++        } else {
++            workInProgressRoot = {
++                ...currentRoot,
++                alternate: currentRoot
++            }
++        }
++    }
++    deletions.length = 0;
++    nextUnitOfWork = workInProgressRoot;
+</span>}
+
+function commitRoot() {
+<span class="token unchanged">    deletions.forEach(commitWork);
+    let currentFiber = workInProgressRoot.firstEffect;
+    while (currentFiber) {
+        commitWork(currentFiber);
+        currentFiber = currentFiber.nextEffect;
+    }
+    deletions.length = 0;//先把要删除的节点清空掉
+</span><span class="token inserted-sign inserted">+   workInProgressRoot.firstEffect = workInProgressRoot.lastEffect = null;//清除effect list
+</span><span class="token unchanged">    currentRoot = workInProgressRoot;
+    workInProgressRoot = null;
+</span>}
+function commitWork(currentFiber) {
+<span class="token inserted-sign inserted">+     if (!currentFiber) {
++        return;
++    }
+</span><span class="token unchanged">    let returnFiber = currentFiber.return;//先获取父Fiber
+</span><span class="token inserted-sign inserted">+    while (returnFiber.tag !== TAG_HOST &amp;&amp; returnFiber.tag !== TAG_ROOT &amp;&amp; returnFiber.tag !== TAG_TEXT) {//如果不是DOM节点就一直向上找,比如ClassCounter
++        returnFiber = returnFiber.return;
++    }
+</span><span class="token unchanged">    const domReturn = returnFiber.stateNode;//获取父的DOM节点
+    if (currentFiber.effectTag === PLACEMENT &amp;&amp; currentFiber.stateNode != null) {//如果是新增DOM节点
+</span><span class="token inserted-sign inserted">+        let nextFiber = currentFiber;
++        while (nextFiber.tag !== TAG_HOST &amp;&amp; nextFiber.tag !== TAG_TEXT) {
++            nextFiber = nextFiber.child;//必须向下找到一个DOM节点 比如Class Counter
++        }
+</span><span class="token unchanged">        domReturn.appendChild(nextFiber.stateNode);
+    } else if (currentFiber.effectTag === DELETION) {//如果是删除则删除并返回
+</span><span class="token inserted-sign inserted">+        commitDeletion(currentFiber, domReturn);
+</span><span class="token unchanged">    } else if (currentFiber.effectTag === UPDATE &amp;&amp; currentFiber.stateNode != null) {//如果是更新
+        if (currentFiber.type === ELEMENT_TEXT) {
+            if (currentFiber.alternate.props.text !== currentFiber.props.text) {
+                currentFiber.stateNode.textContent = currentFiber.props.text;
+            }
+        } else {
+            updateDOM(currentFiber.stateNode, currentFiber.alternate.props, currentFiber.props);
+        }
+    }
+    currentFiber.effectTag = null;
+</span>}
+<span class="token inserted-sign inserted">+function commitDeletion(currentFiber, domReturn) {
++    if (currentFiber.tag === TAG_HOST || currentFiber.tag === TAG_TEXT) {
++        domReturn.removeChild(currentFiber.stateNode);
++    } else {
++        commitDeletion(currentFiber.child, domReturn);
++    }
++}
+</span>function performUnitOfWork(currentFiber) {
+<span class="token unchanged">    beginWork(currentFiber);//开始渲染前的Fiber,就是把子元素变成子fiber
+</span>
+<span class="token unchanged">    if (currentFiber.child) {//如果子节点就返回第一个子节点
+        return currentFiber.child;
+    }
+</span>
+<span class="token unchanged">    while (currentFiber) {//如果没有子节点说明当前节点已经完成了渲染工作
+        completeUnitOfWork(currentFiber);//可以结束此fiber的渲染了 
+        if (currentFiber.sibling) {//如果它有弟弟就返回弟弟
+            return currentFiber.sibling;
+        }
+        currentFiber = currentFiber.return;//如果没有弟弟让爸爸完成，然后找叔叔
+    }
+</span>}
+
+function beginWork(currentFiber) {
+<span class="token unchanged">    if (currentFiber.tag === TAG_ROOT) {//如果是根节点
+        updateHostRoot(currentFiber);
+    } else if (currentFiber.tag === TAG_TEXT) {//如果是原生文本节点
+        updateHostText(currentFiber);
+    } else if (currentFiber.tag === TAG_HOST) {//如果是原生DOM节点
+        updateHostComponent(currentFiber);
+</span><span class="token inserted-sign inserted">+    } else if (currentFiber.tag === TAG_CLASS) {//如果是类组件
++        updateClassComponent(currentFiber)
++    }
+</span>}
+<span class="token inserted-sign inserted">+function updateClassComponent(currentFiber) {
++    if (currentFiber.stateNode === null) {
++        currentFiber.stateNode = new currentFiber.type(currentFiber.props);
++        currentFiber.stateNode.internalFiber = currentFiber;
++        currentFiber.updateQueue = new UpdateQueue();
++    }
++    currentFiber.stateNode.state = currentFiber.updateQueue.forceUpdate(currentFiber.stateNode.state);
++    const newChildren = [currentFiber.stateNode.render()];
++    reconcileChildren(currentFiber, newChildren);
++}
+</span>function updateHostText(currentFiber) {
+<span class="token unchanged">    if (!currentFiber.stateNode) {
+        currentFiber.stateNode = createDOM(currentFiber);//先创建真实的DOM节点
+    }
+</span>}
+function updateHostRoot(currentFiber) {//如果是根节点
+<span class="token unchanged">    const newChildren = currentFiber.props.children;//直接渲染子节点
+    reconcileChildren(currentFiber, newChildren);
+</span>}
+
+function updateHostComponent(currentFiber) {//如果是原生DOM节点
+<span class="token unchanged">    if (!currentFiber.stateNode) {
+        currentFiber.stateNode = createDOM(currentFiber);//先创建真实的DOM节点
+    }
+    const newChildren = currentFiber.props.children;
+    reconcileChildren(currentFiber, newChildren);
+</span>}
+function createDOM(currentFiber) {
+<span class="token unchanged">    if (currentFiber.type === ELEMENT_TEXT) {
+        return document.createTextNode(currentFiber.props.text);
+    }
+    const stateNode = document.createElement(currentFiber.type);
+    updateDOM(stateNode, {}, currentFiber.props);
+    return stateNode;
+</span>}
+
+function reconcileChildren(currentFiber, newChildren) {
+<span class="token unchanged">    let newChildIndex = 0;//新虚拟DOM数组中的索引
+    let oldFiber = currentFiber.alternate &amp;&amp; currentFiber.alternate.child;//父Fiber中的第一个子Fiber
+    let prevSibling;
+    while (newChildIndex &lt; newChildren.length || oldFiber) {
+        const newChild = newChildren[newChildIndex];
+        let newFiber;
+        const sameType = oldFiber &amp;&amp; newChild &amp;&amp; newChild.type === oldFiber.type;//新旧都有，并且元素类型一样
+        let tag;
+</span><span class="token inserted-sign inserted">+        if (newChild &amp;&amp; typeof newChild.type === 'function' &amp;&amp; newChild.type.prototype.isReactComponent) {
++            tag = TAG_CLASS;//类组件
++        } else if (newChild &amp;&amp; newChild.type === ELEMENT_TEXT) {
+</span><span class="token unchanged">            tag = TAG_TEXT;//文本
+        } else if (newChild &amp;&amp; typeof newChild.type === 'string') {
+            tag = TAG_HOST;//原生DOM组件
+        }
+        if (sameType) {
+</span><span class="token inserted-sign inserted">+            let { children: oldChildren, ...oldProps } = oldFiber.props;
++            let { children: newChildren, ...newProps } = newChild.props;
++            newFiber = {
++                tag,//标记Fiber类型，例如是函数组件或者原生组件
++                type: oldFiber.type,//具体的元素类型
++                props: newChild.props,//新的属性对象
++                stateNode: oldFiber.stateNode,//原生组件的话就存放DOM节点，类组件的话是类组件实例，函数组件的话为空，因为没有实例
++                return: currentFiber,//父Fiber
++                updateQueue: oldFiber.updateQueue || new UpdateQueue(),
++                alternate: oldFiber,//上一个Fiber 指向旧树中的节点
++                effectTag: deepEquals(oldFiber.props, newChild.props) ? null : UPDATE,//副作用标识
++            }
+</span><span class="token unchanged">        } else {
+            if (newChild) {//类型不一样，创建新的Fiber,旧的不复用了
+                newFiber = {
+                    tag,//原生DOM组件
+                    type: newChild.type,//具体的元素类型
+                    props: newChild.props,//新的属性对象
+                    stateNode: null,//stateNode肯定是空的
+                    return: currentFiber,//父Fiber
+                    effectTag: PLACEMENT//副作用标识
+                }
+            }
+            if (oldFiber) {
+                oldFiber.effectTag = DELETION;
+                deletions.push(oldFiber);
+            }
+        }
+        if (oldFiber) {  //比较完一个元素了，老Fiber向后移动1位
+            oldFiber = oldFiber.sibling;
+        }
+       if (newFiber) {
+            if (newChildIndex === 0) {
+                currentFiber.child = newFiber;//第一个子节点挂到父节点的child属性上
+            } else {
+                prevSibling.sibling = newFiber;
+            }
+            prevSibling = newFiber;//然后newFiber变成了上一个哥哥了
+        }
+        newChildIndex++;
+    }
+</span>}
+
+function updateDOM(stateNode, oldProps, newProps) {
+<span class="token unchanged">    setProps(stateNode, oldProps, newProps);
+</span>}
+function completeUnitOfWork(currentFiber) {
+<span class="token unchanged">    const returnFiber = currentFiber.return;
+    if (returnFiber) {
+        if (!returnFiber.firstEffect) {
+            returnFiber.firstEffect = currentFiber.firstEffect;
+        }
+        if (!!currentFiber.lastEffect) {
+            if (!!returnFiber.lastEffect) {
+                returnFiber.lastEffect.nextEffect = currentFiber.firstEffect;
+            }
+            returnFiber.lastEffect = currentFiber.lastEffect;
+        }
+</span>
+<span class="token unchanged">        const effectTag = currentFiber.effectTag;
+        if (effectTag) {
+            if (!!returnFiber.lastEffect) {
+                returnFiber.lastEffect.nextEffect = currentFiber;
+            } else {
+                returnFiber.firstEffect = currentFiber;
+            }
+            returnFiber.lastEffect = currentFiber;
+        }
+    }
+</span>}
+
+function workLoop(deadline) {
+<span class="token unchanged">    let shouldYield = false;
+    while (nextUnitOfWork &amp;&amp; !shouldYield) {
+        nextUnitOfWork = performUnitOfWork(nextUnitOfWork);//执行一个任务并返回下一个任务
+        shouldYield = deadline.timeRemaining() &lt; 1;//如果剩余时间小于1毫秒就说明没有时间了，需要把控制权让给浏览器
+    }
+    //如果没有下一个执行单元了，并且当前渲染树存在，则进行提交阶段
+    if (!nextUnitOfWork &amp;&amp; workInProgressRoot) {
+        commitRoot();
+    }
+    requestIdleCallback(workLoop);
+</span>}
+//开始在空闲时间执行workLoop
+requestIdleCallback(workLoop);
+</code></pre></div><h2 id="_5-实现函数组件"><a href="#_5-实现函数组件" class="header-anchor">#</a> 5.实现函数组件</h2> <h3 id="_5-1-src-index-js"><a href="#_5-1-src-index-js" class="header-anchor">#</a> 5.1 src\index.js</h3> <p>src\index.js</p> <div class="language-diff extra-class"><pre class="language-diff"><code><span class="token inserted-sign inserted">+function FunctionCounter() {
++  return (
++    &lt;h1&gt;
++      Count:0
++    &lt;/h1&gt;
++  )
++}
+</span>ReactDOM.render(
+<span class="token inserted-sign inserted">+  &lt;FunctionCounter /&gt;,
+</span><span class="token unchanged">   document.getElementById('root')
+</span>);
+</code></pre></div><h3 id="_5-2-constants-js"><a href="#_5-2-constants-js" class="header-anchor">#</a> 5.2 constants.js</h3> <p>src\constants.js</p> <div class="language-diff extra-class"><pre class="language-diff"><code>export const ELEMENT_TEXT = Symbol.for('ELEMENT_TEXT');
+
+export const TAG_ROOT = Symbol.for('TAG_ROOT');
+export const TAG_HOST = Symbol.for('TAG_HOST');
+export const TAG_TEXT = Symbol.for('TAG_TEXT');
+export const TAG_CLASS = Symbol.for('TAG_CLASS');
+<span class="token inserted-sign inserted">+export const TAG_FUNCTION = Symbol.for('TAG_FUNCTION');
+</span>export const UPDATE = Symbol.for('UPDATE');
+export const PLACEMENT = Symbol.for('PLACEMENT');
+export const DELETION = Symbol.for('DELETION');
+</code></pre></div><h3 id="_5-3-scheduler-js"><a href="#_5-3-scheduler-js" class="header-anchor">#</a> 5.3 scheduler.js</h3> <p>src\scheduler.js</p> <div class="language-diff extra-class"><pre class="language-diff"><code>import { setProps, deepEquals } from './utils';
+import { UpdateQueue } from './updateQueue';
+<span class="token inserted-sign inserted">+import {
++    ELEMENT_TEXT, TAG_ROOT, TAG_HOST, TAG_TEXT, TAG_CLASS, TAG_FUNCTION, PLACEMENT, DELETION, UPDATE
++} from './constants';
+</span>let currentRoot = null;        //当前的根Fiber
+let workInProgressRoot = null; //正在渲染中的根Fiber
+let nextUnitOfWork = null;     //下一个工作单元
+let deletions = [];            //要删除的fiber节点
+
+export function scheduleRoot(rootFiber) {
+<span class="token unchanged">    if (rootFiber) {
+        workInProgressRoot = rootFiber; //把当前树设置为nextUnitOfWork开始进行调度
+    } else {
+        if (currentRoot.alternate) {
+            workInProgressRoot = currentRoot.alternate;
+            workInProgressRoot.alternate = currentRoot;
+        } else {
+            workInProgressRoot = {
+                ...currentRoot,
+                alternate: currentRoot
+            }
+        }
+    }
+    deletions.length = 0;
+    nextUnitOfWork = workInProgressRoot;
+</span>}
+
+function commitRoot() {
+<span class="token unchanged">    deletions.forEach(commitWork);
+    let currentFiber = workInProgressRoot.firstEffect;
+    while (currentFiber) {
+        commitWork(currentFiber);
+        currentFiber = currentFiber.nextEffect;
+    }
+    deletions.length = 0;//先把要删除的节点清空掉
+    workInProgressRoot.firstEffect = workInProgressRoot.lastEffect = null;
+    currentRoot = workInProgressRoot;
+    workInProgressRoot = null;
+</span>}
+function commitWork(currentFiber) {
+<span class="token unchanged">    if (!currentFiber) {
+        return;
+    }
+    let returnFiber = currentFiber.return;//先获取父Fiber
+    while (returnFiber.tag !== TAG_HOST &amp;&amp; returnFiber.tag !== TAG_ROOT &amp;&amp; returnFiber.tag !== TAG_TEXT) {//如果不是DOM节点就一直向上找
+        returnFiber = returnFiber.return;
+    }
+    const domReturn = returnFiber.stateNode;//获取父的DOM节点
+    if (currentFiber.effectTag === PLACEMENT &amp;&amp; currentFiber.stateNode != null) {//如果是新增DOM节点
+        let nextFiber = currentFiber;
+        while (nextFiber.tag !== TAG_HOST &amp;&amp; nextFiber.tag !== TAG_TEXT) {//必须向下找到一个DOM节点
+            nextFiber = nextFiber.child;
+        }
+        domReturn.appendChild(nextFiber.stateNode);
+    } else if (currentFiber.effectTag === DELETION) {//如果是删除则删除并返回
+        commitDeletion(currentFiber, domReturn);
+    } else if (currentFiber.effectTag === UPDATE &amp;&amp; currentFiber.stateNode != null) {//如果是更新
+        if (currentFiber.type === ELEMENT_TEXT) {
+            if (currentFiber.alternate.props.text !== currentFiber.props.text) {
+                currentFiber.stateNode.textContent = currentFiber.props.text;
+            }
+        } else {
+            updateDOM(currentFiber.stateNode, currentFiber.alternate.props, currentFiber.props);
+        }
+    }
+    currentFiber.effectTag = null;
+</span>}
+function commitDeletion(currentFiber, domReturn) {
+<span class="token unchanged">    if (currentFiber.tag === TAG_HOST || currentFiber.tag === TAG_TEXT) {
+        domReturn.removeChild(currentFiber.stateNode);
+    } else {
+        commitDeletion(currentFiber.child, domReturn);
+    }
+</span>}
+function performUnitOfWork(currentFiber) {
+<span class="token unchanged">    beginWork(currentFiber);//开始渲染前的Fiber,就是把子元素变成子fiber
+</span>
+<span class="token unchanged">    if (currentFiber.child) {//如果子节点就返回第一个子节点
+        return currentFiber.child;
+    }
+</span>
+<span class="token unchanged">    while (currentFiber) {//如果没有子节点说明当前节点已经完成了渲染工作
+        completeUnitOfWork(currentFiber);//可以结束此fiber的渲染了 
+        if (currentFiber.sibling) {//如果它有弟弟就返回弟弟
+            return currentFiber.sibling;
+        }
+        currentFiber = currentFiber.return;//如果没有弟弟让爸爸完成，然后找叔叔
+    }
+</span>}
+
+function beginWork(currentFiber) {
+<span class="token unchanged">    if (currentFiber.tag === TAG_ROOT) {//如果是根节点
+        updateHostRoot(currentFiber);
+    } else if (currentFiber.tag === TAG_TEXT) {//如果是原生文本节点
+        updateHostText(currentFiber);
+    } else if (currentFiber.tag === TAG_HOST) {//如果是原生DOM节点
+        updateHostComponent(currentFiber);
+    } else if (currentFiber.tag === TAG_CLASS) {//如果是类组件
+        updateClassComponent(currentFiber)
+</span><span class="token inserted-sign inserted">+    } else if (currentFiber.tag === TAG_FUNCTION) {//如果是函数组件
++        updateFunctionComponent(currentFiber);
++    }
+</span>}
+<span class="token inserted-sign inserted">+function updateFunctionComponent(currentFiber) {
++    const newChildren = [currentFiber.type(currentFiber.props)];
++    reconcileChildren(currentFiber, newChildren);
++}
+</span>function updateClassComponent(currentFiber) {
+<span class="token unchanged">    if (currentFiber.stateNode === null) {
+        currentFiber.stateNode = new currentFiber.type(currentFiber.props);
+        currentFiber.stateNode.internalFiber = currentFiber;
+        currentFiber.updateQueue = new UpdateQueue();
+    }
+    currentFiber.stateNode.state = currentFiber.updateQueue.forceUpdate(currentFiber.stateNode.state);
+    const newChildren = [currentFiber.stateNode.render()];
+    reconcileChildren(currentFiber, newChildren);
+</span>}
+function updateHostText(currentFiber) {
+<span class="token unchanged">    if (!currentFiber.stateNode) {
+        currentFiber.stateNode = createDOM(currentFiber);//先创建真实的DOM节点
+    }
+</span>}
+function updateHostRoot(currentFiber) {//如果是根节点
+<span class="token unchanged">    const newChildren = currentFiber.props.children;//直接渲染子节点
+    reconcileChildren(currentFiber, newChildren);
+</span>}
+
+function updateHostComponent(currentFiber) {//如果是原生DOM节点
+<span class="token unchanged">    if (!currentFiber.stateNode) {
+        currentFiber.stateNode = createDOM(currentFiber);//先创建真实的DOM节点
+    }
+    const newChildren = currentFiber.props.children;
+    reconcileChildren(currentFiber, newChildren);
+</span>}
+function createDOM(currentFiber) {
+<span class="token unchanged">    if (currentFiber.type === ELEMENT_TEXT) {
+        return document.createTextNode(currentFiber.props.text);
+    }
+    const stateNode = document.createElement(currentFiber.type);
+    updateDOM(stateNode, {}, currentFiber.props);
+    return stateNode;
+</span>}
+
+function reconcileChildren(currentFiber, newChildren) {
+<span class="token unchanged">    let newChildIndex = 0;//新虚拟DOM数组中的索引
+    let oldFiber = currentFiber.alternate &amp;&amp; currentFiber.alternate.child;//父Fiber中的第一个子Fiber
+    let prevSibling;
+    while (newChildIndex &lt; newChildren.length || oldFiber) {
+        const newChild = newChildren[newChildIndex];
+        let newFiber;
+        const sameType = oldFiber &amp;&amp; newChild &amp;&amp; newChild.type === oldFiber.type;//新旧都有，并且元素类型一样
+        let tag;
+        if (newChild &amp;&amp; typeof newChild.type === 'function' &amp;&amp; newChild.type.prototype.isReactComponent) {
+            tag = TAG_CLASS;//类组件
+</span><span class="token inserted-sign inserted">+        } else if (newChild &amp;&amp; typeof newChild.type === 'function') {
++            tag = TAG_FUNCTION;//函数组件
++        } else if (newChild &amp;&amp; newChild.type === ELEMENT_TEXT) {
+</span><span class="token unchanged">            tag = TAG_TEXT;//文本
+        } else if (newChild &amp;&amp; typeof newChild.type === 'string') {
+            tag = TAG_HOST;//原生DOM组件
+        }
+        if (sameType) {
+            newFiber = {
+                tag,//标记Fiber类型，例如是函数组件或者原生组件
+                type: oldFiber.type,//具体的元素类型
+                props: newChild.props,//新的属性对象
+                stateNode: oldFiber.stateNode,//原生组件的话就存放DOM节点，类组件的话是类组件实例，函数组件的话为空，因为没有实例
+                return: currentFiber,//父Fiber
+                updateQueue: oldFiber.updateQueue || new UpdateQueue(),
+                alternate: oldFiber,//上一个Fiber 指向旧树中的节点
+                effectTag: deepEquals(oldFiber.props, newChild.props) ? null : UPDATE,//副作用标识
+            }
+        } else {
+            if (newChild) {//类型不一样，创建新的Fiber,旧的不复用了
+                newFiber = {
+                    tag,//原生DOM组件
+                    type: newChild.type,//具体的元素类型
+                    props: newChild.props,//新的属性对象
+                    stateNode: null,//stateNode肯定是空的
+                    return: currentFiber,//父Fiber
+                    effectTag: PLACEMENT //副作用标识 
+                }
+            }
+            if (oldFiber) {
+                oldFiber.effectTag = DELETION;
+                deletions.push(oldFiber);
+            }
+        }
+        if (oldFiber) {  //比较完一个元素了，老Fiber向后移动1位
+            oldFiber = oldFiber.sibling;
+        }
+        if (newFiber) {
+            if (newChildIndex === 0) {
+                currentFiber.child = newFiber;//第一个子节点挂到父节点的child属性上
+            } else {
+                prevSibling.sibling = newFiber;
+            }
+            prevSibling = newFiber;//然后newFiber变成了上一个哥哥了
+        }
+        newChildIndex++;
+    }
+</span>}
+
+function updateDOM(stateNode, oldProps, newProps) {
+<span class="token unchanged">    setProps(stateNode, oldProps, newProps);
+</span>}
+function completeUnitOfWork(currentFiber) {
+<span class="token unchanged">    const returnFiber = currentFiber.return;
+    if (returnFiber) {
+        if (!returnFiber.firstEffect) {
+            returnFiber.firstEffect = currentFiber.firstEffect;
+        }
+        if (!!currentFiber.lastEffect) {
+            if (!!returnFiber.lastEffect) {
+                returnFiber.lastEffect.nextEffect = currentFiber.firstEffect;
+            }
+            returnFiber.lastEffect = currentFiber.lastEffect;
+        }
+</span>
+<span class="token unchanged">        const effectTag = currentFiber.effectTag;
+        if (effectTag) {
+            if (!!returnFiber.lastEffect) {
+                returnFiber.lastEffect.nextEffect = currentFiber;
+            } else {
+                returnFiber.firstEffect = currentFiber;
+            }
+            returnFiber.lastEffect = currentFiber;
+        }
+    }
+</span>}
+
+function workLoop(deadline) {
+<span class="token unchanged">    let shouldYield = false;
+    while (nextUnitOfWork &amp;&amp; !shouldYield) {
+        nextUnitOfWork = performUnitOfWork(nextUnitOfWork);//执行一个任务并返回下一个任务
+        shouldYield = deadline.timeRemaining() &lt; 1;//如果剩余时间小于1毫秒就说明没有时间了，需要把控制权让给浏览器
+    }
+    //如果没有下一个执行单元了，并且当前渲染树存在，则进行提交阶段
+    if (!nextUnitOfWork &amp;&amp; workInProgressRoot) {
+        commitRoot();
+    }
+    requestIdleCallback(workLoop);
+</span>}
+//开始在空闲时间执行workLoop
+requestIdleCallback(workLoop);
+</code></pre></div><h2 id="_5-实现hooks"><a href="#_5-实现hooks" class="header-anchor">#</a> 5.实现hooks</h2> <h3 id="_5-1-src-index-js-2"><a href="#_5-1-src-index-js-2" class="header-anchor">#</a> 5.1 src\index.js</h3> <p>src\index.js</p> <div class="language-diff extra-class"><pre class="language-diff"><code>import React from './react';
+import ReactDOM from './react-dom';
+
+<span class="token inserted-sign inserted">+function reducer(state, action) {
++  switch (action.type) {
++    case 'ADD':
++      return { count: state.count + 1 };
++    default:
++      return state;
++  }
++}
++function FunctionCounter() {
++  const [numberState, setNumberState] = React.useState({ number: 0 });
++  const [countState, dispatch] = React.useReducer(reducer, { count: 0 });
++  return (
++    &lt;div&gt;
++      &lt;h1 onClick={() =&gt; setNumberState(state =&gt; ({ number: state.number + 1 }))}&gt;
++        Count: {numberState.number}
++      &lt;/h1 &gt;
++      &lt;hr /&gt;
++      &lt;h1 onClick={() =&gt; dispatch({ type: 'ADD' })}&gt;
++        Count: {countState.count}
++      &lt;/h1 &gt;
++    &lt;/div&gt;
++  )
++}
+</span>ReactDOM.render(
+<span class="token unchanged">  &lt;FunctionCounter /&gt;,
+  document.getElementById('root')
+</span>);
+</code></pre></div><h3 id="_5-2-src-react-js"><a href="#_5-2-src-react-js" class="header-anchor">#</a> 5.2 src\react.js</h3> <p>src\react.js</p> <div class="language-diff extra-class"><pre class="language-diff"><code>import { ELEMENT_TEXT } from './constants';
+import { Update, UpdateQueue } from './updateQueue';
+<span class="token inserted-sign inserted">+import { scheduleRoot,useState,useReducer} from './scheduler';
+</span>function createElement(type, config, ...children) {
+<span class="token unchanged">    delete config.__self;
+    delete config.__source;
+    return {
+        type,
+        props: {
+            ...config,
+            children: children.map(
+                child =&gt; typeof child === &quot;object&quot; ?
+                    child :
+                    { type: ELEMENT_TEXT, props: { text: child, children: [] } })
+        }
+    }
+</span>}
+class Component {
+<span class="token unchanged">    constructor(props) {
+        this.props = props;
+        this.updateQueue = new UpdateQueue();
+    }
+    setState(payload) {
+        this.internalFiber.updateQueue.enqueueUpdate(new Update(payload));
+        scheduleRoot();
+    }
+</span>}
+Component.prototype.isReactComponent = true;
+let React = {
+<span class="token unchanged">    createElement,
+    Component,
+</span><span class="token inserted-sign inserted">+    useState,
++    useReducer
+</span>}
+export default React;
+</code></pre></div><h3 id="_5-3-src-scheduler-js"><a href="#_5-3-src-scheduler-js" class="header-anchor">#</a> 5.3 src\scheduler.js</h3> <p>src\scheduler.js</p> <div class="language-diff extra-class"><pre class="language-diff"><code>import { setProps, deepEquals } from './utils';
+<span class="token inserted-sign inserted">+import { UpdateQueue, Update } from './updateQueue';
+</span>import {
+<span class="token unchanged">    ELEMENT_TEXT, TAG_ROOT, TAG_HOST, TAG_TEXT, TAG_CLASS, TAG_FUNCTION, PLACEMENT, DELETION, UPDATE
+</span>} from './constants';
+let currentRoot = null;         //当前的根Fiber
+let workInProgressRoot = null;  //正在渲染中的根Fiber
+let nextUnitOfWork = null;      //下一个工作单元
+let deletions = [];             //要删除的fiber节点
+<span class="token inserted-sign inserted">+let workInProgressFiber = null; //正在工作中的fiber
++let hookIndex = 0;              //hook索引
+</span>export function scheduleRoot(rootFiber) {
+<span class="token unchanged">    if (rootFiber) {
+        workInProgressRoot = rootFiber; //把当前树设置为nextUnitOfWork开始进行调度
+    } else {
+        if (currentRoot.alternate) {
+            workInProgressRoot = currentRoot.alternate;
+            workInProgressRoot.alternate = currentRoot;
+        } else {
+            workInProgressRoot = {
+                ...currentRoot,
+                alternate: currentRoot
+            }
+        }
+    }
+    deletions.length = 0;
+    nextUnitOfWork = workInProgressRoot;
+</span>}
+
+function commitRoot() {
+<span class="token unchanged">    deletions.forEach(commitWork);
+    let currentFiber = workInProgressRoot.firstEffect;
+    while (currentFiber) {
+        commitWork(currentFiber);
+        currentFiber = currentFiber.nextEffect;
+    }
+    deletions.length = 0;//先把要删除的节点清空掉
+    workInProgressRoot.firstEffect = workInProgressRoot.lastEffect = null;
+    currentRoot = workInProgressRoot;
+    workInProgressRoot = null;
+</span>}
+function commitWork(currentFiber) {
+<span class="token unchanged">    if (!currentFiber) {
+        return;
+    }
+    let returnFiber = currentFiber.return;//先获取父Fiber
+    while (returnFiber.tag !== TAG_HOST &amp;&amp; returnFiber.tag !== TAG_ROOT &amp;&amp; returnFiber.tag !== TAG_TEXT) {//如果不是DOM节点就一直向上找
+        returnFiber = returnFiber.return;
+    }
+    const domReturn = returnFiber.stateNode;//获取父的DOM节点
+    if (currentFiber.effectTag === PLACEMENT &amp;&amp; currentFiber.stateNode != null) {//如果是新增DOM节点
+        let nextFiber = currentFiber;
+        while (nextFiber.tag !== TAG_HOST &amp;&amp; nextFiber.tag !== TAG_TEXT) {//必须向下找到一个DOM节点
+            nextFiber = nextFiber.child;
+        }
+        domReturn.appendChild(nextFiber.stateNode);
+    } else if (currentFiber.effectTag === DELETION) {//如果是删除则删除并返回
+        commitDeletion(currentFiber, domReturn);
+    } else if (currentFiber.effectTag === UPDATE &amp;&amp; currentFiber.stateNode != null) {//如果是更新
+        if (currentFiber.type === ELEMENT_TEXT) {
+            if (currentFiber.alternate.props.text !== currentFiber.props.text) {
+                currentFiber.stateNode.textContent = currentFiber.props.text;
+            }
+        } else {
+            updateDOM(currentFiber.stateNode, currentFiber.alternate.props, currentFiber.props);
+        }
+    }
+    currentFiber.effectTag = null;
+</span>}
+function commitDeletion(currentFiber, domReturn) {
+<span class="token unchanged">    if (currentFiber.tag === TAG_HOST || currentFiber.tag === TAG_TEXT) {
+        domReturn.removeChild(currentFiber.stateNode);
+    } else {
+        commitDeletion(currentFiber.child, domReturn);
+    }
+</span>}
+function performUnitOfWork(currentFiber) {
+<span class="token unchanged">    beginWork(currentFiber);//开始渲染前的Fiber,就是把子元素变成子fiber
+</span>
+<span class="token unchanged">    if (currentFiber.child) {//如果子节点就返回第一个子节点
+        return currentFiber.child;
+    }
+</span>
+<span class="token unchanged">    while (currentFiber) {//如果没有子节点说明当前节点已经完成了渲染工作
+        completeUnitOfWork(currentFiber);//可以结束此fiber的渲染了 
+        if (currentFiber.sibling) {//如果它有弟弟就返回弟弟
+            return currentFiber.sibling;
+        }
+        currentFiber = currentFiber.return;//如果没有弟弟让爸爸完成，然后找叔叔
+    }
+</span>}
+
+function beginWork(currentFiber) {
+<span class="token unchanged">    if (currentFiber.tag === TAG_ROOT) {//如果是根节点
+        updateHostRoot(currentFiber);
+    } else if (currentFiber.tag === TAG_TEXT) {//如果是原生文本节点
+        updateHostText(currentFiber);
+    } else if (currentFiber.tag === TAG_HOST) {//如果是原生DOM节点
+        updateHostComponent(currentFiber);
+    } else if (currentFiber.tag === TAG_CLASS) {//如果是类组件
+        updateClassComponent(currentFiber)
+    } else if (currentFiber.tag === TAG_FUNCTION) {//如果是函数组件
+        updateFunctionComponent(currentFiber);
+    }
+</span>}
+function updateFunctionComponent(currentFiber) {
+<span class="token inserted-sign inserted">+    workInProgressFiber = currentFiber;
++    hookIndex = 0;
++    workInProgressFiber.hooks = [];
+</span><span class="token unchanged">    const newChildren = [currentFiber.type(currentFiber.props)];
+    reconcileChildren(currentFiber, newChildren);
+</span>}
+function updateClassComponent(currentFiber) {
+<span class="token unchanged">    if (currentFiber.stateNode === null) {
+        currentFiber.stateNode = new currentFiber.type(currentFiber.props);
+        currentFiber.stateNode.internalFiber = currentFiber;
+        currentFiber.updateQueue = new UpdateQueue();
+    }
+    currentFiber.stateNode.state = currentFiber.updateQueue.forceUpdate(currentFiber.stateNode.state);
+    const newChildren = [currentFiber.stateNode.render()];
+    reconcileChildren(currentFiber, newChildren);
+</span>}
+function updateHostText(currentFiber) {
+<span class="token unchanged">    if (!currentFiber.stateNode) {
+        currentFiber.stateNode = createDOM(currentFiber);//先创建真实的DOM节点
+    }
+</span>}
+function updateHostRoot(currentFiber) {//如果是根节点
+<span class="token unchanged">    const newChildren = currentFiber.props.children;//直接渲染子节点
+    reconcileChildren(currentFiber, newChildren);
+</span>}
+
+function updateHostComponent(currentFiber) {//如果是原生DOM节点
+<span class="token unchanged">    if (!currentFiber.stateNode) {
+        currentFiber.stateNode = createDOM(currentFiber);//先创建真实的DOM节点
+    }
+    const newChildren = currentFiber.props.children;
+    reconcileChildren(currentFiber, newChildren);
+</span>}
+function createDOM(currentFiber) {
+<span class="token unchanged">    if (currentFiber.type === ELEMENT_TEXT) {
+        return document.createTextNode(currentFiber.props.text);
+    }
+    const stateNode = document.createElement(currentFiber.type);
+    updateDOM(stateNode, {}, currentFiber.props);
+    return stateNode;
+</span>}
+
+function reconcileChildren(currentFiber, newChildren) {
+<span class="token unchanged">    let newChildIndex = 0;//新虚拟DOM数组中的索引
+    let oldFiber = currentFiber.alternate &amp;&amp; currentFiber.alternate.child;//父Fiber中的第一个子Fiber
+    let prevSibling;
+    while (newChildIndex &lt; newChildren.length || oldFiber) {
+        const newChild = newChildren[newChildIndex];
+        let newFiber;
+        const sameType = oldFiber &amp;&amp; newChild &amp;&amp; newChild.type === oldFiber.type;//新旧都有，并且元素类型一样
+        let tag;
+        if (newChild &amp;&amp; typeof newChild.type === 'function' &amp;&amp; newChild.type.prototype.isReactComponent) {
+            tag = TAG_CLASS;//类组件
+        } else if (newChild &amp;&amp; typeof newChild.type === 'function') {
+            tag = TAG_FUNCTION;//函数组件
+        } else if (newChild &amp;&amp; newChild.type === ELEMENT_TEXT) {
+            tag = TAG_TEXT;//文本
+        } else if (newChild &amp;&amp; typeof newChild.type === 'string') {
+            tag = TAG_HOST;//原生DOM组件
+        }
+        if (sameType) {
+            newFiber = {
+                tag,//标记Fiber类型，例如是函数组件或者原生组件
+                type: oldFiber.type,//具体的元素类型
+                props: newChild.props,//新的属性对象
+                stateNode: oldFiber.stateNode,//原生组件的话就存放DOM节点，类组件的话是类组件实例，函数组件的话为空，因为没有实例
+                return: currentFiber,//父Fiber
+                updateQueue: oldFiber.updateQueue || new UpdateQueue(),
+                alternate: oldFiber,//上一个Fiber 指向旧树中的节点
+                effectTag: deepEquals(oldFiber.props, newChild.props) ? null : UPDATE,//副作用标识
+            }
+        } else {
+            if (newChild) {//类型不一样，创建新的Fiber,旧的不复用了
+                newFiber = {
+                    tag,//原生DOM组件
+                    type: newChild.type,//具体的元素类型
+                    props: newChild.props,//新的属性对象
+                    stateNode: null,//stateNode肯定是空的
+                    return: currentFiber,//父Fiber
+                    effectTag: PLACEMENT //副作用标识 
+                }
+            }
+            if (oldFiber) {
+                oldFiber.effectTag = DELETION;
+                deletions.push(oldFiber);
+            }
+        }
+        if (oldFiber) {  //比较完一个元素了，老Fiber向后移动1位
+            oldFiber = oldFiber.sibling;
+        }
+        if (newFiber) {
+            if (newChildIndex === 0) {
+                currentFiber.child = newFiber;//第一个子节点挂到父节点的child属性上
+            } else {
+                prevSibling.sibling = newFiber;
+            }
+            prevSibling = newFiber;//然后newFiber变成了上一个哥哥了
+        }
+        newChildIndex++;
+    }
+</span>}
+
+function updateDOM(stateNode, oldProps, newProps) {
+<span class="token unchanged">    setProps(stateNode, oldProps, newProps);
+</span>}
+function completeUnitOfWork(currentFiber) {
+<span class="token unchanged">    const returnFiber = currentFiber.return;
+    if (returnFiber) {
+        if (!returnFiber.firstEffect) {
+            returnFiber.firstEffect = currentFiber.firstEffect;
+        }
+        if (!!currentFiber.lastEffect) {
+            if (!!returnFiber.lastEffect) {
+                returnFiber.lastEffect.nextEffect = currentFiber.firstEffect;
+            }
+            returnFiber.lastEffect = currentFiber.lastEffect;
+        }
+</span>
+<span class="token unchanged">        const effectTag = currentFiber.effectTag;
+        if (effectTag) {
+            if (!!returnFiber.lastEffect) {
+                returnFiber.lastEffect.nextEffect = currentFiber;
+            } else {
+                returnFiber.firstEffect = currentFiber;
+            }
+            returnFiber.lastEffect = currentFiber;
+        }
+    }
+</span>}
+<span class="token inserted-sign inserted">+export function useReducer(reducer, initialValue) {
++    let oldHook =
++        workInProgressFiber.alternate &amp;&amp;
++        workInProgressFiber.alternate.hooks &amp;&amp;
++        workInProgressFiber.alternate.hooks[hookIndex];
++    let newHook = oldHook;
++    if (oldHook) {
++        oldHook.state = oldHook.updateQueue.forceUpdate(oldHook.state);
++    } else {
++        newHook = {
++            state: initialValue,
++            updateQueue: new UpdateQueue()
++        };
++    }
++    const dispatch = action =&gt; {
++        newHook.updateQueue.enqueueUpdate(
++            new Update(reducer ? reducer(newHook.state, action) : action)
++        );
++        scheduleRoot();
++    }
++    workInProgressFiber.hooks[hookIndex++] = newHook;
++    return [newHook.state, dispatch];
++}
++export function useState(initState) {
++    return useReducer(null, initState)
++}
+</span>function workLoop(deadline) {
+<span class="token unchanged">    let shouldYield = false;
+    while (nextUnitOfWork &amp;&amp; !shouldYield) {
+        nextUnitOfWork = performUnitOfWork(nextUnitOfWork);//执行一个任务并返回下一个任务
+        shouldYield = deadline.timeRemaining() &lt; 1;//如果剩余时间小于1毫秒就说明没有时间了，需要把控制权让给浏览器
+    }
+    //如果没有下一个执行单元了，并且当前渲染树存在，则进行提交阶段
+    if (!nextUnitOfWork &amp;&amp; workInProgressRoot) {
+        commitRoot();
+    }
+    requestIdleCallback(workLoop);
+</span>}
+//开始在空闲时间执行workLoop
+requestIdleCallback(workLoop);
+</code></pre></div></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">更新时间:</span> <span class="time">4/27/2020, 10:55:47 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/react/fiber/01-fiber.html" class="prev">
+        01. Fiber
+      </a></span> <span class="next"><a href="/react/router/01-router.html">
+        01. React router
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.2af561cb.js" defer></script><script src="/assets/js/2.b2a5c435.js" defer></script><script src="/assets/js/39.26f95568.js" defer></script>
+  </body>
+</html>

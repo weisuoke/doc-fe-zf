@@ -1,0 +1,1104 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>上传功能 | 珠峰架构</title>
+    <meta name="generator" content="VuePress 1.4.1">
+    
+    <meta name="description" content="">
+    <link rel="preload" href="/assets/css/0.styles.1657c744.css" as="style"><link rel="preload" href="/assets/js/app.2af561cb.js" as="script"><link rel="preload" href="/assets/js/2.b2a5c435.js" as="script"><link rel="preload" href="/assets/js/34.7d1f4bd2.js" as="script"><link rel="prefetch" href="/assets/js/10.2b2c8443.js"><link rel="prefetch" href="/assets/js/11.689524dc.js"><link rel="prefetch" href="/assets/js/12.849e2da9.js"><link rel="prefetch" href="/assets/js/13.c798d95d.js"><link rel="prefetch" href="/assets/js/14.380c4ee7.js"><link rel="prefetch" href="/assets/js/15.d5753b2e.js"><link rel="prefetch" href="/assets/js/16.49eb1f17.js"><link rel="prefetch" href="/assets/js/17.5ecf2b4f.js"><link rel="prefetch" href="/assets/js/18.da9c8265.js"><link rel="prefetch" href="/assets/js/19.59d827ef.js"><link rel="prefetch" href="/assets/js/20.73eb42bb.js"><link rel="prefetch" href="/assets/js/21.8570b5b4.js"><link rel="prefetch" href="/assets/js/22.34094913.js"><link rel="prefetch" href="/assets/js/23.5209939b.js"><link rel="prefetch" href="/assets/js/24.53d92201.js"><link rel="prefetch" href="/assets/js/25.7241adf1.js"><link rel="prefetch" href="/assets/js/26.fecc2611.js"><link rel="prefetch" href="/assets/js/27.e50fca48.js"><link rel="prefetch" href="/assets/js/28.4c168acc.js"><link rel="prefetch" href="/assets/js/29.f5186710.js"><link rel="prefetch" href="/assets/js/3.ba1dcccd.js"><link rel="prefetch" href="/assets/js/30.33cb1c11.js"><link rel="prefetch" href="/assets/js/31.c088791d.js"><link rel="prefetch" href="/assets/js/32.3b724af5.js"><link rel="prefetch" href="/assets/js/33.f975c942.js"><link rel="prefetch" href="/assets/js/35.26c11750.js"><link rel="prefetch" href="/assets/js/36.e8890e58.js"><link rel="prefetch" href="/assets/js/37.516eba46.js"><link rel="prefetch" href="/assets/js/38.4f8b8525.js"><link rel="prefetch" href="/assets/js/39.26f95568.js"><link rel="prefetch" href="/assets/js/4.fca74266.js"><link rel="prefetch" href="/assets/js/40.b9a8ffbb.js"><link rel="prefetch" href="/assets/js/41.fd02ea5f.js"><link rel="prefetch" href="/assets/js/42.d2483185.js"><link rel="prefetch" href="/assets/js/43.70bff2de.js"><link rel="prefetch" href="/assets/js/44.219702ca.js"><link rel="prefetch" href="/assets/js/45.aba93af9.js"><link rel="prefetch" href="/assets/js/46.447ba87c.js"><link rel="prefetch" href="/assets/js/47.519ddc28.js"><link rel="prefetch" href="/assets/js/48.fd8af347.js"><link rel="prefetch" href="/assets/js/49.b3783fa9.js"><link rel="prefetch" href="/assets/js/5.cc992e8b.js"><link rel="prefetch" href="/assets/js/50.0bb20f92.js"><link rel="prefetch" href="/assets/js/51.37ba1a59.js"><link rel="prefetch" href="/assets/js/52.054af132.js"><link rel="prefetch" href="/assets/js/53.5aca78a0.js"><link rel="prefetch" href="/assets/js/54.78c43f89.js"><link rel="prefetch" href="/assets/js/55.8ecaadc1.js"><link rel="prefetch" href="/assets/js/56.e844f110.js"><link rel="prefetch" href="/assets/js/57.530db0e9.js"><link rel="prefetch" href="/assets/js/58.8c839289.js"><link rel="prefetch" href="/assets/js/59.6634b409.js"><link rel="prefetch" href="/assets/js/6.b8b36e50.js"><link rel="prefetch" href="/assets/js/60.7ebe5787.js"><link rel="prefetch" href="/assets/js/61.bfe89a8b.js"><link rel="prefetch" href="/assets/js/62.4cdf6e8c.js"><link rel="prefetch" href="/assets/js/63.a0e80f0d.js"><link rel="prefetch" href="/assets/js/64.62a1b782.js"><link rel="prefetch" href="/assets/js/65.7be0994b.js"><link rel="prefetch" href="/assets/js/66.5a592a8e.js"><link rel="prefetch" href="/assets/js/67.40b4291c.js"><link rel="prefetch" href="/assets/js/68.2ac34b58.js"><link rel="prefetch" href="/assets/js/69.728773d5.js"><link rel="prefetch" href="/assets/js/7.0414e914.js"><link rel="prefetch" href="/assets/js/70.30137f66.js"><link rel="prefetch" href="/assets/js/71.7735c9fc.js"><link rel="prefetch" href="/assets/js/72.e9f43339.js"><link rel="prefetch" href="/assets/js/73.2d754e71.js"><link rel="prefetch" href="/assets/js/74.bf70dd09.js"><link rel="prefetch" href="/assets/js/75.18c28356.js"><link rel="prefetch" href="/assets/js/76.a0626bc9.js"><link rel="prefetch" href="/assets/js/77.dfde57e0.js"><link rel="prefetch" href="/assets/js/78.b380a0d6.js"><link rel="prefetch" href="/assets/js/79.f7bafb5d.js"><link rel="prefetch" href="/assets/js/8.c3544379.js"><link rel="prefetch" href="/assets/js/80.ade6c33e.js"><link rel="prefetch" href="/assets/js/81.6335ba85.js"><link rel="prefetch" href="/assets/js/82.9d01c14e.js"><link rel="prefetch" href="/assets/js/83.47911fdd.js"><link rel="prefetch" href="/assets/js/9.844fca3b.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.1657c744.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">珠峰架构</span></a> <div class="links"><!----> <!----></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><!---->  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><a href="/react/" class="sidebar-heading clickable router-link-active open"><span>react</span> <span class="arrow down"></span></a> <ul class="sidebar-links sidebar-group-items"><li><section class="sidebar-group collapsable is-sub-group depth-1"><a href="/react/basic/" class="sidebar-heading clickable"><span>基础</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><a href="/react/fiber/" class="sidebar-heading clickable"><span>Fiber</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><a href="/react/router/" class="sidebar-heading clickable"><span>react router</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><a href="/react/redux/" class="sidebar-heading clickable"><span>redux</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><a href="/react/ssr/" class="sidebar-heading clickable"><span>SSR</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><a href="/react/nextjs/" class="sidebar-heading clickable"><span>nextjs</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><a href="/react/dva/" class="sidebar-heading clickable"><span>dva</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><a href="/react/umi/" class="sidebar-heading clickable"><span>umi</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><a href="/react/component/" class="sidebar-heading clickable router-link-active open"><span>组件</span> <span class="arrow down"></span></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/react/component/upload.html" class="active sidebar-link">上传功能</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/react/component/upload.html#_1-初始化项目" class="sidebar-link">1.初始化项目</a></li><li class="sidebar-sub-header"><a href="/react/component/upload.html#_2-单个上传" class="sidebar-link">2.单个上传</a></li><li class="sidebar-sub-header"><a href="/react/component/upload.html#_3-切片上传" class="sidebar-link">3.切片上传</a></li><li class="sidebar-sub-header"><a href="/react/component/upload.html#_4-进度条" class="sidebar-link">4.进度条</a></li><li class="sidebar-sub-header"><a href="/react/component/upload.html#_5-断点续传和秒传" class="sidebar-link">5.断点续传和秒传</a></li><li class="sidebar-sub-header"><a href="/react/component/upload.html#_1-初始化项目-2" class="sidebar-link">1.初始化项目</a></li><li class="sidebar-sub-header"><a href="/react/component/upload.html#_2-单个上传-2" class="sidebar-link">2.单个上传</a></li><li class="sidebar-sub-header"><a href="/react/component/upload.html#_3-文件切割和合并" class="sidebar-link">3.文件切割和合并</a></li><li class="sidebar-sub-header"><a href="/react/component/upload.html#_4-切片上传" class="sidebar-link">4.切片上传</a></li><li class="sidebar-sub-header"><a href="/react/component/upload.html#_5-断点续传" class="sidebar-link">5.断点续传</a></li></ul></li><li><a href="/react/component/Tree.html" class="sidebar-link">Tree</a></li></ul></section></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><a href="/react/interview/" class="sidebar-heading clickable"><span>面试</span> <span class="arrow right"></span></a> <!----></section></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/vue/" class="sidebar-heading clickable"><span>vue</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/webpack/" class="sidebar-heading clickable"><span>webpack</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/flutter/" class="sidebar-heading clickable"><span>flutter</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/interview/" class="sidebar-heading clickable"><span>interview</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/other/" class="sidebar-heading clickable"><span>other</span> <span class="arrow right"></span></a> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="上传功能"><a href="#上传功能" class="header-anchor">#</a> 上传功能</h1> <ul><li>整体上传</li> <li>分片上传</li> <li>进度条</li> <li>秒传</li> <li>断点续传(支持单个分片续传和刷新浏览器续传)</li> <li>暂停和恢复</li></ul> <h2 id="_1-初始化项目"><a href="#_1-初始化项目" class="header-anchor">#</a> 1.初始化项目</h2> <div class="language-js extra-class"><pre class="language-js"><code>create<span class="token operator">-</span>react<span class="token operator">-</span>app <span class="token operator">--</span>template<span class="token operator">=</span>typescript
+cd create<span class="token operator">-</span>react<span class="token operator">-</span>app
+cnpm i antd <span class="token operator">-</span><span class="token constant">S</span>
+</code></pre></div><h2 id="_2-单个上传"><a href="#_2-单个上传" class="header-anchor">#</a> 2.单个上传</h2> <h3 id="_2-1-src-index-tsx"><a href="#_2-1-src-index-tsx" class="header-anchor">#</a> 2.1 src\index.tsx</h3> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> ReactDOM <span class="token keyword">from</span> <span class="token string">'react-dom'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> App <span class="token keyword">from</span> <span class="token string">'./App'</span><span class="token punctuation">;</span>
+
+ReactDOM<span class="token punctuation">.</span><span class="token function">render</span><span class="token punctuation">(</span><span class="token operator">&lt;</span>App <span class="token operator">/</span><span class="token operator">&gt;</span><span class="token punctuation">,</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'root'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h3 id="_2-2-src-app-tsx"><a href="#_2-2-src-app-tsx" class="header-anchor">#</a> 2.2 src\App.tsx</h3> <div class="language-tsx extra-class"><pre class="language-tsx"><code><span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> Upload <span class="token keyword">from</span> <span class="token string">'./Upload'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token string">'./App.css'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">function</span> <span class="token function">App</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">className</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>App<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+            </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Upload</span></span> <span class="token punctuation">/&gt;</span></span><span class="token plain-text">
+        </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> App<span class="token punctuation">;</span>
+</code></pre></div><h3 id="_2-3-src-app-css"><a href="#_2-3-src-app-css" class="header-anchor">#</a> 2.3 src\App.css</h3> <div class="language-css extra-class"><pre class="language-css"><code><span class="token atrule"><span class="token rule">@import</span> <span class="token string">'~antd/dist/antd.css'</span><span class="token punctuation">;</span></span><span class="token selector">;
+.App</span> <span class="token punctuation">{</span>
+  <span class="token property">padding</span><span class="token punctuation">:</span> 20px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="_2-4-src-upload-tsx"><a href="#_2-4-src-upload-tsx" class="header-anchor">#</a> 2.4 src\Upload.tsx</h3> <p>src\Upload.tsx</p> <div class="language-tsx extra-class"><pre class="language-tsx"><code><span class="token keyword">import</span> React<span class="token punctuation">,</span> <span class="token punctuation">{</span> ChangeEvent<span class="token punctuation">,</span> useState<span class="token punctuation">,</span> useEffect <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> Input<span class="token punctuation">,</span> Row<span class="token punctuation">,</span> Col<span class="token punctuation">,</span> Button<span class="token punctuation">,</span> message <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'antd'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> request <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'./utils'</span><span class="token punctuation">;</span>
+<span class="token keyword">enum</span> UploadStatus <span class="token punctuation">{</span>
+    <span class="token constant">INIT</span><span class="token punctuation">,</span><span class="token comment">//初始态</span>
+    <span class="token constant">PAUSE</span><span class="token punctuation">,</span><span class="token comment">//暂停中</span>
+    <span class="token constant">UPLOADING</span><span class="token comment">//上传中</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">interface</span> <span class="token class-name">Props</span> <span class="token punctuation">{</span>
+
+<span class="token punctuation">}</span>
+<span class="token keyword">function</span> <span class="token function">Upload</span><span class="token punctuation">(</span><span class="token parameter">props<span class="token operator">:</span> Props</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> <span class="token punctuation">[</span>uploadStatus<span class="token punctuation">,</span> setUploadStatus<span class="token punctuation">]</span> <span class="token operator">=</span> useState<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">UploadStatus</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">(UploadStatus.INIT);
+    const [currentFile, setCurrentFile] = useState</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">File</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">();
+    const [objectUrl, setObjectUrl] = useState('');
+    useEffect(() =&gt; </span><span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>currentFile<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">const</span> <span class="token constant">URL</span> <span class="token operator">=</span> window<span class="token punctuation">.</span><span class="token constant">URL</span><span class="token punctuation">;</span>
+            <span class="token keyword">let</span> objectUrl <span class="token operator">=</span> <span class="token constant">URL</span><span class="token punctuation">.</span><span class="token function">createObjectURL</span><span class="token punctuation">(</span>currentFile<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token function">setObjectUrl</span><span class="token punctuation">(</span>objectUrl<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">return</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+                <span class="token constant">URL</span><span class="token punctuation">.</span><span class="token function">revokeObjectURL</span><span class="token punctuation">(</span>objectUrl<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token plain-text">, [currentFile]);
+    const handleChange = (event: ChangeEvent</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">HTMLInputElement</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">) =&gt; </span><span class="token punctuation">{</span>
+        <span class="token keyword">const</span> file<span class="token operator">:</span> File <span class="token operator">=</span> event<span class="token punctuation">.</span>target<span class="token punctuation">.</span>files<span class="token operator">!</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token function">setCurrentFile</span><span class="token punctuation">(</span>file<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'file'</span><span class="token punctuation">,</span> file<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">reset</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token plain-text">
+    function reset() </span><span class="token punctuation">{</span>
+        <span class="token function">setUploadStatus</span><span class="token punctuation">(</span>UploadStatus<span class="token punctuation">.</span><span class="token constant">INIT</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token plain-text">
+    const handleUpload = async () =&gt; </span><span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>currentFile<span class="token punctuation">)</span>
+            <span class="token keyword">return</span> message<span class="token punctuation">.</span><span class="token function">error</span><span class="token punctuation">(</span><span class="token string">'你尚未选择文件'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span><span class="token function">beforeUpload</span><span class="token punctuation">(</span>currentFile<span class="token punctuation">)</span><span class="token punctuation">)</span>
+            <span class="token keyword">return</span> message<span class="token punctuation">.</span><span class="token function">error</span><span class="token punctuation">(</span><span class="token string">'不支持此类型文件的上传'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">const</span> formData <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">FormData</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        formData<span class="token punctuation">.</span><span class="token function">append</span><span class="token punctuation">(</span><span class="token string">&quot;chunk&quot;</span><span class="token punctuation">,</span> currentFile<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        formData<span class="token punctuation">.</span><span class="token function">append</span><span class="token punctuation">(</span><span class="token string">&quot;filename&quot;</span><span class="token punctuation">,</span> currentFile<span class="token punctuation">.</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">let</span> result <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token function">request</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+            url<span class="token operator">:</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">/upload</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">,</span>
+            method<span class="token operator">:</span> <span class="token string">'POST'</span><span class="token punctuation">,</span>
+            data<span class="token operator">:</span> formData<span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'上传结果'</span><span class="token punctuation">,</span> result<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        message<span class="token punctuation">.</span><span class="token function">info</span><span class="token punctuation">(</span><span class="token string">'上传成功!'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">reset</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token plain-text">
+    return (
+        </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">className</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>upload<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+            </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Row</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+                </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Col</span></span> <span class="token attr-name">span</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token number">12</span><span class="token punctuation">}</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+                    </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Input</span></span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>file<span class="token punctuation">&quot;</span></span> <span class="token attr-name">style</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span> width<span class="token operator">:</span> <span class="token number">300</span> <span class="token punctuation">}</span><span class="token punctuation">}</span></span> <span class="token attr-name">onChange</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>handleChange<span class="token punctuation">}</span></span> <span class="token punctuation">/&gt;</span></span><span class="token plain-text">
+                    </span><span class="token punctuation">{</span>uploadStatus <span class="token operator">===</span> UploadStatus<span class="token punctuation">.</span><span class="token constant">INIT</span> <span class="token operator">&amp;&amp;</span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Button</span></span> <span class="token attr-name">style</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span> marginLeft<span class="token operator">:</span> <span class="token number">10</span> <span class="token punctuation">}</span><span class="token punctuation">}</span></span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>primary<span class="token punctuation">&quot;</span></span> <span class="token attr-name">onClick</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>handleUpload<span class="token punctuation">}</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">上传</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">Button</span></span><span class="token punctuation">&gt;</span></span><span class="token punctuation">}</span><span class="token plain-text">
+                </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">Col</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+                </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Col</span></span> <span class="token attr-name">span</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token number">12</span><span class="token punctuation">}</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+                    </span><span class="token punctuation">{</span>objectUrl <span class="token operator">&amp;&amp;</span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">style</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span> maxWidth<span class="token operator">:</span> <span class="token number">150</span><span class="token punctuation">,</span> maxHeight<span class="token operator">:</span> <span class="token number">150</span> <span class="token punctuation">}</span><span class="token punctuation">}</span></span> <span class="token attr-name">src</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>objectUrl<span class="token punctuation">}</span></span> <span class="token punctuation">/&gt;</span></span><span class="token punctuation">}</span><span class="token plain-text">
+                </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">Col</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+            </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">Row</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+        </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+    )
+}
+function beforeUpload(file: File) </span><span class="token punctuation">{</span>
+    <span class="token keyword">const</span> isValidFileType <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'image/jpeg'</span><span class="token punctuation">,</span> <span class="token string">'image/png'</span><span class="token punctuation">,</span> <span class="token string">'application/pdf'</span><span class="token punctuation">,</span> <span class="token string">'video/mp4'</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">includes</span><span class="token punctuation">(</span>file<span class="token punctuation">.</span><span class="token keyword">type</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>isValidFileType<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        message<span class="token punctuation">.</span><span class="token function">error</span><span class="token punctuation">(</span><span class="token string">'不支持此文件类型!'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">const</span> isLt2G <span class="token operator">=</span> file<span class="token punctuation">.</span>size <span class="token operator">/</span> <span class="token number">1024</span> <span class="token operator">/</span> <span class="token number">1024</span> <span class="token operator">&lt;</span> <span class="token number">1024</span> <span class="token operator">*</span> <span class="token number">1024</span> <span class="token operator">*</span> <span class="token number">1024</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>isLt2G<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        message<span class="token punctuation">.</span><span class="token function">error</span><span class="token punctuation">(</span><span class="token string">'上传的图片不能大于2MB!'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> isValidFileType <span class="token operator">&amp;&amp;</span> isLt2G<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token plain-text">
+
+export default Upload;
+</span></code></pre></div><h3 id="_2-4-src-utils-tsx"><a href="#_2-4-src-utils-tsx" class="header-anchor">#</a> 2.4 src\utils.tsx</h3> <p>src\utils.tsx</p> <div class="language-tsx extra-class"><pre class="language-tsx"><code><span class="token keyword">function</span> <span class="token function">request</span><span class="token punctuation">(</span><span class="token parameter">options<span class="token operator">:</span> <span class="token builtin">any</span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">let</span> _default<span class="token operator">:</span> <span class="token builtin">any</span> <span class="token operator">=</span> <span class="token punctuation">{</span>
+        baseURL<span class="token operator">:</span> <span class="token string">'http://localhost:8000'</span><span class="token punctuation">,</span>
+        method<span class="token operator">:</span> <span class="token string">'GET'</span><span class="token punctuation">,</span>
+        header<span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+        data<span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+    options <span class="token operator">=</span> <span class="token punctuation">{</span> <span class="token operator">...</span>_default<span class="token punctuation">,</span> <span class="token operator">...</span>options<span class="token punctuation">,</span> headers<span class="token operator">:</span> <span class="token punctuation">{</span> <span class="token operator">...</span>_default<span class="token punctuation">.</span>headers<span class="token punctuation">,</span> <span class="token operator">...</span><span class="token punctuation">(</span>options<span class="token punctuation">.</span>headers <span class="token operator">||</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token punctuation">}</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">Promise</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">resolve<span class="token operator">:</span> <span class="token builtin">Function</span><span class="token punctuation">,</span> reject<span class="token operator">:</span> <span class="token builtin">Function</span></span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        <span class="token keyword">const</span> xhr <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">XMLHttpRequest</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        xhr<span class="token punctuation">.</span><span class="token function">open</span><span class="token punctuation">(</span>options<span class="token punctuation">.</span>method<span class="token punctuation">,</span> options<span class="token punctuation">.</span>baseURL <span class="token operator">+</span> options<span class="token punctuation">.</span>url<span class="token punctuation">,</span> <span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        Object<span class="token punctuation">.</span><span class="token function">entries</span><span class="token punctuation">(</span>options<span class="token punctuation">.</span>headers<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">[</span>key<span class="token punctuation">,</span> value<span class="token punctuation">]</span></span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> xhr<span class="token punctuation">.</span><span class="token function">setRequestHeader</span><span class="token punctuation">(</span>key<span class="token punctuation">,</span> value <span class="token keyword">as</span> <span class="token builtin">string</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        xhr<span class="token punctuation">.</span>responseType <span class="token operator">=</span> <span class="token string">'json'</span><span class="token punctuation">;</span>
+        xhr<span class="token punctuation">.</span><span class="token function-variable function">onreadystatechange</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>xhr<span class="token punctuation">.</span>readyState <span class="token operator">===</span> <span class="token number">4</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token regex">/(2|3)\d{2}/</span><span class="token punctuation">.</span><span class="token function">test</span><span class="token punctuation">(</span><span class="token string">''</span> <span class="token operator">+</span> xhr<span class="token punctuation">.</span>status<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                    <span class="token function">resolve</span><span class="token punctuation">(</span>xhr<span class="token punctuation">.</span>response<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+                    <span class="token function">reject</span><span class="token punctuation">(</span>xhr<span class="token punctuation">.</span>response<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+        xhr<span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span>options<span class="token punctuation">.</span>data<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">export</span> <span class="token punctuation">{</span>
+    request
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="_3-切片上传"><a href="#_3-切片上传" class="header-anchor">#</a> 3.切片上传</h2> <h3 id="_3-1-upload-tsx"><a href="#_3-1-upload-tsx" class="header-anchor">#</a> 3.1 Upload.tsx</h3> <p>src\Upload.tsx</p> <div class="language-tsx extra-class"><pre class="language-tsx"><code><span class="token keyword">import</span> React<span class="token punctuation">,</span> <span class="token punctuation">{</span> ChangeEvent<span class="token punctuation">,</span> useState<span class="token punctuation">,</span> useEffect <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> Input<span class="token punctuation">,</span> Row<span class="token punctuation">,</span> Col<span class="token punctuation">,</span> Button<span class="token punctuation">,</span> message <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'antd'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> request <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'./utils'</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> <span class="token constant">SIZE</span> <span class="token operator">=</span> <span class="token number">1024</span> <span class="token operator">*</span> <span class="token number">1024</span> <span class="token operator">*</span> <span class="token number">100</span><span class="token punctuation">;</span>
+<span class="token comment">//const SIZE = 1024 * 10;</span>
+<span class="token keyword">enum</span> UploadStatus <span class="token punctuation">{</span>
+    <span class="token constant">INIT</span><span class="token punctuation">,</span><span class="token comment">//初始态</span>
+    <span class="token constant">PAUSE</span><span class="token punctuation">,</span><span class="token comment">//暂停中</span>
+    <span class="token constant">UPLOADING</span><span class="token comment">//上传中</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">interface</span> <span class="token class-name">Part</span> <span class="token punctuation">{</span>
+    size<span class="token operator">:</span> <span class="token builtin">number</span><span class="token punctuation">;</span>
+    chunk<span class="token operator">:</span> Blob<span class="token punctuation">;</span>
+    filename<span class="token operator">?</span><span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">;</span>
+    chunk_name<span class="token operator">?</span><span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">interface</span> <span class="token class-name">Props</span> <span class="token punctuation">{</span>
+
+<span class="token punctuation">}</span>
+<span class="token keyword">function</span> <span class="token function">Upload</span><span class="token punctuation">(</span><span class="token parameter">props<span class="token operator">:</span> Props</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> <span class="token punctuation">[</span>uploadStatus<span class="token punctuation">,</span> setUploadStatus<span class="token punctuation">]</span> <span class="token operator">=</span> useState<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">UploadStatus</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">(UploadStatus.INIT);
+    const [currentFile, setCurrentFile] = useState</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">File</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">();
+    const [objectUrl, setObjectUrl] = useState('');
+    const [worker, setWorker] = useState</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>any</span><span class="token punctuation">&gt;</span></span><span class="token plain-text">(null);
+    const [hashPercent, setHashPercent] = useState</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>number</span><span class="token punctuation">&gt;</span></span><span class="token plain-text">(0);
+    const [filename, setFilename] = useState</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>string</span><span class="token punctuation">&gt;</span></span><span class="token plain-text">('');
+    const [partList, setPartList] = useState&lt;Part[]&gt;([]);
+    useEffect(() =&gt; </span><span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>currentFile<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">const</span> <span class="token constant">URL</span> <span class="token operator">=</span> window<span class="token punctuation">.</span><span class="token constant">URL</span><span class="token punctuation">;</span>
+            <span class="token keyword">let</span> objectUrl <span class="token operator">=</span> <span class="token constant">URL</span><span class="token punctuation">.</span><span class="token function">createObjectURL</span><span class="token punctuation">(</span>currentFile<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token function">setObjectUrl</span><span class="token punctuation">(</span>objectUrl<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">return</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+                <span class="token constant">URL</span><span class="token punctuation">.</span><span class="token function">revokeObjectURL</span><span class="token punctuation">(</span>objectUrl<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token plain-text">, [currentFile]);
+    const handleChange = (event: ChangeEvent</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">HTMLInputElement</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">) =&gt; </span><span class="token punctuation">{</span>
+        <span class="token keyword">const</span> file<span class="token operator">:</span> File <span class="token operator">=</span> event<span class="token punctuation">.</span>target<span class="token punctuation">.</span>files<span class="token operator">!</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token function">setCurrentFile</span><span class="token punctuation">(</span>file<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'file'</span><span class="token punctuation">,</span> file<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">reset</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token plain-text">
+    function reset() </span><span class="token punctuation">{</span>
+        <span class="token function">setUploadStatus</span><span class="token punctuation">(</span>UploadStatus<span class="token punctuation">.</span><span class="token constant">INIT</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token plain-text">
+    const calculateHash = (partList: Part[]): Promise</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>string</span><span class="token punctuation">&gt;</span></span><span class="token plain-text"> =&gt; </span><span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">Promise</span><span class="token punctuation">(</span><span class="token parameter">resolve</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+            <span class="token keyword">let</span> worker <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Worker</span><span class="token punctuation">(</span><span class="token string">&quot;/hash.js&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token function">setWorker</span><span class="token punctuation">(</span>worker<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            worker<span class="token punctuation">.</span><span class="token function">postMessage</span><span class="token punctuation">(</span><span class="token punctuation">{</span> partList <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            worker<span class="token punctuation">.</span><span class="token function-variable function">onmessage</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">event</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+                <span class="token keyword">const</span> <span class="token punctuation">{</span> percent<span class="token punctuation">,</span> hash <span class="token punctuation">}</span> <span class="token operator">=</span> event<span class="token punctuation">.</span>data<span class="token punctuation">;</span>
+                <span class="token function">setHashPercent</span><span class="token punctuation">(</span>percent<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token keyword">if</span> <span class="token punctuation">(</span>hash<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                    <span class="token function">resolve</span><span class="token punctuation">(</span>hash<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token plain-text">
+    const handleUpload = async () =&gt; </span><span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>currentFile<span class="token punctuation">)</span>
+            <span class="token keyword">return</span> message<span class="token punctuation">.</span><span class="token function">error</span><span class="token punctuation">(</span><span class="token string">'你尚未选择文件'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span><span class="token function">beforeUpload</span><span class="token punctuation">(</span>currentFile<span class="token punctuation">)</span><span class="token punctuation">)</span>
+            <span class="token keyword">return</span> message<span class="token punctuation">.</span><span class="token function">error</span><span class="token punctuation">(</span><span class="token string">'不支持此类型文件的上传'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">let</span> partList<span class="token operator">:</span> Part<span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">createChunks</span><span class="token punctuation">(</span>currentFile<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">let</span> fileHash<span class="token operator">:</span> <span class="token builtin">string</span> <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token function">calculateHash</span><span class="token punctuation">(</span>partList<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">let</span> lastDotIndex <span class="token operator">=</span> currentFile<span class="token punctuation">.</span>name<span class="token punctuation">.</span><span class="token function">lastIndexOf</span><span class="token punctuation">(</span><span class="token string">'.'</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token punctuation">;</span>
+        <span class="token keyword">let</span> extName <span class="token operator">=</span> currentFile<span class="token punctuation">.</span>name<span class="token punctuation">.</span><span class="token function">slice</span><span class="token punctuation">(</span>lastDotIndex<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//.jpg .png</span>
+        <span class="token keyword">let</span> filename <span class="token operator">=</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>fileHash<span class="token interpolation-punctuation punctuation">}</span></span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>extName<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span>
+        <span class="token function">setFilename</span><span class="token punctuation">(</span>filename<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        partList <span class="token operator">=</span> partList<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">part<span class="token punctuation">,</span> index<span class="token operator">:</span> <span class="token builtin">number</span></span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span><span class="token punctuation">{</span>
+            filename<span class="token punctuation">,</span><span class="token comment">//文件名</span>
+            chunk_name<span class="token operator">:</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>filename<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">-</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>index<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">,</span><span class="token comment">//分块的名称</span>
+            chunk<span class="token operator">:</span> part<span class="token punctuation">.</span>chunk<span class="token punctuation">,</span><span class="token comment">//代码块</span>
+            size<span class="token operator">:</span> part<span class="token punctuation">.</span>chunk<span class="token punctuation">.</span>size<span class="token comment">//此代码块的大小</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">setPartList</span><span class="token punctuation">(</span>partList<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">await</span> <span class="token function">uploadParts</span><span class="token punctuation">(</span>partList<span class="token punctuation">,</span> filename<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token plain-text">
+    async function uploadParts(partList: Part[], filename: string) </span><span class="token punctuation">{</span>
+        <span class="token keyword">let</span> requests <span class="token operator">=</span> <span class="token function">createRequests</span><span class="token punctuation">(</span>partList<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">await</span> <span class="token builtin">Promise</span><span class="token punctuation">.</span><span class="token function">all</span><span class="token punctuation">(</span>requests<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">await</span> <span class="token function">request</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+            url<span class="token operator">:</span> <span class="token string">'/merge'</span><span class="token punctuation">,</span>
+            method<span class="token operator">:</span> <span class="token string">'POST'</span><span class="token punctuation">,</span>
+            headers<span class="token operator">:</span> <span class="token punctuation">{</span> <span class="token string">'Content-Type'</span><span class="token operator">:</span> <span class="token string">&quot;application/json&quot;</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            data<span class="token operator">:</span> <span class="token constant">JSON</span><span class="token punctuation">.</span><span class="token function">stringify</span><span class="token punctuation">(</span><span class="token punctuation">{</span> filename <span class="token punctuation">}</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        message<span class="token punctuation">.</span><span class="token function">info</span><span class="token punctuation">(</span><span class="token string">'上传成功!'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">reset</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token plain-text">
+    function createRequests(partList: Part[]) </span><span class="token punctuation">{</span>
+        <span class="token keyword">return</span> partList<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">part<span class="token operator">:</span> Part</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span> <span class="token function">request</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+                url<span class="token operator">:</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">/upload/</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>part<span class="token punctuation">.</span>filename<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">/</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>part<span class="token punctuation">.</span>chunk_name<span class="token operator">!</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">,</span>
+                method<span class="token operator">:</span> <span class="token string">'POST'</span><span class="token punctuation">,</span>
+                header<span class="token operator">:</span> <span class="token punctuation">{</span> <span class="token string">'Content-Type'</span><span class="token operator">:</span> <span class="token string">'application/octet-stream'</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                data<span class="token operator">:</span> part<span class="token punctuation">.</span>chunk
+            <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token plain-text">
+    return (
+        </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">className</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>upload<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+            </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Row</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+                </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Col</span></span> <span class="token attr-name">span</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token number">12</span><span class="token punctuation">}</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+                    </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Input</span></span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>file<span class="token punctuation">&quot;</span></span> <span class="token attr-name">style</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span> width<span class="token operator">:</span> <span class="token number">300</span> <span class="token punctuation">}</span><span class="token punctuation">}</span></span> <span class="token attr-name">onChange</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>handleChange<span class="token punctuation">}</span></span> <span class="token punctuation">/&gt;</span></span><span class="token plain-text">
+                    </span><span class="token punctuation">{</span>uploadStatus <span class="token operator">===</span> UploadStatus<span class="token punctuation">.</span><span class="token constant">INIT</span> <span class="token operator">&amp;&amp;</span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Button</span></span> <span class="token attr-name">style</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span> marginLeft<span class="token operator">:</span> <span class="token number">10</span> <span class="token punctuation">}</span><span class="token punctuation">}</span></span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>primary<span class="token punctuation">&quot;</span></span> <span class="token attr-name">onClick</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>handleUpload<span class="token punctuation">}</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">上传</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">Button</span></span><span class="token punctuation">&gt;</span></span><span class="token punctuation">}</span><span class="token plain-text">
+                </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">Col</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+                </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Col</span></span> <span class="token attr-name">span</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token number">12</span><span class="token punctuation">}</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+                    </span><span class="token punctuation">{</span>objectUrl <span class="token operator">&amp;&amp;</span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">style</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span> maxWidth<span class="token operator">:</span> <span class="token number">150</span><span class="token punctuation">,</span> maxHeight<span class="token operator">:</span> <span class="token number">150</span> <span class="token punctuation">}</span><span class="token punctuation">}</span></span> <span class="token attr-name">src</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>objectUrl<span class="token punctuation">}</span></span> <span class="token punctuation">/&gt;</span></span><span class="token punctuation">}</span><span class="token plain-text">
+                </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">Col</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+            </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">Row</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+        </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+    )
+}
+function beforeUpload(file: File) </span><span class="token punctuation">{</span>
+    <span class="token keyword">const</span> isValidFileType <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'image/jpeg'</span><span class="token punctuation">,</span> <span class="token string">'image/png'</span><span class="token punctuation">,</span> <span class="token string">'application/pdf'</span><span class="token punctuation">,</span> <span class="token string">'video/mp4'</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">includes</span><span class="token punctuation">(</span>file<span class="token punctuation">.</span><span class="token keyword">type</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>isValidFileType<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        message<span class="token punctuation">.</span><span class="token function">error</span><span class="token punctuation">(</span><span class="token string">'不支持此文件类型!'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">const</span> isLt2G <span class="token operator">=</span> file<span class="token punctuation">.</span>size <span class="token operator">/</span> <span class="token number">1024</span> <span class="token operator">/</span> <span class="token number">1024</span> <span class="token operator">&lt;</span> <span class="token number">1024</span> <span class="token operator">*</span> <span class="token number">1024</span> <span class="token operator">*</span> <span class="token number">1024</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>isLt2G<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        message<span class="token punctuation">.</span><span class="token function">error</span><span class="token punctuation">(</span><span class="token string">'上传的图片不能大于2MB!'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> isValidFileType <span class="token operator">&amp;&amp;</span> isLt2G<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token plain-text">
+function createChunks(file: File): Part[] </span><span class="token punctuation">{</span>
+    <span class="token keyword">let</span> current <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token keyword">const</span> partList<span class="token operator">:</span> Part<span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token keyword">while</span> <span class="token punctuation">(</span>current <span class="token operator">&lt;</span> file<span class="token punctuation">.</span>size<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">const</span> chunk <span class="token operator">=</span> file<span class="token punctuation">.</span><span class="token function">slice</span><span class="token punctuation">(</span>current<span class="token punctuation">,</span> current <span class="token operator">+</span> <span class="token constant">SIZE</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        partList<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token punctuation">{</span> chunk<span class="token punctuation">,</span> size<span class="token operator">:</span> chunk<span class="token punctuation">.</span>size <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        current <span class="token operator">+=</span> <span class="token constant">SIZE</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> partList<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token plain-text">
+export default Upload;
+</span></code></pre></div><h3 id="_3-2-public-hash-js"><a href="#_3-2-public-hash-js" class="header-anchor">#</a> 3.2 public\hash.js</h3> <p>public\hash.js</p> <div class="language-js extra-class"><pre class="language-js"><code>self<span class="token punctuation">.</span><span class="token function">importScripts</span><span class="token punctuation">(</span><span class="token string">'https://cdn.bootcss.com/spark-md5/3.0.0/spark-md5.js'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+self<span class="token punctuation">.</span><span class="token function-variable function">onmessage</span> <span class="token operator">=</span> <span class="token keyword">async</span> <span class="token punctuation">(</span><span class="token parameter">event</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword">var</span> <span class="token punctuation">{</span> partList <span class="token punctuation">}</span> <span class="token operator">=</span> event<span class="token punctuation">.</span>data<span class="token punctuation">;</span>
+    <span class="token keyword">const</span> spark <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">self<span class="token punctuation">.</span>SparkMD5<span class="token punctuation">.</span>ArrayBuffer</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">var</span> percent <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token keyword">var</span> perSize <span class="token operator">=</span> <span class="token number">100</span> <span class="token operator">/</span> partList<span class="token punctuation">.</span>length<span class="token punctuation">;</span>
+    <span class="token keyword">var</span> buffers <span class="token operator">=</span> <span class="token keyword">await</span> Promise<span class="token punctuation">.</span><span class="token function">all</span><span class="token punctuation">(</span>partList<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span> chunk <span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token keyword">new</span> <span class="token class-name">Promise</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">resolve</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        <span class="token keyword">const</span> reader <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">FileReader</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        reader<span class="token punctuation">.</span><span class="token function">readAsArrayBuffer</span><span class="token punctuation">(</span>chunk<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        reader<span class="token punctuation">.</span><span class="token function-variable function">onload</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">event</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+            percent <span class="token operator">+=</span> perSize<span class="token punctuation">;</span>
+            self<span class="token punctuation">.</span><span class="token function">postMessage</span><span class="token punctuation">(</span><span class="token punctuation">{</span> percent<span class="token operator">:</span> <span class="token function">Number</span><span class="token punctuation">(</span>percent<span class="token punctuation">.</span><span class="token function">toFixed</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token function">resolve</span><span class="token punctuation">(</span>event<span class="token punctuation">.</span>target<span class="token punctuation">.</span>result<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    buffers<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token parameter">buffer</span> <span class="token operator">=&gt;</span> spark<span class="token punctuation">.</span><span class="token function">append</span><span class="token punctuation">(</span>buffer<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    self<span class="token punctuation">.</span><span class="token function">postMessage</span><span class="token punctuation">(</span><span class="token punctuation">{</span> percent<span class="token operator">:</span> <span class="token number">100</span><span class="token punctuation">,</span> hash<span class="token operator">:</span> spark<span class="token punctuation">.</span><span class="token function">end</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    self<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="_4-进度条"><a href="#_4-进度条" class="header-anchor">#</a> 4.进度条</h2> <h3 id="_4-1-src-upload-tsx"><a href="#_4-1-src-upload-tsx" class="header-anchor">#</a> 4.1 src\Upload.tsx</h3> <p>src\Upload.tsx</p> <div class="language-diff extra-class"><pre class="language-diff"><code>import React, { ChangeEvent, useState, useEffect } from 'react';
+<span class="token inserted-sign inserted">+import { Input, Row, Col, Button, message, Progress, Table } from 'antd';
+</span>import { request } from './utils';
+const SIZE = 1024 * 1024 * 100;
+//const SIZE = 1024 * 10;
+enum UploadStatus {
+<span class="token unchanged">    INIT,//初始态
+    PAUSE,//暂停中
+    UPLOADING//上传中
+</span>}
+interface Part {
+<span class="token unchanged">    size: number;
+    chunk: Blob;
+    filename?: string;
+    chunk_name?: string;
+</span><span class="token inserted-sign inserted">+    percent?: number;
+</span>}
+interface Props {
+
+}
+function Upload(props: Props) {
+<span class="token unchanged">    const [uploadStatus, setUploadStatus] = useState&lt;UploadStatus&gt;(UploadStatus.INIT);
+    const [currentFile, setCurrentFile] = useState&lt;File&gt;();
+    const [objectUrl, setObjectUrl] = useState('');
+    const [worker, setWorker] = useState&lt;any&gt;(null);
+    const [hashPercent, setHashPercent] = useState&lt;number&gt;(0);
+    const [filename, setFilename] = useState&lt;string&gt;('');
+    const [partList, setPartList] = useState&lt;Part[]&gt;([]);
+    useEffect(() =&gt; {
+        if (currentFile) {
+            const URL = window.URL;
+            let objectUrl = URL.createObjectURL(currentFile);
+            setObjectUrl(objectUrl);
+            return () =&gt; {
+                URL.revokeObjectURL(objectUrl);
+            }
+        }
+    }, [currentFile]);
+    const handleChange = (event: ChangeEvent&lt;HTMLInputElement&gt;) =&gt; {
+        const file: File = event.target.files![0];
+        setCurrentFile(file);
+        reset();
+    }
+    function reset() {
+        setUploadStatus(UploadStatus.INIT);
+</span><span class="token inserted-sign inserted">+        setHashPercent(0);
+</span><span class="token unchanged">    }
+    const calculateHash = (partList: Part[]): Promise&lt;string&gt; =&gt; {
+        return new Promise(resolve =&gt; {
+            let worker = new Worker(&quot;/hash.js&quot;);
+            setWorker(worker);
+            worker.postMessage({ partList });
+            worker.onmessage = (event) =&gt; {
+                const { percent, hash } = event.data;
+                setHashPercent(percent);
+                console.log('percent', percent);
+                if (hash) {
+                    resolve(hash);
+                }
+            };
+        });
+    }
+    const handleUpload = async () =&gt; {
+        if (!currentFile)
+            return message.error('你尚未选择文件');
+        if (!beforeUpload(currentFile))
+            return message.error('不支持此类型文件的上传');
+</span><span class="token inserted-sign inserted">+        setUploadStatus(UploadStatus.UPLOADING);
+</span><span class="token unchanged">        let partList: Part[] = createChunks(currentFile);
+        let fileHash: string = await calculateHash(partList);
+        let lastDotIndex = currentFile.name.lastIndexOf('.');;
+        let extName = currentFile.name.slice(lastDotIndex);//.jpg .png
+        let filename = `${fileHash}${extName}`;
+        setFilename(filename);
+        partList = partList.map((part, index: number) =&gt; ({
+            filename,//文件名
+            chunk_name: `${filename}-${index}`,//分块的名称
+            chunk: part.chunk,//代码块
+            size: part.chunk.size,//此代码块的大小
+</span><span class="token inserted-sign inserted">+            percent: 0
+</span><span class="token unchanged">        }));
+        setPartList(partList);
+        await uploadParts(partList, filename);
+    }
+    async function uploadParts(partList: Part[], filename: string) {
+        let requests = createRequests(partList);
+        await Promise.all(requests);
+        await request({
+            url: '/merge',
+            method: 'POST',
+            headers: { 'Content-Type': &quot;application/json&quot; },
+            data: JSON.stringify({ filename })
+        });
+        message.info('上传成功!');
+        reset();
+    }
+    function createRequests(partList: Part[]) {
+        return partList.map((part: Part) =&gt; {
+            return request({
+                url: `/upload/${part.filename}/${part.chunk_name!}`,
+                method: 'POST',
+                header: { 'Content-Type': 'application/octet-stream' },
+                data: part.chunk,
+</span><span class="token inserted-sign inserted">+                onProgress: (event: ProgressEvent) =&gt; {
++                    part.percent = event.loaded / part.chunk.size * 100;
++                    setPartList([...partList]);
++                }
+</span><span class="token unchanged">            });
+        })
+    }
+</span><span class="token inserted-sign inserted">+    const columns = [
++        {
++            title: '切片名称',
++            dataIndex: 'filename',
++            key: 'filename',
++            width: '20%'
++        },
++        {
++            title: '切片进度',
++            dataIndex: 'percent',
++            key: 'percent',
++            width: '80%',
++            render: (value: number) =&gt; {
++                return &lt;Progress percent={value} /&gt;
++            }
++        },
++    ];
++    let totalPercent = partList.length &gt; 0 ? Math.round(partList.reduce((acc, curr) =&gt; acc + curr.percent!, 0) / (partList.length * 100) * 100) : 0;
++    let uploadProgress = uploadStatus != UploadStatus.INIT ? (
++        &lt;&gt;
++            &lt;Row&gt;
++                &lt;Col span={4}&gt;
++                    哈希计算:
++                &lt;/Col&gt;
++                &lt;Col span={20}&gt;
++                    &lt;Progress percent={hashPercent} /&gt;
++                &lt;/Col&gt;
++            &lt;/Row&gt;
++            &lt;Row&gt;
++                &lt;Col span={4}&gt;
++                    总体进度:
++                &lt;/Col&gt;
++                &lt;Col span={20}&gt;
++                    &lt;Progress percent={totalPercent} /&gt;
++                &lt;/Col&gt;
++            &lt;/Row&gt;
++            &lt;Table
++                columns={columns}
++                dataSource={partList}
++                rowKey={(row: Part) =&gt; row.chunk_name!}
++            /&gt;
++        &lt;/&gt;
++    ) : null;
+</span><span class="token unchanged">    return (
+        &lt;div className=&quot;upload&quot;&gt;
+            &lt;Row&gt;
+                &lt;Col span={12}&gt;
+                    &lt;Input type=&quot;file&quot; style={{ width: 300 }} onChange={handleChange} /&gt;
+                    {uploadStatus === UploadStatus.INIT &amp;&amp; &lt;Button style={{ marginLeft: 10 }} type=&quot;primary&quot; onClick={handleUpload}&gt;上传&lt;/Button&gt;}
+                &lt;/Col&gt;
+                &lt;Col span={12}&gt;
+                    {objectUrl &amp;&amp; &lt;img style={{ maxWidth: 150, maxHeight: 150 }} src={objectUrl} /&gt;}
+                &lt;/Col&gt;
+            &lt;/Row&gt;
+</span><span class="token inserted-sign inserted">+            {uploadProgress}
+</span><span class="token unchanged">        &lt;/div&gt;
+    )
+</span>}
+function beforeUpload(file: File) {
+<span class="token unchanged">    const isValidFileType = ['image/jpeg', 'image/png', 'application/pdf', 'video/mp4'].includes(file.type);
+    if (!isValidFileType) {
+        message.error('不支持此文件类型!');
+    }
+    const isLt2G = file.size / 1024 / 1024 &lt; 1024 * 1024 * 1024;
+    if (!isLt2G) {
+        message.error('上传的图片不能大于2MB!');
+    }
+    return isValidFileType &amp;&amp; isLt2G;
+</span>}
+function createChunks(file: File): Part[] {
+<span class="token unchanged">    let current = 0;
+    const partList: Part[] = [];
+    while (current &lt; file.size) {
+        const chunk = file.slice(current, current + SIZE);
+        partList.push({ chunk, size: chunk.size });
+        current += SIZE;
+    }
+    return partList;
+</span>}
+export default Upload;
+</code></pre></div><h3 id="_4-2-src-utils-tsx"><a href="#_4-2-src-utils-tsx" class="header-anchor">#</a> 4.2 src\utils.tsx</h3> <p>src\utils.tsx</p> <div class="language-diff extra-class"><pre class="language-diff"><code>function request(options: any) {
+<span class="token unchanged">    let _default: any = {
+        baseURL: 'http://localhost:8000',
+        method: 'GET',
+        header: {},
+        data: {}
+    };
+    options = { ..._default, ...options, headers: { ..._default.headers, ...(options.headers || {}) } };
+    return new Promise((resolve: Function, reject: Function) =&gt; {
+        const xhr = new XMLHttpRequest();
+        xhr.open(options.method, options.baseURL + options.url, true);
+        Object.entries(options.headers).forEach(([key, value]) =&gt; xhr.setRequestHeader(key, value as string));
+        xhr.responseType = 'json';
+</span><span class="token inserted-sign inserted">+        xhr.upload.onprogress = options.onProgress;
+</span><span class="token unchanged">        xhr.onreadystatechange = () =&gt; {
+            if (xhr.readyState === 4) {
+                if (/(2|3)\d{2}/.test('' + xhr.status)) {
+                    resolve(xhr.response);
+                } else {
+                    reject(xhr.response);
+                }
+            }
+        }
+        xhr.send(options.data);
+    });
+</span>}
+
+export {
+<span class="token unchanged">    request
+</span>}
+</code></pre></div><h2 id="_5-断点续传和秒传"><a href="#_5-断点续传和秒传" class="header-anchor">#</a> 5.断点续传和秒传</h2> <h3 id="_5-1-upload-tsx"><a href="#_5-1-upload-tsx" class="header-anchor">#</a> 5.1 Upload.tsx</h3> <p>src\Upload.tsx</p> <div class="language-diff extra-class"><pre class="language-diff"><code>import React, { ChangeEvent, useState, useEffect } from 'react';
+import { Input, Row, Col, Button, message, Progress, Table } from 'antd';
+import { request } from './utils';
+const SIZE = 1024 * 1024 * 100;
+//const SIZE = 1024 * 10;
+enum UploadStatus {
+<span class="token unchanged">    INIT,//初始态
+    PAUSE,//暂停中
+    UPLOADING//上传中
+</span>}
+interface Part {
+<span class="token unchanged">    size: number;
+    chunk: Blob;
+    filename?: string;
+    chunk_name?: string;
+    percent?: number;
+</span><span class="token inserted-sign inserted">+    loaded: number;
++    xhr?: XMLHttpRequest
+</span>}
+<span class="token inserted-sign inserted">+interface Uploaded {
++    filename: string,
++    size: number;
++}
+</span>interface Props {
+
+}
+function Upload(props: Props) {
+<span class="token unchanged">    const [uploadStatus, setUploadStatus] = useState&lt;UploadStatus&gt;(UploadStatus.INIT);
+    const [currentFile, setCurrentFile] = useState&lt;File&gt;();
+    const [objectUrl, setObjectUrl] = useState('');
+    const [worker, setWorker] = useState&lt;any&gt;(null);
+    const [hashPercent, setHashPercent] = useState&lt;number&gt;(0);
+    const [filename, setFilename] = useState&lt;string&gt;('');
+    const [partList, setPartList] = useState&lt;Part[]&gt;([]);
+    useEffect(() =&gt; {
+        if (currentFile) {
+            const URL = window.URL;
+            let objectUrl = URL.createObjectURL(currentFile);
+            setObjectUrl(objectUrl);
+            return () =&gt; {
+                URL.revokeObjectURL(objectUrl);
+            }
+        }
+    }, [currentFile]);
+    const handleChange = (event: ChangeEvent&lt;HTMLInputElement&gt;) =&gt; {
+        const file: File = event.target.files![0];
+        setCurrentFile(file);
+        reset();
+    }
+    function reset() {
+        setUploadStatus(UploadStatus.INIT);
+        setHashPercent(0);
+</span><span class="token inserted-sign inserted">+        setPartList([]);
++        setObjectUrl('');
++        setWorker(null);
++        setFilename('');
+</span><span class="token unchanged">    }
+    const calculateHash = (partList: Part[]): Promise&lt;string&gt; =&gt; {
+        return new Promise(resolve =&gt; {
+            let worker = new Worker(&quot;/hash.js&quot;);
+            setWorker(worker);
+            worker.postMessage({ partList });
+            worker.onmessage = (event) =&gt; {
+                const { percent, hash } = event.data;
+                setHashPercent(percent);
+                if (hash) {
+                    resolve(hash);
+                }
+            };
+        });
+    }
+    const handleUpload = async () =&gt; {
+        if (!currentFile)
+            return message.error('你尚未选择文件');
+        if (!beforeUpload(currentFile))
+            return message.error('不支持此类型文件的上传');
+        setUploadStatus(UploadStatus.UPLOADING);
+        let partList: Part[] = createChunks(currentFile);
+        let fileHash: string = await calculateHash(partList);
+        let lastDotIndex = currentFile.name.lastIndexOf('.');;
+        let extName = currentFile.name.slice(lastDotIndex);//.jpg .png
+        let filename = `${fileHash}${extName}`;
+        setFilename(filename);
+        partList = partList.map((part, index: number) =&gt; ({
+            filename,//文件名
+            chunk_name: `${filename}-${index}`,//分块的名称
+            chunk: part.chunk,//代码块
+            size: part.chunk.size,//此代码块的大小
+</span><span class="token inserted-sign inserted">+            loaded: 0,
+</span><span class="token unchanged">            percent: 0
+        }));
+        setPartList(partList);
+        await uploadParts(partList, filename);
+    }
+</span><span class="token inserted-sign inserted">+    const verify = async (filename: string) =&gt; {
++        const result = await request({
++            url: &quot;/verify&quot;,
++            method: 'POST',
++            headers: { &quot;content-type&quot;: &quot;application/json&quot; },
++            data: JSON.stringify({ filename })
++        });
++        return result;
++    }
++    async function uploadParts(partList: Part[], filename: string) {
++        const { needUpload, uploadedList } = await verify(filename) as any;
++        if (!needUpload) {
++            message.success(&quot;秒传成功&quot;);
++            return reset();
++        }
++        try {
++            let requests = createRequests(partList, uploadedList);
++            await Promise.all(requests);
++            await request({
++                url: '/merge',
++                method: 'POST',
++                headers: { 'Content-Type': &quot;application/json&quot; },
++                data: JSON.stringify({ filename })
++            });
++            message.info('上传成功!');
++            reset();
++        } catch (err) {
++            message.info('上传失败!');
++        }
++    }
++    function createRequests(partList: Part[], uploadedList: Uploaded[]) {
++        return partList.filter((part: Part) =&gt; {
++            let uploadedFile = uploadedList.find(item =&gt; item.filename === part.chunk_name);
++            if (!uploadedFile) {
++                part.loaded = 0;
++                part.percent = 0;
++                return true;
++            }
++            if (uploadedFile.size &lt; part.chunk.size) {
++                part.loaded = uploadedFile.size;
++                part.percent = Number(((part.loaded / part.chunk.size) * 100).toFixed(2));
++                return true;
++            }
++            return false;
++        }).map((part: Part) =&gt; {
++            return request({
++                url: `/upload/${part.filename}/${part.chunk_name!}/${part.loaded!}`,
++                method: 'POST',
++                header: { 'Content-Type': 'application/octet-stream' },
++                data: part.chunk.slice(part.loaded!),
++                setXHR: (xhr: XMLHttpRequest) =&gt; { part.xhr = xhr },
++                onProgress: (event: ProgressEvent) =&gt; {
++                    part.percent = Number((Number(part.loaded + event.loaded) / part.chunk.size * 100).toFixed(2));
++                    setPartList([...partList]);
++                }
++            });
++        })
++    }
++    const handlePause = () =&gt; {
++        partList.forEach((part: Part) =&gt; part.xhr &amp;&amp; part.xhr.abort());
++        setUploadStatus(UploadStatus.PAUSE);
++    }
++    const handleResume = async () =&gt; {
++        setUploadStatus(UploadStatus.UPLOADING);
++        await uploadParts(partList, filename);
++    }
+</span><span class="token unchanged">    const columns = [
+        {
+            title: '切片名称',
+            dataIndex: 'filename',
+            key: 'filename',
+            width: '20%'
+        },
+        {
+            title: '切片进度',
+            dataIndex: 'percent',
+            key: 'percent',
+            width: '80%',
+            render: (value: number) =&gt; {
+                return &lt;Progress percent={value} /&gt;
+            }
+        },
+    ];
+    let totalPercent = partList.length &gt; 0 ? Math.round(partList.reduce((acc, curr) =&gt; acc + curr.percent!, 0) / (partList.length * 100) * 100) : 0;
+    let uploadProgress = uploadStatus != UploadStatus.INIT ? (
+        &lt;&gt;
+            &lt;Row&gt;
+                &lt;Col span={4}&gt;
+                    哈希计算:
+                &lt;/Col&gt;
+                &lt;Col span={20}&gt;
+                    &lt;Progress percent={hashPercent} /&gt;
+                &lt;/Col&gt;
+            &lt;/Row&gt;
+            &lt;Row&gt;
+                &lt;Col span={4}&gt;
+                    总体进度:
+                &lt;/Col&gt;
+                &lt;Col span={20}&gt;
+                    &lt;Progress percent={totalPercent} /&gt;
+                &lt;/Col&gt;
+            &lt;/Row&gt;
+            &lt;Table
+                columns={columns}
+                dataSource={partList}
+                rowKey={(row: Part) =&gt; row.chunk_name!}
+            /&gt;
+        &lt;/&gt;
+    ) : null;
+    return (
+        &lt;div className=&quot;upload&quot;&gt;
+            &lt;Row&gt;
+                &lt;Col span={12}&gt;
+                    &lt;Input type=&quot;file&quot; style={{ width: 300 }} onChange={handleChange} /&gt;
+                    {uploadStatus === UploadStatus.INIT &amp;&amp; &lt;Button style={{ marginLeft: 10 }} type=&quot;primary&quot; onClick={handleUpload}&gt;上传&lt;/Button&gt;}
+</span><span class="token inserted-sign inserted">+                    {uploadStatus === UploadStatus.UPLOADING &amp;&amp; &lt;Button style={{ marginLeft: 10 }} type=&quot;primary&quot; onClick={handlePause}&gt;暂停&lt;/Button&gt;}
++                    {uploadStatus === UploadStatus.PAUSE &amp;&amp; &lt;Button style={{ marginLeft: 10 }} type=&quot;primary&quot; onClick={handleResume}&gt;恢复&lt;/Button&gt;}
+</span><span class="token unchanged">                &lt;/Col&gt;
+                &lt;Col span={12}&gt;
+                    {objectUrl &amp;&amp; &lt;img style={{ maxWidth: 150, maxHeight: 150 }} src={objectUrl} /&gt;}
+                &lt;/Col&gt;
+            &lt;/Row&gt;
+            {
+                uploadProgress
+            }
+        &lt;/div&gt;
+    )
+</span>}
+function beforeUpload(file: File) {
+<span class="token unchanged">    const isValidFileType = ['image/jpeg', 'image/png', 'application/pdf', 'video/mp4'].includes(file.type);
+    if (!isValidFileType) {
+        message.error('不支持此文件类型!');
+    }
+    const isLt2G = file.size / 1024 / 1024 &lt; 1024 * 1024 * 1024;
+    if (!isLt2G) {
+        message.error('上传的图片不能大于2MB!');
+    }
+    return isValidFileType &amp;&amp; isLt2G;
+</span>}
+function createChunks(file: File): Part[] {
+<span class="token unchanged">    let current = 0;
+    const partList: Part[] = [];
+    while (current &lt; file.size) {
+        const chunk = file.slice(current, current + SIZE);
+</span><span class="token inserted-sign inserted">+        partList.push({ chunk, size: chunk.size, loaded: 0 });
+</span><span class="token unchanged">        current += SIZE;
+    }
+    return partList;
+</span>}
+export default Upload;
+</code></pre></div><h3 id="_5-2-src-utils-tsx"><a href="#_5-2-src-utils-tsx" class="header-anchor">#</a> 5.2 src\utils.tsx</h3> <p>src\utils.tsx</p> <div class="language-diff extra-class"><pre class="language-diff"><code>function request(options: any) {
+<span class="token unchanged">    let _default: any = {
+        baseURL: 'http://localhost:8000',
+        method: 'GET',
+        header: {},
+        data: {}
+    };
+    options = { ..._default, ...options, headers: { ..._default.headers, ...(options.headers || {}) } };
+    return new Promise((resolve: Function, reject: Function) =&gt; {
+        const xhr = new XMLHttpRequest();
+        xhr.open(options.method, options.baseURL + options.url, true);
+        Object.entries(options.headers).forEach(([key, value]) =&gt; xhr.setRequestHeader(key, value as string));
+        xhr.responseType = 'json';
+        xhr.upload.onprogress = options.onProgress;
+        xhr.onreadystatechange = () =&gt; {
+            if (xhr.readyState === 4) {
+                if (/(2|3)\d{2}/.test('' + xhr.status)) {
+                    resolve(xhr.response);
+                } else {
+                    reject(xhr.response);
+                }
+            }
+        }
+</span><span class="token inserted-sign inserted">+        options.setXHR &amp;&amp; options.setXHR(xhr);
+</span><span class="token unchanged">        xhr.send(options.data);
+    });
+</span>}
+export {
+<span class="token unchanged">    request
+</span>}
+</code></pre></div><h2 id="_1-初始化项目-2"><a href="#_1-初始化项目-2" class="header-anchor">#</a> 1.初始化项目</h2> <div class="language-js extra-class"><pre class="language-js"><code>mkdir server 
+cd server 
+cnpm init <span class="token operator">-</span>y
+npx tsconfig<span class="token punctuation">.</span>json
+cnpm i fs<span class="token operator">-</span>extra express morgan http<span class="token operator">-</span>errors http<span class="token operator">-</span>status<span class="token operator">-</span>codes cors  multer multiparty <span class="token operator">-</span><span class="token constant">S</span>
+cnpm i @types<span class="token operator">/</span>fs<span class="token operator">-</span>extra @types<span class="token operator">/</span>node   @types<span class="token operator">/</span>express @types<span class="token operator">/</span>morgan @types<span class="token operator">/</span>http<span class="token operator">-</span>errors cross<span class="token operator">-</span>env typescript ts<span class="token operator">-</span>node ts<span class="token operator">-</span>node<span class="token operator">-</span>dev nodemon @types<span class="token operator">/</span>cors @types<span class="token operator">/</span>multer @types<span class="token operator">/</span>multiparty <span class="token operator">-</span><span class="token constant">D</span>
+</code></pre></div><h2 id="_2-单个上传-2"><a href="#_2-单个上传-2" class="header-anchor">#</a> 2.单个上传</h2> <h3 id="_2-1-package-json"><a href="#_2-1-package-json" class="header-anchor">#</a> 2.1 package.json</h3> <div class="language-json extra-class"><pre class="language-json"><code><span class="token property">&quot;scripts&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;start&quot;</span><span class="token operator">:</span> <span class="token string">&quot;cross-env PORT=8000 ts-node-dev --respawn ./src/www.ts&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;dev&quot;</span><span class="token operator">:</span> <span class="token string">&quot;cross-env PORT=8000  nodemon --exec ts-node --files ./src/www.ts&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;utils&quot;</span><span class="token operator">:</span> <span class="token string">&quot;ts-node ./src/utils.ts&quot;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="_2-2-src-www-ts"><a href="#_2-2-src-www-ts" class="header-anchor">#</a> 2.2 src\www.ts</h3> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">import</span> app <span class="token keyword">from</span> <span class="token string">'./app'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> http <span class="token keyword">from</span> <span class="token string">'http'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> port <span class="token operator">=</span> process<span class="token punctuation">.</span>env<span class="token punctuation">.</span><span class="token constant">PORT</span> <span class="token operator">||</span> <span class="token number">8000</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> server <span class="token operator">=</span> http<span class="token punctuation">.</span><span class="token function">createServer</span><span class="token punctuation">(</span>app<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+server<span class="token punctuation">.</span><span class="token function">listen</span><span class="token punctuation">(</span>port<span class="token punctuation">)</span><span class="token punctuation">;</span>
+server<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">'error'</span><span class="token punctuation">,</span> onError<span class="token punctuation">)</span><span class="token punctuation">;</span>
+server<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">'listening'</span><span class="token punctuation">,</span> onListening<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">function</span> <span class="token function">onError</span><span class="token punctuation">(</span><span class="token parameter">error<span class="token operator">:</span> any</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">error</span><span class="token punctuation">(</span>error<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">function</span> <span class="token function">onListening</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Listening on '</span> <span class="token operator">+</span> port<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="_2-3-src-app-ts"><a href="#_2-3-src-app-ts" class="header-anchor">#</a> 2.3 src\app.ts</h3> <p>src\app.ts</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">import</span> createError <span class="token keyword">from</span> <span class="token string">'http-errors'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> express<span class="token punctuation">,</span> <span class="token punctuation">{</span> Request<span class="token punctuation">,</span> Response<span class="token punctuation">,</span> NextFunction <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'express'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> logger <span class="token keyword">from</span> <span class="token string">'morgan'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> <span class="token constant">INTERNAL_SERVER_ERROR</span> <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'http-status-codes'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> cors <span class="token keyword">from</span> <span class="token string">'cors'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> path <span class="token keyword">from</span> <span class="token string">'path'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> <span class="token constant">PUBLIC_DIR</span> <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'./utils'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> fs <span class="token keyword">from</span> <span class="token string">'fs-extra'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> multiparty <span class="token keyword">from</span> <span class="token string">'multiparty'</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> app <span class="token operator">=</span> <span class="token function">express</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+app<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span><span class="token function">logger</span><span class="token punctuation">(</span><span class="token string">'dev'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+app<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>express<span class="token punctuation">.</span><span class="token function">json</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+app<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>express<span class="token punctuation">.</span><span class="token function">urlencoded</span><span class="token punctuation">(</span><span class="token punctuation">{</span> extended<span class="token operator">:</span> <span class="token boolean">false</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+app<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span><span class="token function">cors</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+app<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>express<span class="token punctuation">.</span><span class="token function">static</span><span class="token punctuation">(</span>path<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span> <span class="token string">'public'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+app<span class="token punctuation">.</span><span class="token function">post</span><span class="token punctuation">(</span><span class="token string">'/upload'</span><span class="token punctuation">,</span> <span class="token keyword">async</span> <span class="token punctuation">(</span><span class="token parameter">req<span class="token operator">:</span> Request<span class="token punctuation">,</span> res<span class="token operator">:</span> Response<span class="token punctuation">,</span> next<span class="token operator">:</span> NextFunction</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword">let</span> form <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">multiparty<span class="token punctuation">.</span>Form</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    form<span class="token punctuation">.</span><span class="token function">parse</span><span class="token punctuation">(</span>req<span class="token punctuation">,</span> <span class="token keyword">async</span> <span class="token punctuation">(</span><span class="token parameter">err<span class="token punctuation">,</span> fields<span class="token punctuation">,</span> files</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>err<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span> <span class="token function">next</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">let</span> <span class="token punctuation">[</span>filename<span class="token punctuation">]</span> <span class="token operator">=</span> fields<span class="token punctuation">.</span>filename<span class="token punctuation">;</span>
+        <span class="token keyword">let</span> <span class="token punctuation">[</span>chunk<span class="token punctuation">]</span> <span class="token operator">=</span> files<span class="token punctuation">.</span>chunk<span class="token punctuation">;</span>
+        <span class="token keyword">await</span> fs<span class="token punctuation">.</span><span class="token function">move</span><span class="token punctuation">(</span>chunk<span class="token punctuation">.</span>path<span class="token punctuation">,</span> path<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span><span class="token constant">PUBLIC_DIR</span><span class="token punctuation">,</span> filename<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> overwrite<span class="token operator">:</span> <span class="token boolean">true</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+            res<span class="token punctuation">.</span><span class="token function">json</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+                success<span class="token operator">:</span> <span class="token boolean">true</span>
+            <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token number">3000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+app<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">_req<span class="token punctuation">,</span> _res<span class="token punctuation">,</span> next</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">next</span><span class="token punctuation">(</span><span class="token function">createError</span><span class="token punctuation">(</span><span class="token number">404</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+app<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">error<span class="token operator">:</span> any<span class="token punctuation">,</span> _req<span class="token operator">:</span> Request<span class="token punctuation">,</span> res<span class="token operator">:</span> Response<span class="token punctuation">,</span> _next<span class="token operator">:</span> NextFunction</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    res<span class="token punctuation">.</span><span class="token function">status</span><span class="token punctuation">(</span>error<span class="token punctuation">.</span>status <span class="token operator">||</span> <span class="token constant">INTERNAL_SERVER_ERROR</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    res<span class="token punctuation">.</span><span class="token function">json</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+        success<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+        error
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> app<span class="token punctuation">;</span>
+</code></pre></div><h3 id="_2-4-src-utils-ts"><a href="#_2-4-src-utils-ts" class="header-anchor">#</a> 2.4 src\utils.ts</h3> <p>src\utils.ts</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">import</span> path <span class="token keyword">from</span> <span class="token string">'path'</span><span class="token punctuation">;</span>
+<span class="token keyword">export</span> <span class="token keyword">const</span> <span class="token constant">TEMP_DIR</span> <span class="token operator">=</span> path<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span> <span class="token string">'temp'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">export</span> <span class="token keyword">const</span> <span class="token constant">PUBLIC_DIR</span> <span class="token operator">=</span> path<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span> <span class="token string">'public'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h2 id="_3-文件切割和合并"><a href="#_3-文件切割和合并" class="header-anchor">#</a> 3.文件切割和合并</h2> <h3 id="_3-1-src-utils-ts"><a href="#_3-1-src-utils-ts" class="header-anchor">#</a> 3.1 src\utils.ts</h3> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">import</span> path <span class="token keyword">from</span> <span class="token string">'path'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> fs<span class="token punctuation">,</span> <span class="token punctuation">{</span> WriteStream <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'fs-extra'</span><span class="token punctuation">;</span>
+<span class="token keyword">export</span> <span class="token keyword">const</span> <span class="token constant">TEMP_DIR</span> <span class="token operator">=</span> path<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span> <span class="token string">'temp'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">export</span> <span class="token keyword">const</span> <span class="token constant">PUBLIC_DIR</span> <span class="token operator">=</span> path<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span> <span class="token string">'public'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">export</span> <span class="token keyword">const</span> <span class="token constant">SIZE</span> <span class="token operator">=</span> <span class="token number">1024</span> <span class="token operator">*</span> <span class="token number">1024</span> <span class="token operator">*</span> <span class="token number">100</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">const</span> <span class="token function-variable function">splitChunks</span> <span class="token operator">=</span> <span class="token keyword">async</span> <span class="token punctuation">(</span><span class="token parameter">filename<span class="token operator">:</span> string<span class="token punctuation">,</span> size<span class="token operator">:</span> number <span class="token operator">=</span> <span class="token constant">SIZE</span></span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> filePath <span class="token operator">=</span> path<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span> filename<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">const</span> chunksDir <span class="token operator">=</span> path<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span><span class="token constant">TEMP_DIR</span><span class="token punctuation">,</span> filename<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">let</span> stat <span class="token operator">=</span> <span class="token keyword">await</span> fs<span class="token punctuation">.</span><span class="token function">stat</span><span class="token punctuation">(</span>filePath<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">let</span> content <span class="token operator">=</span> <span class="token keyword">await</span> fs<span class="token punctuation">.</span><span class="token function">readFile</span><span class="token punctuation">(</span>filePath<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">let</span> current <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token keyword">await</span> fs<span class="token punctuation">.</span><span class="token function">mkdirp</span><span class="token punctuation">(</span>chunksDir<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">while</span> <span class="token punctuation">(</span>current <span class="token operator">&lt;</span> stat<span class="token punctuation">.</span>size<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">await</span> fs<span class="token punctuation">.</span><span class="token function">writeFile</span><span class="token punctuation">(</span>
+            path<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span>chunksDir<span class="token punctuation">,</span> filename <span class="token operator">+</span> <span class="token string">'-'</span> <span class="token operator">+</span> i<span class="token punctuation">)</span><span class="token punctuation">,</span>
+            content<span class="token punctuation">.</span><span class="token function">slice</span><span class="token punctuation">(</span>current<span class="token punctuation">,</span> current <span class="token operator">+</span> size<span class="token punctuation">)</span>
+        <span class="token punctuation">)</span><span class="token punctuation">;</span>
+        i<span class="token operator">++</span><span class="token punctuation">;</span>
+        current <span class="token operator">+=</span> size<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token comment">//splitChunks('dog.png', 1024  * 10);</span>
+
+<span class="token keyword">const</span> <span class="token function-variable function">pipeStream</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">filePath<span class="token operator">:</span> string<span class="token punctuation">,</span> writeStream<span class="token operator">:</span> WriteStream</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token keyword">new</span> <span class="token class-name">Promise</span><span class="token punctuation">(</span><span class="token parameter">resolve</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> readStream <span class="token operator">=</span> fs<span class="token punctuation">.</span><span class="token function">createReadStream</span><span class="token punctuation">(</span>filePath<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    readStream<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">'end'</span><span class="token punctuation">,</span> <span class="token keyword">async</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        <span class="token keyword">await</span> fs<span class="token punctuation">.</span><span class="token function">unlink</span><span class="token punctuation">(</span>filePath<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">resolve</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    readStream<span class="token punctuation">.</span><span class="token function">pipe</span><span class="token punctuation">(</span>writeStream<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">export</span> <span class="token keyword">const</span> <span class="token function-variable function">mergeChunks</span> <span class="token operator">=</span> <span class="token keyword">async</span> <span class="token punctuation">(</span><span class="token parameter">filename<span class="token operator">:</span> string<span class="token punctuation">,</span> size<span class="token operator">:</span> number <span class="token operator">=</span> <span class="token constant">SIZE</span></span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> filePath <span class="token operator">=</span> path<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span><span class="token constant">PUBLIC_DIR</span><span class="token punctuation">,</span> filename<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">const</span> chunksDir <span class="token operator">=</span> path<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span><span class="token constant">TEMP_DIR</span><span class="token punctuation">,</span> filename<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">const</span> chunkFiles <span class="token operator">=</span> <span class="token keyword">await</span> fs<span class="token punctuation">.</span><span class="token function">readdir</span><span class="token punctuation">(</span>chunksDir<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    chunkFiles<span class="token punctuation">.</span><span class="token function">sort</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">a<span class="token punctuation">,</span> b</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token function">Number</span><span class="token punctuation">(</span>a<span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">'-'</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token function">Number</span><span class="token punctuation">(</span>b<span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">'-'</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">await</span> Promise<span class="token punctuation">.</span><span class="token function">all</span><span class="token punctuation">(</span>
+        chunkFiles<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">chunkFile<span class="token punctuation">,</span> index</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token function">pipeStream</span><span class="token punctuation">(</span>
+            path<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span>chunksDir<span class="token punctuation">,</span> chunkFile<span class="token punctuation">)</span><span class="token punctuation">,</span>
+            fs<span class="token punctuation">.</span><span class="token function">createWriteStream</span><span class="token punctuation">(</span>filePath<span class="token punctuation">,</span> <span class="token punctuation">{</span>
+                start<span class="token operator">:</span> index <span class="token operator">*</span> size
+            <span class="token punctuation">}</span><span class="token punctuation">)</span>
+        <span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">await</span> fs<span class="token punctuation">.</span><span class="token function">rmdir</span><span class="token punctuation">(</span>chunksDir<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token comment">//mergeChunks('dog.png', 1024 * 10);</span>
+</code></pre></div><h2 id="_4-切片上传"><a href="#_4-切片上传" class="header-anchor">#</a> 4.切片上传</h2> <h3 id="_4-1-src-app-ts"><a href="#_4-1-src-app-ts" class="header-anchor">#</a> 4.1 src\app.ts</h3> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">import</span> createError <span class="token keyword">from</span> <span class="token string">'http-errors'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> express<span class="token punctuation">,</span> <span class="token punctuation">{</span> Request<span class="token punctuation">,</span> Response<span class="token punctuation">,</span> NextFunction <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'express'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> logger <span class="token keyword">from</span> <span class="token string">'morgan'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> <span class="token constant">INTERNAL_SERVER_ERROR</span> <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'http-status-codes'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> cors <span class="token keyword">from</span> <span class="token string">'cors'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> path <span class="token keyword">from</span> <span class="token string">'path'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> <span class="token constant">TEMP_DIR</span><span class="token punctuation">,</span> <span class="token constant">PUBLIC_DIR</span><span class="token punctuation">,</span> mergeChunks <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'./utils'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> fs <span class="token keyword">from</span> <span class="token string">'fs-extra'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> multiparty <span class="token keyword">from</span> <span class="token string">'multiparty'</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> app <span class="token operator">=</span> <span class="token function">express</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+app<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span><span class="token function">logger</span><span class="token punctuation">(</span><span class="token string">'dev'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+app<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>express<span class="token punctuation">.</span><span class="token function">json</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+app<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>express<span class="token punctuation">.</span><span class="token function">urlencoded</span><span class="token punctuation">(</span><span class="token punctuation">{</span> extended<span class="token operator">:</span> <span class="token boolean">false</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+app<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span><span class="token function">cors</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+app<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>express<span class="token punctuation">.</span><span class="token function">static</span><span class="token punctuation">(</span>path<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span> <span class="token string">'public'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+app<span class="token punctuation">.</span><span class="token function">post</span><span class="token punctuation">(</span><span class="token string">'/merge'</span><span class="token punctuation">,</span> <span class="token keyword">async</span> <span class="token punctuation">(</span><span class="token parameter">req<span class="token operator">:</span> Request<span class="token punctuation">,</span> res<span class="token operator">:</span> Response</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword">let</span> <span class="token punctuation">{</span> filename <span class="token punctuation">}</span> <span class="token operator">=</span> req<span class="token punctuation">.</span>body<span class="token punctuation">;</span>
+    <span class="token keyword">await</span> <span class="token function">mergeChunks</span><span class="token punctuation">(</span>filename<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    res<span class="token punctuation">.</span><span class="token function">json</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+        success<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+        url<span class="token operator">:</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">http://localhost:8000/</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>filename<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+app<span class="token punctuation">.</span><span class="token function">post</span><span class="token punctuation">(</span><span class="token string">'/upload/:filename/:chunk_name'</span><span class="token punctuation">,</span> <span class="token keyword">async</span> <span class="token punctuation">(</span><span class="token parameter">req<span class="token operator">:</span> Request<span class="token punctuation">,</span> res<span class="token operator">:</span> Response<span class="token punctuation">,</span> _next<span class="token operator">:</span> NextFunction</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword">let</span> file_dir <span class="token operator">=</span> path<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span><span class="token constant">TEMP_DIR</span><span class="token punctuation">,</span> req<span class="token punctuation">.</span>params<span class="token punctuation">.</span>filename<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">let</span> exist <span class="token operator">=</span> <span class="token keyword">await</span> fs<span class="token punctuation">.</span><span class="token function">pathExists</span><span class="token punctuation">(</span>file_dir<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>exist<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">await</span> fs<span class="token punctuation">.</span><span class="token function">mkdirs</span><span class="token punctuation">(</span>file_dir<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">const</span> filePath <span class="token operator">=</span> path<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span><span class="token constant">TEMP_DIR</span><span class="token punctuation">,</span> req<span class="token punctuation">.</span>params<span class="token punctuation">.</span>filename<span class="token punctuation">,</span> req<span class="token punctuation">.</span>params<span class="token punctuation">.</span>chunk_name<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">let</span> writeStream <span class="token operator">=</span> fs<span class="token punctuation">.</span><span class="token function">createWriteStream</span><span class="token punctuation">(</span>filePath<span class="token punctuation">,</span> <span class="token punctuation">{</span> start<span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span> flags<span class="token operator">:</span> <span class="token string">&quot;a&quot;</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    req<span class="token punctuation">.</span><span class="token function">pipe</span><span class="token punctuation">(</span>writeStream<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    req<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">'end'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        writeStream<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        res<span class="token punctuation">.</span><span class="token function">json</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+            success<span class="token operator">:</span> <span class="token boolean">true</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+app<span class="token punctuation">.</span><span class="token function">post</span><span class="token punctuation">(</span><span class="token string">'/upload'</span><span class="token punctuation">,</span> <span class="token keyword">async</span> <span class="token punctuation">(</span><span class="token parameter">req<span class="token operator">:</span> Request<span class="token punctuation">,</span> res<span class="token operator">:</span> Response<span class="token punctuation">,</span> next<span class="token operator">:</span> NextFunction</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword">let</span> form <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">multiparty<span class="token punctuation">.</span>Form</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    form<span class="token punctuation">.</span><span class="token function">parse</span><span class="token punctuation">(</span>req<span class="token punctuation">,</span> <span class="token keyword">async</span> <span class="token punctuation">(</span><span class="token parameter">err<span class="token punctuation">,</span> fields<span class="token punctuation">,</span> files</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>err<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span> <span class="token function">next</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">let</span> <span class="token punctuation">[</span>filename<span class="token punctuation">]</span> <span class="token operator">=</span> fields<span class="token punctuation">.</span>filename<span class="token punctuation">;</span>
+        <span class="token keyword">let</span> <span class="token punctuation">[</span>chunk<span class="token punctuation">]</span> <span class="token operator">=</span> files<span class="token punctuation">.</span>chunk<span class="token punctuation">;</span>
+        <span class="token keyword">await</span> fs<span class="token punctuation">.</span><span class="token function">move</span><span class="token punctuation">(</span>chunk<span class="token punctuation">.</span>path<span class="token punctuation">,</span> path<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span><span class="token constant">PUBLIC_DIR</span><span class="token punctuation">,</span> filename<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> overwrite<span class="token operator">:</span> <span class="token boolean">true</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+            res<span class="token punctuation">.</span><span class="token function">json</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+                success<span class="token operator">:</span> <span class="token boolean">true</span>
+            <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token number">3000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+app<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">_req<span class="token punctuation">,</span> _res<span class="token punctuation">,</span> next</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">next</span><span class="token punctuation">(</span><span class="token function">createError</span><span class="token punctuation">(</span><span class="token number">404</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+app<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">error<span class="token operator">:</span> any<span class="token punctuation">,</span> _req<span class="token operator">:</span> Request<span class="token punctuation">,</span> res<span class="token operator">:</span> Response<span class="token punctuation">,</span> _next<span class="token operator">:</span> NextFunction</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    res<span class="token punctuation">.</span><span class="token function">status</span><span class="token punctuation">(</span>error<span class="token punctuation">.</span>status <span class="token operator">||</span> <span class="token constant">INTERNAL_SERVER_ERROR</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    res<span class="token punctuation">.</span><span class="token function">json</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+        success<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+        error
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> app<span class="token punctuation">;</span>
+</code></pre></div><h2 id="_5-断点续传"><a href="#_5-断点续传" class="header-anchor">#</a> 5.断点续传</h2> <h3 id="_5-1-app-ts"><a href="#_5-1-app-ts" class="header-anchor">#</a> 5.1 app.ts</h3> <div class="language-diff extra-class"><pre class="language-diff"><code>import createError from 'http-errors';
+import express, { Request, Response, NextFunction } from 'express';
+import logger from 'morgan';
+import { INTERNAL_SERVER_ERROR } from 'http-status-codes';
+import cors from 'cors';
+import path from 'path';
+import { TEMP_DIR, PUBLIC_DIR, mergeChunks } from './utils';
+import fs from 'fs-extra';
+import multiparty from 'multiparty';
+let app = express();
+app.use(logger('dev'));
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+app.use(cors());
+app.use(express.static(path.resolve(__dirname, 'public')));
+app.post('/merge', async (req: Request, res: Response) =&gt; {
+<span class="token unchanged">    let { filename } = req.body;
+    await mergeChunks(filename);
+    res.json({
+        success: true,
+        url: `http://localhost:8000/${filename}`
+    });
+</span>});
+<span class="token inserted-sign inserted">+app.post('/upload/:filename/:chunk_name/:start', async (req: Request, res: Response, _next: NextFunction) =&gt; {
+</span><span class="token unchanged">    let start = isNaN(Number(req.params.start)) ? 0 : Number(req.params.start);
+    let file_dir = path.resolve(TEMP_DIR, req.params.filename);
+    let exist = await fs.pathExists(file_dir);
+    if (!exist) {
+        await fs.mkdirs(file_dir);
+    }
+    const filePath = path.resolve(TEMP_DIR, req.params.filename, req.params.chunk_name);
+</span><span class="token inserted-sign inserted">+    let writeStream = fs.createWriteStream(filePath, { start, flags: &quot;a&quot; });
+</span><span class="token unchanged">    req.pipe(writeStream);
+</span><span class="token inserted-sign inserted">+    req.on('error', () =&gt; {
++        writeStream.close();
++    });
++    req.on('close', () =&gt; {
++        writeStream.close();
++    });
+</span><span class="token unchanged">    req.on('end', () =&gt; {
+        writeStream.close();
+        res.json({
+            success: true
+        });
+    });
+</span>});
+<span class="token inserted-sign inserted">+app.post('/verify', async (req: Request, res: Response): Promise&lt;any&gt; =&gt; {
++    const { filename } = req.body;
++    const filePath = path.resolve(PUBLIC_DIR, filename);
++    let existFile = await fs.pathExists(filePath);
++    if (existFile) {
++        return res.json({
++            success: true,
++            needUpload: false
++        });
++    }
++    let tempFilePath = path.resolve(TEMP_DIR, filename);
++    let uploadedList: any[] = [];
++    let existTemporaryFile = await fs.pathExists(tempFilePath);
++    if (existTemporaryFile) {
++        uploadedList = await fs.readdir(tempFilePath);
++        uploadedList = await Promise.all(uploadedList.map(async (filename: string) =&gt; {
++            let stat = await fs.stat(path.resolve(tempFilePath, filename));
++            return {
++                filename,
++                size: stat.size
++            }
++        }));
++    }
++    res.json({
++        success: true,
++        needUpload: true,
++        uploadedList: uploadedList
++    });
++});
+</span>app.post('/upload', async (req: Request, res: Response, next: NextFunction) =&gt; {
+<span class="token unchanged">    let form = new multiparty.Form();
+    form.parse(req, async (err, fields, files) =&gt; {
+        if (err) {
+            return next(err);
+        }
+        let [filename] = fields.filename;
+        let [chunk] = files.chunk;
+        await fs.move(chunk.path, path.resolve(PUBLIC_DIR, filename), { overwrite: true });
+        setTimeout(() =&gt; {
+            res.json({
+                success: true
+            });
+        }, 3000);
+    });
+</span>});
+app.use(function (_req, _res, next) {
+<span class="token unchanged">    next(createError(404));
+</span>});
+
+app.use(function (error: any, _req: Request, res: Response, _next: NextFunction) {
+<span class="token unchanged">    res.status(error.status || INTERNAL_SERVER_ERROR);
+    res.json({
+        success: false,
+        error
+    });
+</span>});
+
+export default app;
+</code></pre></div></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">更新时间:</span> <span class="time">4/24/2020, 10:43:13 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/react/umi/01-umi.html" class="prev">
+        1.UmiJS
+      </a></span> <span class="next"><a href="/react/component/Tree.html">
+        Tree
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.2af561cb.js" defer></script><script src="/assets/js/2.b2a5c435.js" defer></script><script src="/assets/js/34.7d1f4bd2.js" defer></script>
+  </body>
+</html>

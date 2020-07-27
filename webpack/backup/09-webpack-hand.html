@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>09. Webpack hand | 珠峰架构</title>
+    <meta name="generator" content="VuePress 1.4.1">
+    
+    <meta name="description" content="">
+    <link rel="preload" href="/assets/css/0.styles.1657c744.css" as="style"><link rel="preload" href="/assets/js/app.2af561cb.js" as="script"><link rel="preload" href="/assets/js/2.b2a5c435.js" as="script"><link rel="preload" href="/assets/js/80.ade6c33e.js" as="script"><link rel="prefetch" href="/assets/js/10.2b2c8443.js"><link rel="prefetch" href="/assets/js/11.689524dc.js"><link rel="prefetch" href="/assets/js/12.849e2da9.js"><link rel="prefetch" href="/assets/js/13.c798d95d.js"><link rel="prefetch" href="/assets/js/14.380c4ee7.js"><link rel="prefetch" href="/assets/js/15.d5753b2e.js"><link rel="prefetch" href="/assets/js/16.49eb1f17.js"><link rel="prefetch" href="/assets/js/17.5ecf2b4f.js"><link rel="prefetch" href="/assets/js/18.da9c8265.js"><link rel="prefetch" href="/assets/js/19.59d827ef.js"><link rel="prefetch" href="/assets/js/20.73eb42bb.js"><link rel="prefetch" href="/assets/js/21.8570b5b4.js"><link rel="prefetch" href="/assets/js/22.34094913.js"><link rel="prefetch" href="/assets/js/23.5209939b.js"><link rel="prefetch" href="/assets/js/24.53d92201.js"><link rel="prefetch" href="/assets/js/25.7241adf1.js"><link rel="prefetch" href="/assets/js/26.fecc2611.js"><link rel="prefetch" href="/assets/js/27.e50fca48.js"><link rel="prefetch" href="/assets/js/28.4c168acc.js"><link rel="prefetch" href="/assets/js/29.f5186710.js"><link rel="prefetch" href="/assets/js/3.ba1dcccd.js"><link rel="prefetch" href="/assets/js/30.33cb1c11.js"><link rel="prefetch" href="/assets/js/31.c088791d.js"><link rel="prefetch" href="/assets/js/32.3b724af5.js"><link rel="prefetch" href="/assets/js/33.f975c942.js"><link rel="prefetch" href="/assets/js/34.7d1f4bd2.js"><link rel="prefetch" href="/assets/js/35.26c11750.js"><link rel="prefetch" href="/assets/js/36.e8890e58.js"><link rel="prefetch" href="/assets/js/37.516eba46.js"><link rel="prefetch" href="/assets/js/38.4f8b8525.js"><link rel="prefetch" href="/assets/js/39.26f95568.js"><link rel="prefetch" href="/assets/js/4.fca74266.js"><link rel="prefetch" href="/assets/js/40.b9a8ffbb.js"><link rel="prefetch" href="/assets/js/41.fd02ea5f.js"><link rel="prefetch" href="/assets/js/42.d2483185.js"><link rel="prefetch" href="/assets/js/43.70bff2de.js"><link rel="prefetch" href="/assets/js/44.219702ca.js"><link rel="prefetch" href="/assets/js/45.aba93af9.js"><link rel="prefetch" href="/assets/js/46.447ba87c.js"><link rel="prefetch" href="/assets/js/47.519ddc28.js"><link rel="prefetch" href="/assets/js/48.fd8af347.js"><link rel="prefetch" href="/assets/js/49.b3783fa9.js"><link rel="prefetch" href="/assets/js/5.cc992e8b.js"><link rel="prefetch" href="/assets/js/50.0bb20f92.js"><link rel="prefetch" href="/assets/js/51.37ba1a59.js"><link rel="prefetch" href="/assets/js/52.054af132.js"><link rel="prefetch" href="/assets/js/53.5aca78a0.js"><link rel="prefetch" href="/assets/js/54.78c43f89.js"><link rel="prefetch" href="/assets/js/55.8ecaadc1.js"><link rel="prefetch" href="/assets/js/56.e844f110.js"><link rel="prefetch" href="/assets/js/57.530db0e9.js"><link rel="prefetch" href="/assets/js/58.8c839289.js"><link rel="prefetch" href="/assets/js/59.6634b409.js"><link rel="prefetch" href="/assets/js/6.b8b36e50.js"><link rel="prefetch" href="/assets/js/60.7ebe5787.js"><link rel="prefetch" href="/assets/js/61.bfe89a8b.js"><link rel="prefetch" href="/assets/js/62.4cdf6e8c.js"><link rel="prefetch" href="/assets/js/63.a0e80f0d.js"><link rel="prefetch" href="/assets/js/64.62a1b782.js"><link rel="prefetch" href="/assets/js/65.7be0994b.js"><link rel="prefetch" href="/assets/js/66.5a592a8e.js"><link rel="prefetch" href="/assets/js/67.40b4291c.js"><link rel="prefetch" href="/assets/js/68.2ac34b58.js"><link rel="prefetch" href="/assets/js/69.728773d5.js"><link rel="prefetch" href="/assets/js/7.0414e914.js"><link rel="prefetch" href="/assets/js/70.30137f66.js"><link rel="prefetch" href="/assets/js/71.7735c9fc.js"><link rel="prefetch" href="/assets/js/72.e9f43339.js"><link rel="prefetch" href="/assets/js/73.2d754e71.js"><link rel="prefetch" href="/assets/js/74.bf70dd09.js"><link rel="prefetch" href="/assets/js/75.18c28356.js"><link rel="prefetch" href="/assets/js/76.a0626bc9.js"><link rel="prefetch" href="/assets/js/77.dfde57e0.js"><link rel="prefetch" href="/assets/js/78.b380a0d6.js"><link rel="prefetch" href="/assets/js/79.f7bafb5d.js"><link rel="prefetch" href="/assets/js/8.c3544379.js"><link rel="prefetch" href="/assets/js/81.6335ba85.js"><link rel="prefetch" href="/assets/js/82.9d01c14e.js"><link rel="prefetch" href="/assets/js/83.47911fdd.js"><link rel="prefetch" href="/assets/js/9.844fca3b.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.1657c744.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">珠峰架构</span></a> <div class="links"><!----> <!----></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><!---->  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><a href="/react/" class="sidebar-heading clickable"><span>react</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/vue/" class="sidebar-heading clickable"><span>vue</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/webpack/" class="sidebar-heading clickable router-link-active open"><span>webpack</span> <span class="arrow down"></span></a> <ul class="sidebar-links sidebar-group-items"><li><section class="sidebar-group collapsable is-sub-group depth-1"><a href="/webpack/2020/" class="sidebar-heading clickable"><span>2020版</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><a href="/webpack/backup/" class="sidebar-heading clickable router-link-active open"><span>备份</span> <span class="arrow down"></span></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/webpack/backup/01-webpack-basic.html" class="sidebar-link">01 Webpack基础</a></li><li><a href="/webpack/backup/02-webpack-optimize.html" class="sidebar-link">02. Webpack optimize</a></li><li><a href="/webpack/backup/03-webpack-file.html" class="sidebar-link">03. Webpack file</a></li><li><a href="/webpack/backup/04-webpack-tapable.html" class="sidebar-link">04. Webpack Tapable</a></li><li><a href="/webpack/backup/05-webpack-ast.html" class="sidebar-link">05. AST</a></li><li><a href="/webpack/backup/06-webpack-source.html" class="sidebar-link">06. Webpack Source</a></li><li><a href="/webpack/backup/07-webpack-loader.html" class="sidebar-link">07. Webpack Loader</a></li><li><a href="/webpack/backup/08-webpack-plugin.html" class="sidebar-link">08. Webpack Plugin</a></li><li><a href="/webpack/backup/09-webpack-hand.html" class="active sidebar-link">09. Webpack hand</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/webpack/backup/09-webpack-hand.html#_09-webpack-hand" class="sidebar-link">09. Webpack hand</a></li><li class="sidebar-sub-header"><a href="/webpack/backup/09-webpack-hand.html#_2-创建compiler-js" class="sidebar-link">2. 创建Compiler.js</a></li><li class="sidebar-sub-header"><a href="/webpack/backup/09-webpack-hand.html#_3-监听make事件" class="sidebar-link">3. 监听make事件</a></li><li class="sidebar-sub-header"><a href="/webpack/backup/09-webpack-hand.html#_4-make" class="sidebar-link">4. make</a></li><li class="sidebar-sub-header"><a href="/webpack/backup/09-webpack-hand.html#_5-build" class="sidebar-link">5. build</a></li><li class="sidebar-sub-header"><a href="/webpack/backup/09-webpack-hand.html#_6-seal封装chunk" class="sidebar-link">6. seal封装chunk</a></li><li class="sidebar-sub-header"><a href="/webpack/backup/09-webpack-hand.html#_7-emit" class="sidebar-link">7. emit</a></li><li class="sidebar-sub-header"><a href="/webpack/backup/09-webpack-hand.html#_8-支持loader" class="sidebar-link">8. 支持loader</a></li></ul></li><li><a href="/webpack/backup/10-webpack-prepare.html" class="sidebar-link">10. Webpack Prepare</a></li></ul></section></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/flutter/" class="sidebar-heading clickable"><span>flutter</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/interview/" class="sidebar-heading clickable"><span>interview</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/other/" class="sidebar-heading clickable"><span>other</span> <span class="arrow right"></span></a> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="_09-webpack-hand"><a href="#_09-webpack-hand" class="header-anchor">#</a> 09. Webpack hand</h2> <h3 id="_1-1-webpack-config-js"><a href="#_1-1-webpack-config-js" class="header-anchor">#</a> 1.1 webpack.config.js</h3> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> path <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'path'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+    context<span class="token operator">:</span>process<span class="token punctuation">.</span><span class="token function">cwd</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    mode<span class="token operator">:</span><span class="token string">'development'</span><span class="token punctuation">,</span>
+    devtool<span class="token operator">:</span><span class="token string">'none'</span><span class="token punctuation">,</span>
+    entry<span class="token operator">:</span><span class="token string">'./src/index.js'</span><span class="token punctuation">,</span>
+    output<span class="token operator">:</span><span class="token punctuation">{</span>
+        path<span class="token operator">:</span>path<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span><span class="token string">'dist'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        filename<span class="token operator">:</span><span class="token string">'[name].js'</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="_1-2-cli-js"><a href="#_1-2-cli-js" class="header-anchor">#</a> 1.2 cli.js</h3> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> webpack <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&quot;webpack&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> webpackOptions <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&quot;./webpack.config&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> compiler <span class="token operator">=</span> <span class="token function">webpack</span><span class="token punctuation">(</span>webpackOptions<span class="token punctuation">)</span><span class="token punctuation">;</span>
+compiler<span class="token punctuation">.</span><span class="token function">run</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">err<span class="token punctuation">,</span> stats</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>
+    stats<span class="token punctuation">.</span><span class="token function">toJson</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+      entries<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+      chunks<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+      modules<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+      _modules<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+      assets<span class="token operator">:</span> <span class="token boolean">true</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h3 id="_1-3-index-js"><a href="#_1-3-index-js" class="header-anchor">#</a> 1.3 index.js</h3> <p>src\index.js</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">let</span> title <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'./title'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>title<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h3 id="_1-4-title-js"><a href="#_1-4-title-js" class="header-anchor">#</a> 1.4 title.js</h3> <p>src\title.js</p> <div class="language-js extra-class"><pre class="language-js"><code>
+</code></pre></div><h3 id="_1-5-main-js"><a href="#_1-5-main-js" class="header-anchor">#</a> 1.5 main.js</h3> <p>dist\main.js</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">modules</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment">// webpackBootstrap</span>
+    <span class="token comment">// The module cache</span>
+    <span class="token keyword">var</span> installedModules <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+    <span class="token comment">// The require function</span>
+    <span class="token keyword">function</span> <span class="token function">__webpack_require__</span><span class="token punctuation">(</span><span class="token parameter">moduleId</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+        <span class="token comment">// Check if module is in cache</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>installedModules<span class="token punctuation">[</span>moduleId<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span> installedModules<span class="token punctuation">[</span>moduleId<span class="token punctuation">]</span><span class="token punctuation">.</span>exports<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token comment">// Create a new module (and put it into the cache)</span>
+        <span class="token keyword">var</span> module <span class="token operator">=</span> installedModules<span class="token punctuation">[</span>moduleId<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">{</span>
+            i<span class="token operator">:</span> moduleId<span class="token punctuation">,</span>
+            l<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+            exports<span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+        <span class="token comment">// Execute the module function</span>
+        modules<span class="token punctuation">[</span>moduleId<span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span>module<span class="token punctuation">.</span>exports<span class="token punctuation">,</span> module<span class="token punctuation">,</span> module<span class="token punctuation">.</span>exports<span class="token punctuation">,</span> __webpack_require__<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token comment">// Flag the module as loaded</span>
+        module<span class="token punctuation">.</span>l <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+
+        <span class="token comment">// Return the exports of the module</span>
+        <span class="token keyword">return</span> module<span class="token punctuation">.</span>exports<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+
+    <span class="token comment">// expose the modules object (__webpack_modules__)</span>
+    __webpack_require__<span class="token punctuation">.</span>m <span class="token operator">=</span> modules<span class="token punctuation">;</span>
+
+    <span class="token comment">// expose the module cache</span>
+    __webpack_require__<span class="token punctuation">.</span>c <span class="token operator">=</span> installedModules<span class="token punctuation">;</span>
+
+    <span class="token comment">// define getter function for harmony exports</span>
+    __webpack_require__<span class="token punctuation">.</span><span class="token function-variable function">d</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">exports<span class="token punctuation">,</span> name<span class="token punctuation">,</span> getter</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token operator">!</span>__webpack_require__<span class="token punctuation">.</span><span class="token function">o</span><span class="token punctuation">(</span>exports<span class="token punctuation">,</span> name<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            Object<span class="token punctuation">.</span><span class="token function">defineProperty</span><span class="token punctuation">(</span>exports<span class="token punctuation">,</span> name<span class="token punctuation">,</span> <span class="token punctuation">{</span> enumerable<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span> <span class="token keyword">get</span><span class="token operator">:</span> getter <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+    <span class="token comment">// define __esModule on exports</span>
+    __webpack_require__<span class="token punctuation">.</span><span class="token function-variable function">r</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">exports</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token keyword">typeof</span> Symbol <span class="token operator">!==</span> <span class="token string">'undefined'</span> <span class="token operator">&amp;&amp;</span> Symbol<span class="token punctuation">.</span>toStringTag<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            Object<span class="token punctuation">.</span><span class="token function">defineProperty</span><span class="token punctuation">(</span>exports<span class="token punctuation">,</span> Symbol<span class="token punctuation">.</span>toStringTag<span class="token punctuation">,</span> <span class="token punctuation">{</span> value<span class="token operator">:</span> <span class="token string">'Module'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        Object<span class="token punctuation">.</span><span class="token function">defineProperty</span><span class="token punctuation">(</span>exports<span class="token punctuation">,</span> <span class="token string">'__esModule'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> value<span class="token operator">:</span> <span class="token boolean">true</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+    <span class="token comment">// create a fake namespace object</span>
+    <span class="token comment">// mode &amp; 1: value is a module id, require it</span>
+    <span class="token comment">// mode &amp; 2: merge all properties of value into the ns</span>
+    <span class="token comment">// mode &amp; 4: return value when already ns object</span>
+    <span class="token comment">// mode &amp; 8|1: behave like require</span>
+    __webpack_require__<span class="token punctuation">.</span><span class="token function-variable function">t</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">value<span class="token punctuation">,</span> mode</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>mode <span class="token operator">&amp;</span> <span class="token number">1</span><span class="token punctuation">)</span> value <span class="token operator">=</span> <span class="token function">__webpack_require__</span><span class="token punctuation">(</span>value<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>mode <span class="token operator">&amp;</span> <span class="token number">8</span><span class="token punctuation">)</span> <span class="token keyword">return</span> value<span class="token punctuation">;</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token punctuation">(</span>mode <span class="token operator">&amp;</span> <span class="token number">4</span><span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span> <span class="token keyword">typeof</span> value <span class="token operator">===</span> <span class="token string">'object'</span> <span class="token operator">&amp;&amp;</span> value <span class="token operator">&amp;&amp;</span> value<span class="token punctuation">.</span>__esModule<span class="token punctuation">)</span> <span class="token keyword">return</span> value<span class="token punctuation">;</span>
+        <span class="token keyword">var</span> ns <span class="token operator">=</span> Object<span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span><span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        __webpack_require__<span class="token punctuation">.</span><span class="token function">r</span><span class="token punctuation">(</span>ns<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        Object<span class="token punctuation">.</span><span class="token function">defineProperty</span><span class="token punctuation">(</span>ns<span class="token punctuation">,</span> <span class="token string">'default'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> enumerable<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span> value<span class="token operator">:</span> value <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>mode <span class="token operator">&amp;</span> <span class="token number">2</span> <span class="token operator">&amp;&amp;</span> <span class="token keyword">typeof</span> value <span class="token operator">!=</span> <span class="token string">'string'</span><span class="token punctuation">)</span> <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">var</span> key <span class="token keyword">in</span> value<span class="token punctuation">)</span> __webpack_require__<span class="token punctuation">.</span><span class="token function">d</span><span class="token punctuation">(</span>ns<span class="token punctuation">,</span> key<span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">key</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token keyword">return</span> value<span class="token punctuation">[</span>key<span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token punctuation">}</span><span class="token punctuation">.</span><span class="token function">bind</span><span class="token punctuation">(</span><span class="token keyword">null</span><span class="token punctuation">,</span> key<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> ns<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token comment">// getDefaultExport function for compatibility with non-harmony modules</span>
+    __webpack_require__<span class="token punctuation">.</span><span class="token function-variable function">n</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">module</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">var</span> getter <span class="token operator">=</span> module <span class="token operator">&amp;&amp;</span> module<span class="token punctuation">.</span>__esModule <span class="token operator">?</span>
+            <span class="token keyword">function</span> <span class="token function">getDefault</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token keyword">return</span> module<span class="token punctuation">[</span><span class="token string">'default'</span><span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token punctuation">}</span> <span class="token operator">:</span>
+            <span class="token keyword">function</span> <span class="token function">getModuleExports</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token keyword">return</span> module<span class="token punctuation">;</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+        __webpack_require__<span class="token punctuation">.</span><span class="token function">d</span><span class="token punctuation">(</span>getter<span class="token punctuation">,</span> <span class="token string">'a'</span><span class="token punctuation">,</span> getter<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> getter<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token comment">// Object.prototype.hasOwnProperty.call</span>
+    __webpack_require__<span class="token punctuation">.</span><span class="token function-variable function">o</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">object<span class="token punctuation">,</span> property</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token keyword">return</span> <span class="token class-name">Object</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span><span class="token function">hasOwnProperty</span><span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span>object<span class="token punctuation">,</span> property<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token comment">// __webpack_public_path__</span>
+    __webpack_require__<span class="token punctuation">.</span>p <span class="token operator">=</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">;</span>
+    <span class="token comment">// Load entry module and return exports</span>
+    <span class="token keyword">return</span> <span class="token function">__webpack_require__</span><span class="token punctuation">(</span>__webpack_require__<span class="token punctuation">.</span>s <span class="token operator">=</span> <span class="token string">&quot;./src/index.js&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">(</span><span class="token punctuation">{</span>
+ <span class="token string">&quot;./src/index.js&quot;</span><span class="token operator">:</span>
+ <span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">module<span class="token punctuation">,</span> exports<span class="token punctuation">,</span> __webpack_require__</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">let</span> title <span class="token operator">=</span> <span class="token function">__webpack_require__</span><span class="token punctuation">(</span><span class="token comment">/*! ./title */</span> <span class="token string">&quot;./src/title.js&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>title<span class="token punctuation">)</span><span class="token punctuation">;</span>
+ <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+ <span class="token string">&quot;./src/title.js&quot;</span><span class="token operator">:</span>
+ <span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">module<span class="token punctuation">,</span> exports</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+   module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token string">&quot;title&quot;</span><span class="token punctuation">;</span>
+ <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h2 id="_2-创建compiler-js"><a href="#_2-创建compiler-js" class="header-anchor">#</a> 2. 创建Compiler.js</h2> <h3 id="_2-1-webpack-index-js"><a href="#_2-1-webpack-index-js" class="header-anchor">#</a> 2.1 webpack\index.js</h3> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> NodeEnvironmentPlugin <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&quot;./plugins/NodeEnvironmentPlugin&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> WebpackOptionsApply <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&quot;./WebpackOptionsApply&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> Compiler <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&quot;./Compiler&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">function</span> <span class="token function">webpack</span><span class="token punctuation">(</span><span class="token parameter">options</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  options<span class="token punctuation">.</span>context <span class="token operator">=</span> options<span class="token punctuation">.</span>context <span class="token operator">||</span> path<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span>process<span class="token punctuation">.</span><span class="token function">cwd</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token comment">//创建compiler</span>
+  <span class="token keyword">let</span> compiler <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Compiler</span><span class="token punctuation">(</span>options<span class="token punctuation">.</span>context<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token comment">//给compiler指定options</span>
+  compiler<span class="token punctuation">.</span>options <span class="token operator">=</span> Object<span class="token punctuation">.</span><span class="token function">assign</span><span class="token punctuation">(</span>compiler<span class="token punctuation">.</span>options<span class="token punctuation">,</span> options<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token comment">//设置读写文件的API</span>
+  <span class="token keyword">new</span> <span class="token class-name">NodeEnvironmentPlugin</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">apply</span><span class="token punctuation">(</span>compiler<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token comment">//调用配置文件里配置的插件并依次调用</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>options<span class="token punctuation">.</span>plugins <span class="token operator">&amp;&amp;</span> Array<span class="token punctuation">.</span><span class="token function">isArray</span><span class="token punctuation">(</span>options<span class="token punctuation">.</span>plugins<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">const</span> plugin <span class="token keyword">of</span> options<span class="token punctuation">.</span>plugins<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token function">plugin</span><span class="token punctuation">.</span><span class="token function">apply</span><span class="token punctuation">(</span>compiler<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+  compiler<span class="token punctuation">.</span>hooks<span class="token punctuation">.</span><span class="token function">environment</span><span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//设置变量</span>
+  compiler<span class="token punctuation">.</span>hooks<span class="token punctuation">.</span><span class="token function">afterEnvironment</span><span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//设置变量完成后</span>
+  <span class="token keyword">new</span> <span class="token class-name">WebpackOptionsApply</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">process</span><span class="token punctuation">(</span>options<span class="token punctuation">,</span> compiler<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//处理参数</span>
+  <span class="token keyword">return</span> compiler<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> webpack<span class="token punctuation">;</span>
+</code></pre></div><h3 id="_2-2-compiler-js"><a href="#_2-2-compiler-js" class="header-anchor">#</a> 2.2 Compiler.js</h3> <p>webpack\Compiler.js</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> <span class="token punctuation">{</span>
+  Tapable<span class="token punctuation">,</span>
+  SyncHook<span class="token punctuation">,</span>
+  SyncBailHook<span class="token punctuation">,</span>
+  AsyncSeriesHook<span class="token punctuation">,</span>
+  AsyncParallelHook
+<span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&quot;tapable&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">class</span> <span class="token class-name">Compiler</span> <span class="token keyword">extends</span> <span class="token class-name">Tapable</span> <span class="token punctuation">{</span>
+  <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token parameter">context</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">super</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>hooks <span class="token operator">=</span> <span class="token punctuation">{</span>
+      environment<span class="token operator">:</span> <span class="token keyword">new</span> <span class="token class-name">SyncHook</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+      afterEnvironment<span class="token operator">:</span> <span class="token keyword">new</span> <span class="token class-name">SyncHook</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+      afterPlugins<span class="token operator">:</span> <span class="token keyword">new</span> <span class="token class-name">SyncHook</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">&quot;compiler&quot;</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>options <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>context <span class="token operator">=</span> context<span class="token punctuation">;</span> <span class="token comment">//设置上下文路径</span>
+  <span class="token punctuation">}</span>
+  <span class="token function">run</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;开始编译&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> Compiler<span class="token punctuation">;</span>
+</code></pre></div><h3 id="_2-3-nodeenvironmentplugin-js"><a href="#_2-3-nodeenvironmentplugin-js" class="header-anchor">#</a> 2.3 NodeEnvironmentPlugin.js</h3> <p>webpack\plugins\NodeEnvironmentPlugin.js</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> fs <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&quot;fs&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">class</span> <span class="token class-name">NodeEnvironmentPlugin</span> <span class="token punctuation">{</span>
+  <span class="token function">apply</span><span class="token punctuation">(</span><span class="token parameter">compiler</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    compiler<span class="token punctuation">.</span>inputFileSystem <span class="token operator">=</span> fs<span class="token punctuation">;</span> <span class="token comment">//设置读文件的模块</span>
+    compiler<span class="token punctuation">.</span>outputFileSystem <span class="token operator">=</span> fs<span class="token punctuation">;</span> <span class="token comment">//设置写文件的模块</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> NodeEnvironmentPlugin<span class="token punctuation">;</span>
+</code></pre></div><h3 id="_2-4-webpackoptionsapply-js"><a href="#_2-4-webpackoptionsapply-js" class="header-anchor">#</a> 2.4 WebpackOptionsApply.js</h3> <p>webpack\WebpackOptionsApply.js</p> <div class="language-js extra-class"><pre class="language-js"><code>module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token keyword">class</span> <span class="token class-name">WebpackOptionsApply</span> <span class="token punctuation">{</span>
+  <span class="token function">process</span><span class="token punctuation">(</span><span class="token parameter">options<span class="token punctuation">,</span> compiler</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">//插件绑定结束</span>
+    compiler<span class="token punctuation">.</span>hooks<span class="token punctuation">.</span><span class="token function">afterPlugins</span><span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span>compiler<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><h2 id="_3-监听make事件"><a href="#_3-监听make事件" class="header-anchor">#</a> 3. 监听make事件</h2> <h3 id="_3-1-webpackoptionsapply-js"><a href="#_3-1-webpackoptionsapply-js" class="header-anchor">#</a> 3.1 WebpackOptionsApply.js</h3> <p>webpack\WebpackOptionsApply.js</p> <div class="language-diff extra-class"><pre class="language-diff"><code><span class="token inserted-sign inserted">+const EntryOptionPlugin = require(&quot;./plugins/EntryOptionPlugin&quot;);
+</span>module.exports = class WebpackOptionsApply {
+<span class="token unchanged">  process(options, compiler) {
+     //挂载入口文件插件
+</span><span class="token inserted-sign inserted">+    new EntryOptionPlugin().apply(compiler);
+</span><span class="token unchanged">    //触发entryOption事件执行
+</span><span class="token inserted-sign inserted">+    compiler.hooks.entryOption.call(options.context, options.entry);
+</span><span class="token unchanged">    //插件绑定结束
+    compiler.hooks.afterPlugins.call(compiler);
+  }
+</span>};
+</code></pre></div><h3 id="_3-2-entryoptionplugin-js"><a href="#_3-2-entryoptionplugin-js" class="header-anchor">#</a> 3.2 EntryOptionPlugin.js</h3> <p>webpack\plugins\EntryOptionPlugin.js</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> SingleEntryPlugin <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&quot;./SingleEntryPlugin&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">class</span> <span class="token class-name">EntryOptionPlugin</span> <span class="token punctuation">{</span>
+  <span class="token function">apply</span><span class="token punctuation">(</span><span class="token parameter">compiler</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    compiler<span class="token punctuation">.</span>hooks<span class="token punctuation">.</span>entryOption<span class="token punctuation">.</span><span class="token function">tap</span><span class="token punctuation">(</span><span class="token string">&quot;EntryOptionPlugin&quot;</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">context<span class="token punctuation">,</span> entry</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      <span class="token keyword">new</span> <span class="token class-name">SingleEntryPlugin</span><span class="token punctuation">(</span>context<span class="token punctuation">,</span> entry<span class="token punctuation">,</span> <span class="token string">&quot;main&quot;</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">apply</span><span class="token punctuation">(</span>compiler<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> EntryOptionPlugin<span class="token punctuation">;</span>
+</code></pre></div><h3 id="_3-3-singleentryplugin-js"><a href="#_3-3-singleentryplugin-js" class="header-anchor">#</a> 3.3 SingleEntryPlugin.js</h3> <p>webpack\plugins\SingleEntryPlugin.js</p> <div class="language-js extra-class"><pre class="language-js"><code>module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token keyword">class</span> <span class="token class-name">EntryOptionPlugin</span> <span class="token punctuation">{</span>
+  <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token parameter">context<span class="token punctuation">,</span> entry<span class="token punctuation">,</span> name</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>context <span class="token operator">=</span> context<span class="token punctuation">;</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>entry <span class="token operator">=</span> entry<span class="token punctuation">;</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> name<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token function">apply</span><span class="token punctuation">(</span><span class="token parameter">compiler</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    compiler<span class="token punctuation">.</span>hooks<span class="token punctuation">.</span>make<span class="token punctuation">.</span><span class="token function">tapAsync</span><span class="token punctuation">(</span>
+      <span class="token string">&quot;SingleEntryPlugin&quot;</span><span class="token punctuation">,</span>
+      <span class="token punctuation">(</span><span class="token parameter">compilation<span class="token punctuation">,</span> callback</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+          <span class="token comment">//入口文件 代码块的名称 context上下文绝对路径</span>
+        <span class="token keyword">const</span> <span class="token punctuation">{</span> entry<span class="token punctuation">,</span> name<span class="token punctuation">,</span> context <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">;</span>
+        compilation<span class="token punctuation">.</span><span class="token function">addEntry</span><span class="token punctuation">(</span>context<span class="token punctuation">,</span> entry<span class="token punctuation">,</span> name<span class="token punctuation">,</span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><h2 id="_4-make"><a href="#_4-make" class="header-anchor">#</a> 4. make</h2> <h3 id="_4-1-webpack-compiler-js"><a href="#_4-1-webpack-compiler-js" class="header-anchor">#</a> 4.1 webpack\Compiler.js</h3> <div class="language-diff extra-class"><pre class="language-diff"><code><span class="token inserted-sign inserted">+const {Tapable,SyncHook,SyncBailHook,AsyncSeriesHook,AsyncParallelHook} = require(&quot;tapable&quot;);
++const Compilation  = require('./Compilation');
+</span>class Compiler extends Tapable {
+<span class="token unchanged">  constructor(context) {
+    super();
+    this.hooks = {
+      environment: new SyncHook([]),
+      afterEnvironment: new SyncHook([]),
+      afterPlugins: new SyncHook([&quot;compiler&quot;]),
+      entryOption: new SyncBailHook([&quot;context&quot;, &quot;entry&quot;]),
+</span><span class="token inserted-sign inserted">+      beforeRun: new AsyncSeriesHook([&quot;compiler&quot;]),
++      run: new AsyncSeriesHook([&quot;compiler&quot;]),
++      beforeCompile: new AsyncSeriesHook([&quot;params&quot;]),
++      compile: new SyncHook([&quot;params&quot;]),
++      make: new AsyncParallelHook([&quot;compilation&quot;]),
++      thisCompilation: new SyncHook([&quot;compilation&quot;, &quot;params&quot;]),
++      compilation: new SyncHook([&quot;compilation&quot;, &quot;params&quot;]),
++      done: new AsyncSeriesHook([&quot;stats&quot;])
+</span><span class="token unchanged">    };
+    this.options = {};
+    this.context = context; //设置上下文路径
+  }
+</span>
+<span class="token inserted-sign inserted">+  run(finalCallback) {
++    //编译完成后的回调
++    const onCompiled = (err, compilation) =&gt; {
++     
++    };
++    //准备运行编译
++    this.hooks.beforeRun.callAsync(this, err =&gt; {
++      //运行
++      this.hooks.run.callAsync(this, err =&gt; {
++        //开始编译,编译完成后执行conCompiled回调
++        this.compile(onCompiled);
++      });
++    });
++  }
++  newCompilation(params){
++    const compilation = new Compilation(this);
++    this.hooks.thisCompilation.call(compilation, params);
++      this.hooks.compilation.call(compilation, params);
++    return compilation;
++  }
++  compile(onCompiled){
++    this.hooks.beforeCompile.callAsync({}, err =&gt; {
++      this.hooks.compile.call();
++      const compilation = this.newCompilation();
++      this.hooks.make.callAsync(compilation, err =&gt; {
++          console.log(err,'make完成')
++      });
++    });
++  }
+</span>}
+module.exports = Compiler;
+</code></pre></div><h3 id="_4-2-compilation-js"><a href="#_4-2-compilation-js" class="header-anchor">#</a> 4.2 Compilation.js</h3> <p>webpack\Compilation.js</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> normalModuleFactory <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'./NormalModuleFactory'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> <span class="token punctuation">{</span>Tapable<span class="token punctuation">,</span>SyncHook<span class="token punctuation">,</span>SyncBailHook<span class="token punctuation">,</span>AsyncSeriesHook<span class="token punctuation">,</span>AsyncParallelHook<span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&quot;tapable&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> path <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'path'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">class</span> <span class="token class-name">Compilation</span> <span class="token keyword">extends</span> <span class="token class-name">Tapable</span> <span class="token punctuation">{</span>
+    <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token parameter">compiler</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">super</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>compiler <span class="token operator">=</span> compiler<span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>options <span class="token operator">=</span> compiler<span class="token punctuation">.</span>options<span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>context <span class="token operator">=</span> compiler<span class="token punctuation">.</span>context<span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>inputFileSystem <span class="token operator">=</span> compiler<span class="token punctuation">.</span>inputFileSystem<span class="token punctuation">;</span>
+            <span class="token keyword">this</span><span class="token punctuation">.</span>outputFileSystem <span class="token operator">=</span> compiler<span class="token punctuation">.</span>outputFileSystem<span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>hooks <span class="token operator">=</span> <span class="token punctuation">{</span>
+          addEntry<span class="token operator">:</span> <span class="token keyword">new</span> <span class="token class-name">SyncHook</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">&quot;entry&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;name&quot;</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>entries<span class="token operator">=</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token comment">//context ./src/index.js main callback(终级回调)</span>
+    <span class="token function">addEntry</span><span class="token punctuation">(</span><span class="token parameter">context<span class="token punctuation">,</span> entry<span class="token punctuation">,</span> name<span class="token punctuation">,</span> finallyCallback</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span>hooks<span class="token punctuation">.</span><span class="token function">addEntry</span><span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span>entry<span class="token punctuation">,</span> name<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//开始增加入口</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">_addModuleChain</span><span class="token punctuation">(</span>context<span class="token punctuation">,</span>entry<span class="token punctuation">,</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token function">finallyCallback</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+   <span class="token punctuation">}</span>
+   <span class="token function">_addModuleChain</span><span class="token punctuation">(</span><span class="token parameter">context<span class="token punctuation">,</span>entry<span class="token punctuation">,</span>name</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+     <span class="token keyword">let</span> module <span class="token operator">=</span> normalModuleFactory<span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span>
+         <span class="token punctuation">{</span>name<span class="token punctuation">,</span>  <span class="token comment">//模块所属的代码块的名称</span>
+         context<span class="token operator">:</span><span class="token keyword">this</span><span class="token punctuation">.</span>context<span class="token punctuation">,</span><span class="token comment">//上下文</span>
+         request<span class="token operator">:</span>path<span class="token punctuation">.</span>posix<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span>context<span class="token punctuation">,</span>entry<span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//模块完整路径</span>
+     module<span class="token punctuation">.</span><span class="token function">build</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//开始编译模块</span>
+     <span class="token keyword">this</span><span class="token punctuation">.</span>entries<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>module<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//把编译好的模块添加到入口列表里面</span>
+   <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> Compilation<span class="token punctuation">;</span>
+</code></pre></div><h3 id="_4-3-normalmodulefactory-js"><a href="#_4-3-normalmodulefactory-js" class="header-anchor">#</a> 4.3 NormalModuleFactory.js</h3> <p>webpack\NormalModuleFactory.js</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> path <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&quot;path&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> NormalModule <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'./NormalModule'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">class</span> <span class="token class-name">NormalModuleFactory</span><span class="token punctuation">{</span>
+  <span class="token function">create</span><span class="token punctuation">(</span><span class="token parameter">data</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">NormalModule</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">NormalModuleFactory</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h3 id="_4-4-normalmodule-js"><a href="#_4-4-normalmodule-js" class="header-anchor">#</a> 4.4 NormalModule.js</h3> <p>webpack\NormalModule.js</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">class</span> <span class="token class-name">NormalModule</span><span class="token punctuation">{</span>
+    <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span>name<span class="token punctuation">,</span>context<span class="token punctuation">,</span>request<span class="token punctuation">}</span></span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> name<span class="token punctuation">;</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span>context <span class="token operator">=</span> context<span class="token punctuation">;</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span>request <span class="token operator">=</span> request<span class="token punctuation">;</span>  
+    <span class="token punctuation">}</span>
+    <span class="token function">build</span><span class="token punctuation">(</span><span class="token parameter">compilation</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'开始编译入口模块'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> NormalModule<span class="token punctuation">;</span>
+</code></pre></div><h2 id="_5-build"><a href="#_5-build" class="header-anchor">#</a> 5. build</h2> <h3 id="_5-1-compilation-js"><a href="#_5-1-compilation-js" class="header-anchor">#</a> 5.1 Compilation.js</h3> <p>webpack\Compilation.js</p> <div class="language-diff extra-class"><pre class="language-diff"><code>const normalModuleFactory = require('./NormalModuleFactory');
+const {Tapable,SyncHook,SyncBailHook,AsyncSeriesHook,AsyncParallelHook} = require(&quot;tapable&quot;);
+const path = require('path');
+class Compilation extends Tapable {
+<span class="token unchanged">    constructor(compiler) {
+        super();
+        this.compiler = compiler;
+        this.options = compiler.options;
+        this.context = compiler.context;
+        this.inputFileSystem = compiler.inputFileSystem;
+            this.outputFileSystem = compiler.outputFileSystem;
+        this.hooks = {
+          addEntry: new SyncHook([&quot;entry&quot;, &quot;name&quot;])
+        }
+</span><span class="token inserted-sign inserted">+        this.entries=[];
++        this._modules = {}; //模块代码
++        this.modules=[];
+</span><span class="token unchanged">    }
+    //context ./src/index.js main callback(终级回调)
+    addEntry(context, entry, name, finallyCallback) {
+      this.hooks.addEntry.call(entry, name);//开始增加入口
+      this._addModuleChain(context,entry,name);
+</span><span class="token inserted-sign inserted">+      console.log('编译完成');
++      console.log(this);
+</span><span class="token unchanged">      finallyCallback();
+   }
+   //增加模块链
+   _addModuleChain(context,entry,name){
+     let module = normalModuleFactory.create(
+         {name,  //模块所属的代码块的名称
+         context:this.context,//上下文
+         request:path.posix.join(context,entry)});//模块完整路径
+     module.build(this);//开始编译模块
+     this.entries.push(module);//把编译好的模块添加到入口列表里面
+   }
+   //编译依赖的模块
+</span><span class="token inserted-sign inserted">+   buildDependencies(module,dependencies){
++    module.dependencies = dependencies.map(data =&gt;{//映射老模块到新的模块
++       let module = normalModuleFactory.create(data);//创建新的模块
++       return module.build(this);//编译模块并返回自己
++    });
++  }
+</span>}
+module.exports = Compilation;
+</code></pre></div><h3 id="_5-2-normalmodule-js"><a href="#_5-2-normalmodule-js" class="header-anchor">#</a> 5.2 NormalModule.js</h3> <p>webpack\NormalModule.js</p> <div class="language-diff extra-class"><pre class="language-diff"><code><span class="token inserted-sign inserted">+const fs = require('fs');
++const ejs = require('ejs');
++const path = require('path');
++const babylon = require('babylon');
++const t = require('babel-types');
++const generate = require('babel-generator').default;
++const traverse = require('babel-traverse').default;
+</span>class NormalModule{
+<span class="token unchanged">    constructor({name,context,request}){
+      this.name = name;
+      this.context = context;
+      this.request = request;  
+</span><span class="token inserted-sign inserted">+      this.dependencies = [];
++      this.moduleId;
++      this._ast;
++      this._source;
+</span><span class="token unchanged">    }
+    build(compilation){
+</span><span class="token inserted-sign inserted">+        let originalSource = compilation.inputFileSystem.readFileSync(this.request,'utf8');
++        const ast = babylon.parse(originalSource);
++        let dependencies = [];
++        traverse(ast,{
++            CallExpression:(nodePath)=&gt;{
++                if (nodePath.node.callee.name == 'require') {
++                    //获取当前节点
++                    let node = nodePath.node;
++                    //修改require为__webpack_require__
++                    node.callee.name = '__webpack_require__';
++                    //获取要加载的模块ID
++                    let moduleName = node.arguments[0].value;
++                    let extension = moduleName.split(path.posix.sep).pop().indexOf('.')==-1?'.js':'';
++                    //获取依赖模块的绝对路径
++                    let dependencyRequest = path.posix.join(path.posix.dirname(this.request),moduleName+extension);
++                    //获取依赖模块的模块ID
++                    let dependencyModuleId = './'+path.posix.relative(this.context,dependencyRequest);
++                    //把依赖对象添加到依赖列表里
++                    dependencies.push({name:this.name,context:this.context,request:dependencyRequest});
++                    //修改加载的模块ID名称
++                    node.arguments = [t.stringLiteral(dependencyModuleId)];
++                }
++            }
++        });
++        //生成新的代码
++        let {code} = generate(ast);
++        //获取模块的来源代码
++        this._source = code;
++        //获得语法树
++        this._ast = ast;
++        //获取模块ID
++        this.moduleId = './'+path.posix.relative(this.context,this.request);
++        //添加到模块数组里
++        compilation.modules.push(this);
++        //KEY为模块的绝对路径 值为模块转译后的代码
++        compilation._modules[this.request] = code;
++        //编译依赖项
++        compilation.buildDependencies(this,dependencies);
++        return this;
+</span><span class="token unchanged">    }
+</span>}
+module.exports = NormalModule;
+</code></pre></div><h2 id="_6-seal封装chunk"><a href="#_6-seal封装chunk" class="header-anchor">#</a> 6. seal封装chunk</h2> <h3 id="_6-1-compiler-js"><a href="#_6-1-compiler-js" class="header-anchor">#</a> 6.1 Compiler.js</h3> <p>webpack\Compiler.js</p> <div class="language-diff extra-class"><pre class="language-diff"><code>this.hooks = {
+<span class="token unchanged">      compilation: new SyncHook([&quot;compilation&quot;, &quot;params&quot;]),
+</span><span class="token inserted-sign inserted">+      afterCompile:new SyncHook([&quot;params&quot;]),
+</span><span class="token unchanged">      done: new AsyncSeriesHook([&quot;stats&quot;])
+    };
+</span>
+compile(onCompiled){
+<span class="token unchanged">    this.hooks.beforeCompile.callAsync({}, err =&gt; {
+      this.hooks.compile.call();
+      const compilation = this.newCompilation();
+      this.hooks.make.callAsync(compilation, err =&gt; {
+</span><span class="token inserted-sign inserted">+         compilation.seal(err =&gt; {
++           this.hooks.afterCompile.callAsync(compilation, err =&gt; {
++              return onCompiled(null, compilation);
++           });
++         });
+</span><span class="token unchanged">      });
+    });
+  }
+</span></code></pre></div><h3 id="_6-2-compilation-js"><a href="#_6-2-compilation-js" class="header-anchor">#</a> 6.2 Compilation.js</h3> <p>webpack\Compilation.js</p> <div class="language-diff extra-class"><pre class="language-diff"><code><span class="token inserted-sign inserted">+ let Chunk = require('./Chunk');
+</span>class Compilation extends Tapable {
+<span class="token unchanged">    constructor(compiler) {
+        super();
+        this.hooks = {
+          addEntry: new SyncHook([&quot;entry&quot;, &quot;name&quot;]),
+</span><span class="token inserted-sign inserted">+          seal: new SyncHook([]),
++                beforeChunks: new SyncHook([]),
++                afterChunks: new SyncHook([&quot;chunks&quot;])
+</span><span class="token unchanged">        }
+        this.entries=[];    //入口模块
+        this._modules = {}; //模块代码
+        this.modules=[];    //所有模块
+</span><span class="token inserted-sign inserted">+        this.chunks = [];   //代码块
+</span><span class="token unchanged">    }
+    //context ./src/index.js main callback(终级回调)
+    addEntry(context, entry, name, finallyCallback) {
+      this.hooks.addEntry.call(entry, name);//开始增加入口
+      this._addModuleChain(context,entry,name);
+      finallyCallback();
+   }
+</span>
+<span class="token inserted-sign inserted">+  seal(callback){
++    this.hooks.seal.call();
++    this.hooks.beforeChunks.call();//生成代码块之前
++    for (const module of this.entries) {//循环入口模块
++      const chunk = new Chunk(module);//创建代码块
++          this.chunks.push(chunk);//把代码块添加到代码块数组中
++      //把代码块的模块添加到代码块中
++      chunk.modules = this.modules.filter(module=&gt;module.name == chunk.name);
++    }
++    this.hooks.afterChunks.call(this.chunks);//生成代码块之后
++    callback();//封装结束
++  }
+</span>}
+module.exports = Compilation;
+</code></pre></div><h2 id="_7-emit"><a href="#_7-emit" class="header-anchor">#</a> 7. emit</h2> <h3 id="_7-1-compiler-js"><a href="#_7-1-compiler-js" class="header-anchor">#</a> 7.1 Compiler.js</h3> <p>webpack\Compiler.js</p> <div class="language-diff extra-class"><pre class="language-diff"><code>const {Tapable,SyncHook,SyncBailHook,AsyncSeriesHook,AsyncParallelHook} = require(&quot;tapable&quot;);
+const Compilation  = require('./Compilation');
+<span class="token inserted-sign inserted">+ const Stats = require('./Stats');
++ const mkdirp = require('mkdirp');
++ const path = require('path');
+</span>class Compiler extends Tapable {
+<span class="token unchanged">  constructor(context) {
+    super();
+    this.hooks = {
+      environment: new SyncHook([]),
+      afterEnvironment: new SyncHook([]),
+      afterPlugins: new SyncHook([&quot;compiler&quot;]),
+      entryOption: new SyncBailHook([&quot;context&quot;, &quot;entry&quot;]),
+      beforeRun: new AsyncSeriesHook([&quot;compiler&quot;]),
+      run: new AsyncSeriesHook([&quot;compiler&quot;]),
+      beforeCompile: new AsyncSeriesHook([&quot;params&quot;]),
+      compile: new SyncHook([&quot;params&quot;]),
+      make: new AsyncParallelHook([&quot;compilation&quot;]),
+      thisCompilation: new SyncHook([&quot;compilation&quot;, &quot;params&quot;]),
+      compilation: new SyncHook([&quot;compilation&quot;, &quot;params&quot;]),
+      afterCompile:new SyncHook([&quot;params&quot;]),
+</span><span class="token inserted-sign inserted">+       emit: new AsyncSeriesHook([&quot;compilation&quot;]),
+</span><span class="token unchanged">      done: new AsyncSeriesHook([&quot;stats&quot;])
+    };
+    this.options = {};
+    this.context = context; //设置上下文路径
+  }
+</span><span class="token inserted-sign inserted">+   emitAssets(compilation,callback){
++     const emitFiles = err =&gt; {
++       let assets = compilation.assets;
++       for(let file in assets){
++         let source = assets[file];
++         const targetPath = path.posix.join(this.options.output.path,file);
++         let content = source;
++         this.outputFileSystem.writeFileSync(targetPath, content);
++       }
++       callback();
++     }
+</span><span class="token unchanged">    this.hooks.emit.callAsync(compilation, err =&gt; {
+            mkdirp(this.options.output.path, emitFiles);
+        });
+  }
+  run(finalCallback) {
+    //编译完成后的回调
+    const onCompiled = (err, compilation) =&gt; {
+</span><span class="token inserted-sign inserted">+       this.emitAssets(compilation, err =&gt; {
++         const stats = new Stats(compilation);
++         this.hooks.done.callAsync(stats, err =&gt; {
++            return finalCallback(null, stats);
++         });
++       })
+</span><span class="token unchanged">    };
+    //准备运行编译
+    this.hooks.beforeRun.callAsync(this, err =&gt; {
+      //运行
+      this.hooks.run.callAsync(this, err =&gt; {
+        //开始编译,编译完成后执行conCompiled回调
+        this.compile(onCompiled);
+      });
+    });
+  }
+  newCompilation(params){
+    const compilation = new Compilation(this);
+    this.hooks.thisCompilation.call(compilation, params);
+      this.hooks.compilation.call(compilation, params);
+    return compilation;
+  }
+  compile(onCompiled){
+    this.hooks.beforeCompile.callAsync({}, err =&gt; {
+      this.hooks.compile.call();
+      const compilation = this.newCompilation();
+      this.hooks.make.callAsync(compilation, err =&gt; {
+          compilation.seal(err =&gt; {
+            this.hooks.afterCompile.callAsync(compilation, err =&gt; {
+              return onCompiled(null, compilation);
+            });
+          });
+      });
+    });
+  }
+</span>}
+module.exports = Compiler;
+</code></pre></div><h3 id="_7-2-compilation-js"><a href="#_7-2-compilation-js" class="header-anchor">#</a> 7.2 Compilation.js</h3> <p>webpack\Compilation.js</p> <div class="language-diff extra-class"><pre class="language-diff"><code>const normalModuleFactory = require('./NormalModuleFactory');
+const {Tapable,SyncHook,SyncBailHook,AsyncSeriesHook,AsyncParallelHook} = require(&quot;tapable&quot;);
+const path = require('path');
+<span class="token inserted-sign inserted">+ const Chunk = require('./Chunk');
++ const fs = require('fs');
++ const ejs = require('ejs');
++ const mainTemplate = fs.readFileSync(path.join(__dirname, 'main.ejs'), 'utf8');
++ const mainRender = ejs.compile(mainTemplate);
+</span>class Compilation extends Tapable {
+<span class="token unchanged">    constructor(compiler) {
+        super();
+        this.compiler = compiler;
+        this.options = compiler.options;
+        this.context = compiler.context;
+        this.inputFileSystem = compiler.inputFileSystem;
+            this.outputFileSystem = compiler.outputFileSystem;
+        this.hooks = {
+          addEntry: new SyncHook([&quot;entry&quot;, &quot;name&quot;]),
+          seal: new SyncHook([]),
+                beforeChunks: new SyncHook([]),
+                afterChunks: new SyncHook([&quot;chunks&quot;])
+        }
+        this.entries=[];    //入口模块
+        this._modules = {}; //模块代码
+        this.modules=[];    //所有模块
+        this.chunks = [];   //代码块
+</span><span class="token inserted-sign inserted">+       this.files=[];
++       this.assets = {};   //资源 
+</span><span class="token unchanged">    }
+    //context ./src/index.js main callback(终级回调)
+    addEntry(context, entry, name, finallyCallback) {
+      this.hooks.addEntry.call(entry, name);//开始增加入口
+      this._addModuleChain(context,entry,name);
+      finallyCallback();
+   }
+   //增加模块链
+   _addModuleChain(context,entry,name){
+     let module = normalModuleFactory.create(
+         {name,  //模块所属的代码块的名称
+         context:this.context,//上下文
+         request:path.posix.join(context,entry)});//模块完整路径
+     module.build(this);//开始编译模块
+     this.entries.push(module);//把编译好的模块添加到入口列表里面
+   }
+   //编译依赖的模块
+   buildDependencies(module,dependencies){
+    module.dependencies = dependencies.map(data =&gt;{//映射老模块到新的模块
+       let module = normalModuleFactory.create(data);//创建新的模块
+       return module.build(this);//编译模块并返回自己
+    });
+  }
+  seal(callback){
+    this.hooks.seal.call();
+    this.hooks.beforeChunks.call();//生成代码块之前
+    for (const module of this.entries) {//循环入口模块
+      const chunk = new Chunk(module);//创建代码块
+          this.chunks.push(chunk);//把代码块添加到代码块数组中
+      //把代码块的模块添加到代码块中
+      chunk.modules = this.modules.filter(module=&gt;module.name == chunk.name);
+    }
+    this.hooks.afterChunks.call(this.chunks);//生成代码块之后
+</span><span class="token inserted-sign inserted">+     this.createChunkAssets();
+</span><span class="token unchanged">    callback();//封装结束
+  }
+</span><span class="token inserted-sign inserted">+   createChunkAssets(){
++     for (let i = 0; i &lt; this.chunks.length; i++) {
++       const chunk = this.chunks[i];
++       chunk.files = [];
++             const file = chunk.name+'.js';
++       const source = mainRender({ entryId:chunk.entryModule.moduleId, modules:chunk.modules});
++       chunk.files.push(file);
++       this.emitAsset(file, source);
++     }
++   }
++   emitAsset(file, source){
++      this.assets[file] = source;
++      this.files.push(file);
++   }
+</span>}
+module.exports = Compilation;
+</code></pre></div><h3 id="_7-3-main-ejs"><a href="#_7-3-main-ejs" class="header-anchor">#</a> 7.3 main.ejs</h3> <p>webpack\main.ejs</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">modules</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">var</span> installedModules <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token keyword">function</span> <span class="token function">__webpack_require__</span><span class="token punctuation">(</span><span class="token parameter">moduleId</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>installedModules<span class="token punctuation">[</span>moduleId<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> installedModules<span class="token punctuation">[</span>moduleId<span class="token punctuation">]</span><span class="token punctuation">.</span>exports<span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+      <span class="token keyword">var</span> module <span class="token operator">=</span> installedModules<span class="token punctuation">[</span>moduleId<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">{</span>
+        i<span class="token operator">:</span> moduleId<span class="token punctuation">,</span>
+        l<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+        exports<span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+      <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+      modules<span class="token punctuation">[</span>moduleId<span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span>module<span class="token punctuation">.</span>exports<span class="token punctuation">,</span> module<span class="token punctuation">,</span> module<span class="token punctuation">.</span>exports<span class="token punctuation">,</span> __webpack_require__<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      module<span class="token punctuation">.</span>l <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+      <span class="token keyword">return</span> module<span class="token punctuation">.</span>exports<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> <span class="token function">__webpack_require__</span><span class="token punctuation">(</span>__webpack_require__<span class="token punctuation">.</span>s <span class="token operator">=</span> <span class="token string">&quot;&lt;%-entryId%&gt;&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token punctuation">(</span><span class="token punctuation">{</span>
+        <span class="token operator">&lt;</span><span class="token operator">%</span>
+          <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">let</span> id <span class="token keyword">in</span> modules<span class="token punctuation">)</span><span class="token punctuation">{</span>
+              <span class="token keyword">let</span> <span class="token punctuation">{</span>moduleId<span class="token punctuation">,</span>_source<span class="token punctuation">}</span> <span class="token operator">=</span> modules<span class="token punctuation">[</span>id<span class="token punctuation">]</span><span class="token punctuation">;</span><span class="token operator">%</span><span class="token operator">&gt;</span>
+              <span class="token string">&quot;&lt;%-moduleId%&gt;&quot;</span><span class="token operator">:</span>
+              <span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">module<span class="token punctuation">,</span> exports<span class="token punctuation">,</span>__webpack_require__</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token operator">&lt;</span><span class="token operator">%</span><span class="token operator">-</span>_source<span class="token operator">%</span><span class="token operator">&gt;</span>
+              <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+           <span class="token operator">&lt;</span><span class="token operator">%</span><span class="token punctuation">}</span>
+        <span class="token operator">%</span><span class="token operator">&gt;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h3 id="_7-4-stats-js"><a href="#_7-4-stats-js" class="header-anchor">#</a> 7.4 Stats.js</h3> <p>webpack\Stats.js</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">class</span> <span class="token class-name">Stats</span><span class="token punctuation">{</span>
+    <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token parameter">compilation</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>files <span class="token operator">=</span> compilation<span class="token punctuation">.</span>files<span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>modules <span class="token operator">=</span> compilation<span class="token punctuation">.</span>modules<span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>chunks <span class="token operator">=</span> compilation<span class="token punctuation">.</span>chunks<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> Stats<span class="token punctuation">;</span>
+</code></pre></div><h2 id="_8-支持loader"><a href="#_8-支持loader" class="header-anchor">#</a> 8. 支持loader</h2> <h3 id="_8-1-normalmodule-js"><a href="#_8-1-normalmodule-js" class="header-anchor">#</a> 8.1 NormalModule.js</h3> <p>webpack\NormalModule.js</p> <div class="language-diff extra-class"><pre class="language-diff"><code>const fs = require('fs');
+const ejs = require('ejs');
+const path = require('path');
+const babylon = require('babylon');
+const t = require('babel-types');
+const generate = require('babel-generator').default;
+const traverse = require('babel-traverse').default;
+class NormalModule{
+<span class="token unchanged">    constructor({name,context,request}){
+      this.name = name;
+      this.context = context;
+      this.request = request;  
+      this.dependencies = [];
+      this.moduleId;
+      this._ast;
+      this._source;
+    }
+</span><span class="token inserted-sign inserted">+    getSource(request,compilation){
++        let source = compilation.inputFileSystem.readFileSync(this.request,'utf8');
++        let { module: { rules } } = compilation.options;
++        for (let i = 0; i &lt; rules.length; i++) {
++            let rule = rules[i];
++            if (rule.test.test(request)) {
++                let loaders = rule.use;
++                let loaderIndex = loaders.length - 1;
++                let iterateLoaders = ()=&gt;{
++                    let loaderName = loaders[loaderIndex];
++                    let loader = require(path.resolve(this.context, 'loaders', loaderName));
++                    source = loader(source);
++                    if (loaderIndex &gt; 0) {
++                        loaderIndex--;
++                        iterateLoaders();
++                    }
++                }
++                iterateLoaders();
++                break;
++            }
++        }
++        return source;
++    }
+</span><span class="token unchanged">    build(compilation){
+</span><span class="token inserted-sign inserted">+        let originalSource = this.getSource(this.request,compilation);
+</span><span class="token unchanged">        const ast = babylon.parse(originalSource);
+        let dependencies = [];
+        traverse(ast,{
+            CallExpression:(nodePath)=&gt;{
+                if (nodePath.node.callee.name == 'require') {
+                    //获取当前节点
+                    let node = nodePath.node;
+                    //修改require为__webpack_require__
+                    node.callee.name = '__webpack_require__';
+                    //获取要加载的模块ID
+                    let moduleName = node.arguments[0].value;
+                    let extension = moduleName.split(path.posix.sep).pop().indexOf('.')==-1?'.js':'';
+                    //获取依赖模块的绝对路径
+                    let dependencyRequest = path.posix.join(path.posix.dirname(this.request),moduleName+extension);
+                    //获取依赖模块的模块ID
+                    let dependencyModuleId = './'+path.posix.relative(this.context,dependencyRequest);
+                    //把依赖对象添加到依赖列表里
+                    dependencies.push({name:this.name,context:this.context,request:dependencyRequest});
+                    //修改加载的模块ID名称
+                    node.arguments = [t.stringLiteral(dependencyModuleId)];
+                }
+            }
+        });
+        //生成新的代码
+        let {code} = generate(ast);
+        //获取模块的来源代码
+        this._source = code;
+        //获得语法树
+        this._ast = ast;
+        //获取模块ID
+        this.moduleId = './'+path.posix.relative(this.context,this.request);
+        //添加到模块数组里
+        compilation.modules.push(this);
+        //KEY为模块的绝对路径 值为模块转译后的代码
+        compilation._modules[this.request] = code;
+        //编译依赖项
+        compilation.buildDependencies(this,dependencies);
+        return this;
+    }
+</span>}
+module.exports = NormalModule;
+</code></pre></div><h3 id="_8-2-index-js"><a href="#_8-2-index-js" class="header-anchor">#</a> 8.2 index.js</h3> <p>src\index.js</p> <div class="language-diff extra-class"><pre class="language-diff"><code><span class="token inserted-sign inserted">+require('./index.less');
+</span>let title = require('./title');
+console.log(title);
+</code></pre></div><h3 id="_8-3-src-index-less"><a href="#_8-3-src-index-less" class="header-anchor">#</a> 8.3 src\index.less</h3> <p>index.less</p> <div class="language-less extra-class"><pre class="language-less"><code><span class="token variable">@color<span class="token punctuation">:</span></span>red<span class="token punctuation">;</span>
+<span class="token selector">body</span><span class="token punctuation">{</span>
+    <span class="token property">background-color</span><span class="token punctuation">:</span><span class="token variable">@color</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="_8-4-less-loader-js"><a href="#_8-4-less-loader-js" class="header-anchor">#</a> 8.4 less-loader.js</h3> <p>loaders\less-loader.js</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">var</span> less <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'less'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+module<span class="token punctuation">.</span><span class="token function-variable function">exports</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">source</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">let</span> css<span class="token punctuation">;</span>
+    less<span class="token punctuation">.</span><span class="token function">render</span><span class="token punctuation">(</span>source<span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">err<span class="token punctuation">,</span> output</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        css <span class="token operator">=</span> output<span class="token punctuation">.</span>css<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> css<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="_8-5-style-loader-js"><a href="#_8-5-style-loader-js" class="header-anchor">#</a> 8.5 style-loader.js</h3> <p>loaders\style-loader.js</p> <div class="language-js extra-class"><pre class="language-js"><code>module<span class="token punctuation">.</span><span class="token function-variable function">exports</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">source</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">let</span> str <span class="token operator">=</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">
+      let style = document.createElement('style');
+      style.innerHTML = </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span><span class="token constant">JSON</span><span class="token punctuation">.</span><span class="token function">stringify</span><span class="token punctuation">(</span>source<span class="token punctuation">)</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">;
+      document.head.appendChild(style);
+    </span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> str<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">更新时间:</span> <span class="time">7/11/2020, 3:44:30 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/webpack/backup/08-webpack-plugin.html" class="prev">
+        08. Webpack Plugin
+      </a></span> <span class="next"><a href="/webpack/backup/10-webpack-prepare.html">
+        10. Webpack Prepare
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.2af561cb.js" defer></script><script src="/assets/js/2.b2a5c435.js" defer></script><script src="/assets/js/80.ade6c33e.js" defer></script>
+  </body>
+</html>
